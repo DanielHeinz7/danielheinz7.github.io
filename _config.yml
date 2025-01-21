@@ -23,8 +23,8 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Daniel Heinz"
-  pronouns         : "he/him"
-  bio              : "Research Lab Lead at Karlsruhe Institute of Technology, researching sustainable digital services, digitalization & information systems"
+  pronouns         : 
+  bio              : "Researching sustainable digital services, digitalization & information systems at KIT"
   location         : "Karlsruhe, Germany"
   employer         : "Karlsruhe Institute of Technology"
   uri              : # URL
