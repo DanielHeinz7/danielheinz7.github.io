@@ -6,7 +6,8 @@
 
 main:
   - title: "Publications"
-    url: /publications/
+    url: https://scholar.google.com/citations?hl=de&user=GqGdTtQAAAAJ&view_op=list_works&sortby=pubdate
+    # url: /publications/
 
  # - title: "Talks"
  #   url: /talks/    
