@@ -1,0 +1,67 @@
+---
+const choices = [
+  {
+    key: 'inform', label: 'Inform',
+    service: 'Reports unusual vibration in a machine.',
+    human: 'A technician interprets the alert and decides whether to inspect the machine.',
+    needs: 'Reliable data and someone responsible for responding to the alert.',
+  },
+  {
+    key: 'recommend', label: 'Recommend',
+    service: 'Suggests a maintenance window based on the machine’s condition.',
+    human: 'A technician reviews the recommendation and approves or changes the plan.',
+    needs: 'An explanation of the recommendation and a way to check it against operating needs.',
+  },
+  {
+    key: 'act', label: 'Act',
+    service: 'Automatically creates a maintenance order when agreed conditions are met.',
+    human: 'The team sets those conditions, monitors the service, and can override its actions.',
+    needs: 'Permission to trigger the action, a record of what happened, and a fallback when something goes wrong.',
+  },
+];
+---
+<section class="service-example" aria-labelledby="example-title">
+  <h2 id="example-title">One machine, different service choices</h2>
+  <p class="example-context">Illustrative example: maintenance on a factory floor.</p>
+  <div class="service-tabs" role="tablist" aria-label="Compare service choices">
+    {choices.map(({ key, label }, index) => (
+      <button type="button" role="tab" id={`tab-${key}`} aria-controls={`panel-${key}`} aria-selected={index === 0 ? 'true' : 'false'} tabindex={index === 0 ? 0 : -1}>{label}</button>
+    ))}
+  </div>
+  {choices.map(({ key, service, human, needs }, index) => (
+    <div class="comparison-panel" role="tabpanel" id={`panel-${key}`} aria-labelledby={`tab-${key}`} tabindex="0" hidden={index !== 0}>
+      <dl><dt>The service</dt><dd>{service}</dd><dt>Human role</dt><dd>{human}</dd></dl>
+      <p class="depends"><strong>What it needs</strong><br />{needs}</p>
+    </div>
+  ))}
+  <p class="example-context">These choices can be combined. The example illustrates design differences discussed in the paper.</p>
+</section>
+<script>
+  document.querySelectorAll<HTMLElement>('.service-tabs[role="tablist"]').forEach(list => {
+    const tabs = Array.from(list.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+    function select(tab: HTMLButtonElement, focus = false) {
+      tabs.forEach(item => {
+        const selected = item === tab;
+        item.setAttribute('aria-selected', String(selected));
+        item.tabIndex = selected ? 0 : -1;
+        const panel = document.getElementById(item.getAttribute('aria-controls') ?? '');
+        if (panel) panel.hidden = !selected;
+      });
+      if (focus) tab.focus();
+    }
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => select(tab));
+      tab.addEventListener('keydown', event => {
+        let next: number | undefined;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = tabs.length - 1;
+        if (next !== undefined) {
+          event.preventDefault();
+          select(tabs[next], true);
+        }
+      });
+    });
+  });
+</script>

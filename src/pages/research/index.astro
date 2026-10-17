@@ -1,0 +1,41 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Arrow from '../../components/Arrow.astro';
+import papers from '../../data/papers.json';
+import '../../styles/research.css';
+
+const topics = papers.filter((paper, index) => papers.findIndex(item => item.topic === paper.topic) === index);
+---
+<SiteLayout title="Research" description="How organizations change around data and AI. Research questions, selected publications, and accessible explanations of the ideas." active="research" bodyClass="research-page">
+  <nav class="page-nav" aria-label="Back to home"><a href="/"><Arrow /> Home</a></nav>
+  <h1>Research</h1>
+  <p class="lede">How organizations change around data and AI.</p>
+  <nav class="research-contents" aria-label="Research topics">
+    {topics.map(paper => <a href={`#${paper.id}`}>{paper.topic}</a>)}
+  </nav>
+  {papers.map(paper => (
+    <section class="research-stream" id={paper.id} aria-labelledby={`${paper.id}-title`}>
+      <h2 id={`${paper.id}-title`}>{paper.question}</h2>
+      <div class="stream-body">
+        <div class="stream-idea">
+          <p>{paper.idea}</p>
+          <a class="idea-link text-link" href={`/research/${paper.slug}/`} aria-label={`Explore the idea: ${paper.question}`}>Explore the idea <Arrow /></a>
+        </div>
+        <a class="paper-sheet" href={paper.url} aria-label={`Read ${paper.title}`}>
+          <img src={`/images/papers/${paper.image}`} alt={`First page of ${paper.title}`} width="750" height="1000" loading="lazy" />
+        </a>
+        <div class="paper-citation">
+          <h3><a href={paper.url}>{paper.title}</a></h3>
+          <p class="authors">{paper.authors}</p>
+          <p class="venue">{paper.venue}</p>
+        </div>
+      </div>
+    </section>
+  ))}
+  <section class="research-approach" aria-labelledby="approach-title">
+    <h2 id="approach-title">Research in practice</h2>
+    <p>I combine qualitative field research with design science: building systems with organizations and using their deployment as a field site.</p>
+    <a class="all-publications text-link" href="https://scholar.google.com/citations?user=GqGdTtQAAAAJ&hl=en">All publications on Google Scholar <Arrow /></a>
+  </section>
+  <footer><span>Daniel Heinz · Karlsruhe</span><a href="#content">Back to top <Arrow /></a></footer>
+</SiteLayout>

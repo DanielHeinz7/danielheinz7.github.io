@@ -1,0 +1,190 @@
+[
+  {
+    "id": "renewal",
+    "topic": "Transforming firms",
+    "question": "How can firms renew what they already have?",
+    "idea": "Legacy systems carry data and operational stability. Reconfiguring them can open new paths for digital renewal.",
+    "title": "A mechanism-based theory of legacy enterprise information system reconfiguration in incumbent firms",
+    "authors": "Heinz & Breidbach",
+    "venue": "Journal of Information Technology · 2026",
+    "url": "https://doi.org/10.1177/02683962261461296",
+    "image": "jit-first-page.png",
+    "detail": "paper-legacy-systems.html",
+    "full_authors": "Daniel Heinz and Christoph F. Breidbach",
+    "explainer": {
+      "headline": "Renewal can start with existing systems.",
+      "intro": "The systems that run a firm today can also support what it wants to do next. Their data and reliable routines are resources for change.",
+      "sections": [
+        {
+          "heading": "The tension",
+          "body": "Established firms depend on systems built over many years. Those systems can make change difficult, but they also hold the records, workflows, and controls that keep daily operations running."
+        },
+        {
+          "heading": "What the study explains",
+          "body": "We studied how manufacturers reconfigured existing systems for new digital activities. Firms used stable operations to support experiments, put accumulated data to new uses, connected new applications through interfaces, and adapted financial routines for new revenue models."
+        },
+        {
+          "heading": "A new service on an existing foundation",
+          "body": "Illustrative example: a manufacturer wants to offer a recurring maintenance service. Existing equipment records can identify the installed machines, while established billing routines may need changes to support recurring charges. The work involves both software and the way the firm operates.",
+          "kind": "example"
+        },
+        {
+          "heading": "A practical starting point",
+          "body": "Before deciding what to replace, identify the data and routines a new offering can build on. Then make responsibility for the connections between old and new systems explicit. The paper offers explanations for such changes, not a universal migration plan."
+        }
+      ],
+      "method": "The theory comes from retrospective case studies of successful reconfigurations in German manufacturing firms. Its mechanisms are context-dependent explanations. The study does not establish that reconfiguration is always preferable to replacement."
+    },
+    "slug": "legacy-systems"
+  },
+  {
+    "id": "smart-services",
+    "topic": "Transforming firms",
+    "question": "What makes a smart service useful?",
+    "idea": "Connected products can inform, recommend, or act. Our taxonomy shows how service outcomes, users, and technical capabilities fit together in business-to-business settings.",
+    "title": "Smart services in B2B contexts: A taxonomy and archetypes",
+    "authors": "Heinz, Fassnacht, Benz, Luchner & Satzger",
+    "full_authors": "Daniel Heinz, Marcel Fassnacht, Carina Benz, Philipp Luchner, and Gerhard Satzger",
+    "venue": "Information & Management · 2026",
+    "url": "https://doi.org/10.1016/j.im.2026.104390",
+    "image": "im-first-page.png",
+    "detail": "paper-smart-services.html",
+    "explainer": {
+      "headline": "What makes a smart service useful?",
+      "intro": "A connected machine can report a problem, recommend a response, or act on its own. Each choice calls for a different service design.",
+      "sections": [
+        {
+          "heading": "Start with the job",
+          "body": "Smart services use data from connected products to help someone do something. The important design choices include who benefits, what the service should deliver, and who has authority to act."
+        },
+        {
+          "interactive": "service-choices"
+        },
+        {
+          "heading": "What the study adds",
+          "body": "We developed a way to describe and compare B2B smart services: who provides and uses them, what they deliver, and how they turn data into information or action. Recurring combinations form recognizable service types."
+        },
+        {
+          "heading": "A practical starting point",
+          "body": "Map an existing service before planning its next feature. Check whether the users, data access, analytics, and authority to act match the proposed change. The paper offers a vocabulary for making those dependencies visible."
+        }
+      ],
+      "method": "The study combines research literature with public descriptions of implemented services. It maps service configurations; it does not establish which configuration causes better performance or how common each is in the market. Public descriptions can underrepresent failed or internal projects."
+    },
+    "slug": "smart-services"
+  },
+  {
+    "id": "enterprise-ai",
+    "topic": "Enterprise AI",
+    "question": "How should people and AI share the work?",
+    "idea": "Human and AI capabilities can be combined in different ways. Our framework explains how shared resources and rules shape this collaboration in service ecosystems.",
+    "title": "Conceptualizing hybrid intelligent service ecosystems",
+    "authors": "Bartelheimer, Heinz et al.",
+    "venue": "Electronic Markets · 2025",
+    "url": "https://doi.org/10.1007/s12525-025-00798-4",
+    "image": "hybrid-first-page.png",
+    "detail": "paper-human-ai-work.html",
+    "full_authors": "Christian Bartelheimer, Daniel Heinz, Sarah Hönigsberg, Dominik Siemon, Mahei Manhai Li, Timo Strohmann, Jens Poeppelbuss, and Christoph Peters",
+    "explainer": {
+      "headline": "Who does what when AI joins in?",
+      "intro": "AI changes how a service is delivered when people, software, and partner organizations take on different parts of the work.",
+      "sections": [
+        {
+          "heading": "Look beyond one person and one tool",
+          "body": "A service usually connects several participants. Customers, employees, and partner firms may all use AI. Understanding their collaboration requires looking at the resources they share and the rules that shape what each participant can do."
+        },
+        {
+          "heading": "What the paper contributes",
+          "body": "Our framework describes service networks in which humans and AI systems act together. It explains how the division of work depends on the situation and can evolve as participants change their capabilities and expectations."
+        },
+        {
+          "heading": "Following a customer request",
+          "body": "Illustrative example: an AI assistant prepares an answer, an employee checks it, and a partner supplies information needed to resolve the request. The service depends on all of those contributions and on agreements about access, responsibility, and disclosure.",
+          "kind": "example"
+        },
+        {
+          "heading": "A question to take into practice",
+          "body": "Who is acting, what resources can they use, and what rules apply? Mapping those relationships is one way to use the framework when discussing a new AI service. This is a practical application of the concept, rather than a method tested in this paper."
+        }
+      ],
+      "method": "This is a conceptual synthesis of human–AI collaboration and service research, illustrated through scenarios. It develops a framework and propositions for further empirical study; it does not measure whether a particular arrangement improves performance."
+    },
+    "slug": "human-ai-work"
+  },
+  {
+    "id": "data-ecosystems",
+    "topic": "Data ecosystems",
+    "question": "What makes data sharing work across firms?",
+    "idea": "Sharing data connects technical choices with organizational structures and relationships between firms. Our taxonomy helps explain how these choices fit together.",
+    "title": "Data sharing practices: The interplay of data, organizational structures, and network dynamics",
+    "authors": "Fassnacht, Leimstoll, Benz, Heinz & Satzger",
+    "venue": "Electronic Markets · 2024",
+    "url": "https://doi.org/10.1007/s12525-024-00732-0",
+    "image": "data-sharing-first-page.png",
+    "detail": "paper-data-sharing.html",
+    "full_authors": "Marcel Fassnacht, Jannis Leimstoll, Carina Benz, Daniel Heinz, and Gerhard Satzger",
+    "explainer": {
+      "headline": "What are we sharing data for?",
+      "intro": "Firms share data for different reasons. The purpose shapes who should participate, how they work together, and what the technical arrangement needs to support.",
+      "sections": [
+        {
+          "heading": "Start with the purpose",
+          "body": "A company may share data to meet a legal requirement, coordinate operations, earn revenue, or contribute to a societal goal. Those purposes can call for different relationships between the organizations involved."
+        },
+        {
+          "heading": "What the study adds",
+          "body": "We developed a taxonomy, a structured way to describe and compare data-sharing practices. It connects characteristics of the data with organizational choices and the wider network. The recurring patterns help explain why arrangements that look technically similar may serve different purposes."
+        },
+        {
+          "heading": "The same data, a different arrangement",
+          "body": "Illustrative example: a firm might sell equipment-use data to another business or share it with a partner to coordinate maintenance. Before choosing a platform, the firms need to clarify the purpose of the exchange and how each participant benefits.",
+          "kind": "example"
+        },
+        {
+          "heading": "Using the idea",
+          "body": "The taxonomy provides a vocabulary for comparing a proposed arrangement with existing practices. A useful starting question is what the participants expect to gain from sharing. Technical choices can then be discussed in relation to that purpose."
+        }
+      ],
+      "method": "The taxonomy and patterns draw on literature and publicly documented cases. They describe practices at a point in time. Confidential arrangements and technical implementation details may be missing, and the study does not test which configuration causes economic success."
+    },
+    "slug": "data-sharing"
+  },
+  {
+    "id": "entrepreneurship",
+    "topic": "Entrepreneurship",
+    "question": "How can AI help founders think for themselves?",
+    "idea": "AI coaching should help founders question assumptions and develop their judgment. We translate these needs into design requirements that preserve founders’ control over decisions.",
+    "title": "Designing AI-Based Entrepreneurial Coaching Systems",
+    "authors": "Liebschner, Heinz & Satzger",
+    "venue": "DESRIST · 2026",
+    "url": "https://doi.org/10.1007/978-3-032-28313-9_2",
+    "image": "coaching-first-page.png",
+    "detail": "paper-ai-coaching.html",
+    "full_authors": "Jonas Liebschner, Daniel Heinz, and Gerhard Satzger",
+    "explainer": {
+      "headline": "How can AI help founders think?",
+      "intro": "Founders need to test assumptions and make decisions under uncertainty. An AI coach should support that learning while keeping decisions with the founder.",
+      "sections": [
+        {
+          "heading": "The problem with agreeable answers",
+          "body": "Generic AI assistants can offer quick responses while losing the context of a venture or accepting its assumptions too readily. Human coaches also have limited time and cannot follow every decision between sessions."
+        },
+        {
+          "heading": "What the paper proposes",
+          "body": "Interviews with founders and coaches informed requirements for AI coaching systems. The system should help structure the venture, connect assumptions with tests and evidence, and support critical reflection across successive conversations."
+        },
+        {
+          "heading": "Make an assumption testable",
+          "body": "Illustrative example: a founder believes customers will pay for a new service. An AI coach could ask what evidence supports that belief and help plan a test. The founder decides how to interpret the evidence and what to do next.",
+          "kind": "example"
+        },
+        {
+          "heading": "A design principle to carry forward",
+          "body": "Keep assumptions, experiments, evidence, and decisions connected. Let founders accept, revise, or reject a recommendation with their own reasoning. These are design proposals intended to support learning, with effectiveness still to be evaluated."
+        }
+      ],
+      "method": "The study analyzes interviews in predominantly university-linked German coaching settings for early technology ventures. It develops design requirements. It does not demonstrate that a deployed AI coach improves judgment, learning, or venture success."
+    },
+    "slug": "ai-coaching"
+  }
+]
