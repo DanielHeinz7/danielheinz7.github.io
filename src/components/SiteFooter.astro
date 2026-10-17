@@ -1,0 +1,8 @@
+---
+import Arrow from './Arrow.astro';
+import { site } from '../data/site';
+---
+<footer>
+  <span>Daniel Heinz · Karlsruhe</span>
+  {site.email ? <a href={`mailto:${site.email}`}>Get in touch <Arrow /></a> : <a href="/">Home <Arrow /></a>}
+</footer>

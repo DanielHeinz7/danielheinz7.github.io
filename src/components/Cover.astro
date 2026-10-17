@@ -1,0 +1,20 @@
+---
+import { site } from '../data/site';
+---
+<aside class="cover" aria-label="About Daniel Heinz">
+  <div class="cover-inner">
+    <a class="mast" href="/">{site.name}</a>
+    <div class="role">{site.role}<br />{site.institution}</div>
+    <img class="portrait" src="/images/portrait.jpg" alt="Daniel Heinz" width="1737" height="1737" fetchpriority="high" />
+  </div>
+  <nav class="contact" aria-label="Contact">
+    {site.email && <a href={`mailto:${site.email}`}>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="1.5" fill="none" stroke="currentColor" stroke-width="2" /><path d="M3 6.5l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2" /></svg>
+      <span>Email</span>
+    </a>}
+    <a href={site.scholar}><img src="/icons/google-scholar.svg" alt="" width="20" height="20" /><span>Google Scholar</span></a>
+    <a href={site.orcid}><img src="/icons/orcid.svg" alt="" width="20" height="20" /><span>ORCID</span></a>
+    <a href={site.linkedin}><img src="/icons/linkedin.svg" alt="" width="20" height="20" /><span>LinkedIn</span></a>
+    {site.cv && <a href={site.cv}><span>CV (PDF)</span></a>}
+  </nav>
+</aside>
