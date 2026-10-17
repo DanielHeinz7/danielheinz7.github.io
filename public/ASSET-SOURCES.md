@@ -8,6 +8,7 @@
   - CAIS: https://doi.org/10.17705/1CAIS.05835. First article page of the accepted manuscript (PDF page 2), from https://publikationen.bibliothek.kit.edu/1000190352/174771020. © 2026 Association for Information Systems; no Creative Commons license asserted. The image retains the manuscript footer and editorial placeholders and is labeled as an accepted manuscript beside both uses. The full PDF is not redistributed.
   - Hybrid intelligent service ecosystems: https://doi.org/10.1007/s12525-025-00798-4
   - Data sharing practices: https://doi.org/10.1007/s12525-024-00732-0
+  - BISE: Dominik Martin, Daniel Heinz, Moritz Glauner, and Niklas Kühl, *Selecting Data Assets in Data Marketplaces: Leveraging Machine Learning and Explainable AI for Value Quantification*. https://doi.org/10.1007/s12599-025-00940-8. © The Author(s) 2025, licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/. First page of the published article, sourced from https://link.springer.com/content/pdf/10.1007/s12599-025-00940-8.pdf. Rasterized and resized; no cropping or content alteration.
   - Entrepreneurial coaching: https://doi.org/10.1007/978-3-032-28313-9_2
 - Schibsted Grotesk: https://github.com/schibsted/schibsted-grotesk, SIL Open Font License 1.1. The license is included in `fonts/OFL.txt`.
 - Google Scholar and ORCID marks: Simple Icons, https://github.com/simple-icons/simple-icons. CC0; brand trademarks remain their owners' property. Original brand colors are applied.

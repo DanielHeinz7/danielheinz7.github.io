@@ -156,8 +156,11 @@
         }
       ]
     },
-    "manuscript_url": "https://publikationen.bibliothek.kit.edu/1000190352",
-    "image_credit": "© 2026 Association for Information Systems"
+    "image_source": {
+      "url": "https://publikationen.bibliothek.kit.edu/1000190352",
+      "label": "Accepted manuscript · KITopen",
+      "credit": "© 2026 Association for Information Systems"
+    }
   },
   {
     "id": "enterprise-ai",
@@ -260,6 +263,68 @@
       ]
     },
     "slug": "data-sharing"
+  },
+  {
+    "id": "data-selection",
+    "topic": "Data ecosystems",
+    "question": "Which data is worth buying for a prediction?",
+    "idea": "We built a mechanism that ranks data sources and tests what each adds to a prediction. It helps buyers compare data bundles against their budget before acquiring them.",
+    "title": "Selecting Data Assets in Data Marketplaces: Leveraging Machine Learning and Explainable AI for Value Quantification",
+    "authors": "Martin, Heinz, Glauner & Kühl",
+    "venue": "Business & Information Systems Engineering · 2026",
+    "url": "https://doi.org/10.1007/s12599-025-00940-8",
+    "image": "bise-first-page.png",
+    "detail": "paper-data-selection.html",
+    "full_authors": "Dominik Martin, Daniel Heinz, Moritz Glauner, and Niklas Kühl",
+    "explainer": {
+      "headline": "Which data improves a prediction?",
+      "intro": "A marketplace may offer many sensor feeds. The useful ones are those that improve the prediction you need to make. We built a mechanism that estimates that contribution before a buyer acquires the data.",
+      "sections": [
+        {
+          "heading": "Start with a prediction",
+          "body": "The buyer provides historical outcomes, such as whether a component was healthy or failing. The mechanism assesses candidate data against those outcomes, using an existing prediction model or a surrogate model. The buyer receives an assessment before purchase; the marketplace performing that assessment still needs access to the underlying data."
+        },
+        {
+          "heading": "Rank signals, then test additions",
+          "body": [
+            "Feature-selection methods or explainable AI rank candidate inputs. SHAP, for example, estimates how inputs contribute to a model’s prediction. A global ranking summarizes their importance across cases; a local ranking can change with each case.",
+            "The prototype adds inputs in rank order and measures how model performance changes. Values of inputs not yet selected are permuted, or shuffled, to mask their information. This matters when signals overlap: two useful signals considered separately may add little extra together. Combining these performance estimates with marketplace prices helps the buyer choose a bundle within a budget or work back from a required performance level."
+          ]
+        },
+        {
+          "heading": "Choosing signals for a turbine",
+          "kind": "example",
+          "body": [
+            "Illustrative extension of the study’s seal-monitoring case: a wind-turbine operator wants to distinguish healthy hydraulic seals from failure modes. Candidate feeds include pressure, temperature, and vibration-derived signals. The mechanism ranks them against labeled examples, then tests what each successive addition contributes.",
+            "A second pressure feed might repeat information already available, while a vibration feature might add evidence under a particular operating condition. The buyer can inspect the estimated gain before paying for another feed. These signal outcomes are illustrative; the study evaluated seal data from a test bench."
+          ]
+        },
+        {
+          "heading": "What the experiments show",
+          "body": "SHAP performed strongly for context-specific selection in the reported comparisons. Sequential feature selection and permutation importance were also competitive in suitable settings. More demanding methods traded computation time for prediction performance. These estimates belong to a particular model and task; pricing and business returns require additional judgments."
+        }
+      ],
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "We used design science research to develop a data-selection mechanism for marketplaces. A structured review of 53 articles and initial interviews with four domain experts informed the requirements. Across two design cycles, we translated those requirements into design principles and implemented the mechanism in Python. Expert feedback helped refine the design."
+        },
+        {
+          "heading": "Technical evaluation",
+          "body": "We compared ranking strategies on ten public datasets and an industrial dataset for hydraulic seal condition monitoring. The industrial case contained 545 sensor features from a test bench. Experiments covered classification and regression, using F1 and R² scores. We compared cost–performance curves with random selection and averaged 50 repetitions of the masking procedure. Eleven experts assessed the prototype’s perceived usefulness and their attitudes toward using it."
+        },
+        {
+          "heading": "What the evidence supports",
+          "body": "The study demonstrates technical feasibility and compares methods under the tested conditions. It does not evaluate purchases in a deployed marketplace. Results depend on the model, available target labels, and how missing inputs are simulated. The assessing system needs access to candidate data; secure marketplace integration remains implementation work. Expert ratings measure expectations of usefulness, rather than observed purchasing behavior."
+        }
+      ]
+    },
+    "slug": "data-selection",
+    "image_source": {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "label": "Published article · CC BY 4.0",
+      "credit": "© The authors 2025"
+    }
   },
   {
     "id": "entrepreneurship",
