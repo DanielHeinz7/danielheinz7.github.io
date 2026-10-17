@@ -14,7 +14,9 @@ import { site } from '../data/site';
     </a>}
     <a href={site.scholar}><img src="/icons/google-scholar.svg" alt="" width="20" height="20" /><span>Google Scholar</span></a>
     <a href={site.orcid}><img src="/icons/orcid.svg" alt="" width="20" height="20" /><span>ORCID</span></a>
-    <a href={site.linkedin}><img src="/icons/linkedin.svg" alt="" width="20" height="20" /><span>LinkedIn</span></a>
-    {site.cv && <a href={site.cv}><span>CV (PDF)</span></a>}
+    <div class="contact-pair">
+      <a href={site.linkedin}><img src="/icons/linkedin.svg" alt="" width="20" height="20" /><span>LinkedIn</span></a>
+      {site.cv && <a href={site.cv}><span>CV (PDF)</span></a>}
+    </div>
   </nav>
 </aside>
