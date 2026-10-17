@@ -1,0 +1,102 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Arrow from '../components/Arrow.astro';
+import '../styles/tools.css';
+---
+
+<SiteLayout
+  title="Tools in use"
+  description="Software for research decisions, founder coaching, and the everyday work of a research group."
+  active="tools"
+  bodyClass="research-page tools-page"
+>
+  <nav class="page-nav" aria-label="Back to home">
+    <a href="/"><span class="tools-back"><Arrow /></span> Home</a>
+  </nav>
+
+  <h1>Tools in use</h1>
+  <p class="lede">Tools we build to support research, teaching, and the work around them.</p>
+
+  <nav class="research-contents" aria-label="Tools on this page">
+    <a href="#placet">Placet</a>
+    <a href="#innocompass">InnoCompass</a>
+    <a href="#hub">DSI-WI4 Hub</a>
+  </nav>
+
+  <section class="tool-section" id="placet" aria-labelledby="placet-heading">
+    <h2 id="placet-heading">Placet</h2>
+    <p class="tool-purpose">Keeping the researcher’s decisions visible.</p>
+    <div class="tool-copy">
+      <p>
+        Placet is a desktop app for paper projects in which agents propose and only
+        the researcher accepts. Each acceptance is logged in the researcher’s own
+        words, so coauthors can follow what changed and why.
+      </p>
+      <p>
+        I’m developing Placet and the research-harness plugin it runs on. The desktop
+        app is in testing; the plugin’s code and walkthrough are available on GitHub.
+      </p>
+    </div>
+    <a class="text-link tool-link" href="https://github.com/DanielHeinz7/research-harness">
+      Explore research-harness <Arrow />
+    </a>
+
+    <figure class="tool-figure">
+      <a href="/images/tools/research-harness-session.png" aria-label="Open the research-harness session view image at full size">
+        <img
+          src="/images/tools/research-harness-session.png"
+          alt="A research-harness session view showing a research question and an open question for the authors to discuss."
+          width="1440"
+          height="900"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+      <figcaption>
+        The research-harness session view, using its public-data example.
+        <a href="https://github.com/DanielHeinz7/research-harness/blob/main/docs/media/README.md#where-the-content-comes-from">Demo sources and credits</a>.
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="tool-section" id="innocompass" aria-labelledby="innocompass-heading">
+    <h2 id="innocompass-heading">InnoCompass</h2>
+    <p class="tool-purpose">Making a venture’s assumptions available for discussion.</p>
+    <div class="tool-copy">
+      <p>
+        InnoCompass is an AI-based system for early-stage founders that structures
+        how a venture is represented and surfaces the assumptions behind it.
+        It is used in KIT’s coaching formats and doubles as our research instrument.
+      </p>
+      <p>
+        I lead the project and its research; technical development is led by my
+        doctoral researcher. Our published work asks what AI coaching needs to
+        support founders’ learning and judgment.
+      </p>
+    </div>
+    <a class="text-link tool-link" href="/research/ai-coaching/">
+      Read the research behind it <Arrow />
+    </a>
+  </section>
+
+  <section class="tool-section" id="hub" aria-labelledby="hub-heading">
+    <h2 id="hub-heading">DSI-WI4 Hub</h2>
+    <p class="tool-purpose">Bringing the work of a research group together.</p>
+    <div class="tool-copy">
+      <p>
+        A research group runs research, teaching, projects, and administration across
+        many tools. I’m building the DSI-WI4 Hub at KIT to connect that work through
+        a shared sign-in and apps for meetings, publications, and internal processes.
+      </p>
+      <p>
+        The group uses the hub in its everyday work. Access to its apps is managed
+        through the group’s accounts and permissions.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <a href="/lab/">Inside the lab <Arrow /></a>
+    <a href="/teaching/">Teaching <Arrow /></a>
+  </footer>
+</SiteLayout>

@@ -1,0 +1,77 @@
+.tools-back {
+  display: inline-flex;
+  transform: rotate(180deg);
+}
+
+.tools-page .lede {
+  max-width: 40ch;
+}
+
+.tool-section {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 2px solid var(--ink);
+  scroll-margin-top: 24px;
+}
+
+.tool-section h2 {
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.tool-purpose {
+  max-width: 42ch;
+  margin-top: 12px;
+  color: var(--mute);
+  font-size: 20px;
+  line-height: 1.5;
+  text-wrap: balance;
+}
+
+.tool-copy {
+  max-width: 65ch;
+  margin-top: 20px;
+}
+
+.tool-copy p + p {
+  margin-top: 16px;
+}
+
+.tool-link {
+  min-height: 44px;
+  margin-top: 16px;
+}
+
+.tool-figure {
+  margin: 24px 0 0;
+}
+
+.tool-figure > a {
+  display: block;
+  border: 1px solid var(--rule);
+  background: #fff;
+}
+
+.tool-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tool-figure figcaption {
+  max-width: 65ch;
+  margin-top: 12px;
+  color: var(--mute);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 850px) {
+  .tool-section {
+    margin-top: 32px;
+  }
+
+  .tool-copy {
+    margin-top: 16px;
+  }
+}
