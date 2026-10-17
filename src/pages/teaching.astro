@@ -1,0 +1,76 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Arrow from '../components/Arrow.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import '../styles/lab-teaching.css';
+
+const courses = [
+  {
+    title: 'Building Digital Services with AI',
+    context: 'Practical seminar · KIT · Winter 2026/27',
+    description: 'Students turn an idea of their own into a working web app with AI coding tools. They direct the build, check the output, and document what they learn from their decisions and setbacks.',
+    href: 'https://dsi.win.kit.edu/courses_1335.php',
+    linkLabel: 'Course details',
+  },
+  {
+    title: 'Digital Services: Innovation & Business Models',
+    context: 'Master’s course · KIT',
+    description: 'I teach adoption of innovations, digital platforms and ecosystems, and smart services. Students prepare the concepts before class and work through cases together.',
+    href: 'https://dsi.win.kit.edu/courses_1204.php',
+    linkLabel: 'Course details',
+  },
+  {
+    title: 'Philosophy of Science',
+    context: 'Doctoral seminar · KIT · Winter 2026/27',
+    description: 'What makes a research question worth asking, and what counts as a convincing answer? Doctoral researchers read foundational texts and discuss the assumptions behind their own work.',
+  },
+  {
+    title: 'Digital Services at HECTOR School',
+    context: 'Executive education · KIT',
+    description: 'With business professionals, I work through how digital services change a company’s offering and the way it operates. My sessions cover innovation adoption, platforms and ecosystems, smart services, and sustainable digital services.',
+    href: 'https://www.hectorschool.kit.edu/specialization-digital-services.php',
+    linkLabel: 'Program details',
+  },
+];
+---
+
+<SiteLayout
+  title="Teaching"
+  description="Daniel Heinz’s teaching in digital services, AI-assisted development, philosophy of science, and executive education at KIT."
+  active="teaching"
+  bodyClass="lab-teaching-page"
+>
+  <nav class="page-nav" aria-label="Back to home">
+    <a href="/"><Arrow /> Home</a>
+  </nav>
+
+  <h1>Teaching</h1>
+  <p class="lede">Students explain their choices, try them in practice, and reflect on what they learned.</p>
+
+  <div class="course-list">
+    {courses.map((course) => (
+      <section class="course-entry">
+        <h2>{course.title}</h2>
+        <p class="course-context">{course.context}</p>
+        <p>{course.description}</p>
+        {course.href && (
+          <a class="text-link section-link" href={course.href} aria-label={`${course.linkLabel}: ${course.title}`}>
+            {course.linkLabel} <Arrow />
+          </a>
+        )}
+      </section>
+    ))}
+  </div>
+
+  <section class="field-section" aria-labelledby="advising-title">
+    <h2 id="advising-title">Research through a thesis</h2>
+    <p>I advise doctoral researchers and bachelor’s and master’s students. Our meetings connect the research question to methodological choices and to the next piece of work.</p>
+    <a class="text-link section-link" href="https://dsi.win.kit.edu/theses.php">Thesis opportunities at KIT <Arrow /></a>
+  </section>
+
+  <nav class="related-pages" aria-label="Continue exploring">
+    <a class="text-link" href="/lab/">Lab <Arrow /></a>
+    <a class="text-link" href="/research/">Research <Arrow /></a>
+  </nav>
+  <SiteFooter />
+</SiteLayout>
