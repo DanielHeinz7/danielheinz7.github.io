@@ -1,0 +1,37 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Arrow from '../components/Arrow.astro';
+import { navigation } from '../data/site';
+---
+<SiteLayout title="Daniel Heinz" active="home" bodyClass="compact-navigation">
+  <PageHeader title="What changes when organizations put AI to work?" intro="My lab builds AI systems with firms and founders to study work and human judgment in practice." />
+  <section class="work sample" aria-labelledby="work-title">
+    <header class="section-head">
+      <h2 id="work-title">Inside the research</h2>
+      <span>Journal of Information Technology · 2026</span>
+    </header>
+    <div class="sample-body">
+      <a class="paper-image" href="/research/legacy-systems/" aria-label="Explore the idea: legacy systems as a foundation for renewal">
+        <img src="/images/papers/jit-first-page.png" width="1351" height="1800" alt="First page of the Journal of Information Technology article by Daniel Heinz and Christoph F. Breidbach" />
+      </a>
+      <div class="annotation">
+        <h3>Legacy systems as a foundation for renewal.</h3>
+        <p>Legacy systems provide data and operational stability that firms can build on. Our theory explains how reconfiguring this installed base enables digital renewal while sustaining day-to-day operations.</p>
+        <p class="byline">Daniel Heinz &amp;<br />Christoph F. Breidbach</p>
+        <a class="text-link" href="/research/legacy-systems/">Explore the idea <Arrow /></a>
+      </div>
+    </div>
+  </section>
+  <nav class="tiles" aria-label="Explore the site">
+    {navigation.map(({ href, label }) => <a class="tile" href={href}><span class="tile-title">{label}<Arrow /></span></a>)}
+  </nav>
+  <a class="glance text-link" href="/at-a-glance/">Research at a glance <Arrow /></a>
+  <section class="news" aria-labelledby="news-title">
+    <h2 id="news-title">News</h2>
+    <div class="news-row"><time datetime="2026-10">Oct 2026</time><p>Visiting Fellow Grant from the University of Jyväskylä for a research stay in spring 2027.</p></div>
+    <div class="news-row"><time datetime="2026-06">Jun 2026</time><p>Best Paper Runner-up at DESRIST 2026 for our work on AI-based coaching for founders.</p></div>
+  </section>
+  <SiteFooter />
+</SiteLayout>
