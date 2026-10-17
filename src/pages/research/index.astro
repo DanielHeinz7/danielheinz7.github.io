@@ -28,6 +28,7 @@ const topics = papers.filter((paper, index) => papers.findIndex(item => item.top
           <h3><a href={paper.url}>{paper.title}</a></h3>
           <p class="authors">{paper.authors}</p>
           <p class="venue">{paper.venue}</p>
+          {'manuscript_url' in paper && <p class="paper-source"><a href={paper.manuscript_url}>Accepted manuscript · KITopen</a><br />{paper.image_credit}</p>}
         </div>
       </div>
     </section>

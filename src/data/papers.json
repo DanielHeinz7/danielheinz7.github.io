@@ -104,6 +104,62 @@
     "slug": "smart-services"
   },
   {
+    "id": "circular-industry",
+    "topic": "Transforming firms",
+    "question": "What would make a circular car industry possible?",
+    "idea": "Keeping components in use requires a shared view of their history. Our study works backward from a circular automotive industry to identify the data, agreements, and investments that would make it possible.",
+    "title": "Backcasting the Future of the Automotive Industry: Leveraging Digital Technologies for the Circular Economy",
+    "authors": "Sagnier Eckert, Finner, Heinz & Satzger",
+    "full_authors": "Linda Sagnier Eckert, Ann-Sophie Finner, Daniel Heinz, and Gerhard Satzger",
+    "venue": "Communications of the Association for Information Systems · 2026",
+    "url": "https://doi.org/10.17705/1CAIS.05835",
+    "image": "cais-first-page.png",
+    "detail": "paper-circular-industry.html",
+    "slug": "circular-industry",
+    "explainer": {
+      "headline": "Designing for a battery’s next life.",
+      "intro": "A retired car can leave behind a battery that still has useful life. The question is how another firm can recognize that value and act on it.",
+      "sections": [
+        {
+          "heading": "The decision begins before disposal",
+          "body": "A remanufacturer needs to know how a battery was built, used, and repaired. Those records originate with other firms, often years earlier. Choices about component design and access to product history shape what can be recovered later."
+        },
+        {
+          "heading": "Work backward from the future",
+          "body": "We envisioned a circular European automotive industry in 2050, then traced the steps needed to get there. The resulting pathway connects better lifecycle data with agreements about who can use it, skills for acting on it, and investment in circular production. Digital tools and those organizational changes develop together."
+        },
+        {
+          "heading": "Choosing a battery’s next use",
+          "body": [
+            "Illustrative scenario: a battery returned from an electric vehicle has uneven wear across its modules. An authorized remanufacturer combines the battery’s usage history with fresh diagnostic tests. A model estimates remaining useful life, while a digital twin tests how it might perform as stationary storage.",
+            "That evidence helps the firm choose between a second use, rebuilding the pack from suitable modules, and material recovery. The decision and any replacements are written back to its digital product passport, so the next owner can understand what it contains. This depends on other firms agreeing which history to share and retaining control over sensitive information."
+          ],
+          "kind": "example"
+        },
+        {
+          "heading": "Start with one future decision",
+          "body": "Choose a component and ask what a future repairer or remanufacturer would need to know about it. Then work backward: who creates that information, who keeps it accessible, and what would make sharing it worthwhile? The paper’s scenarios offer a way to organize that discussion."
+        }
+      ],
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "We used backcasting: define a desirable future, then work backward to the actions needed to reach it. Our target was a circular, carbon-neutral European automotive industry by 2050. We developed future images for vehicle design and manufacturing and for recovering value when components finish their original use."
+        },
+        {
+          "heading": "Evidence and analysis",
+          "body": "We conducted 14 interviews across two rounds with representatives of eight organizations, then compared the findings with research and industry literature. Interview transcripts were coded into recurring themes. Two expert workshops challenged and refined the future images and the transition pathway. The first included nine research and industry participants; the second included five experts in circularity, automotive technology, and data sharing."
+        },
+        {
+          "heading": "What the findings support",
+          "body": "The result is a proposed pathway, grounded in expert judgment and existing knowledge. It does not predict what will happen or demonstrate the environmental gains of a deployed system. Some goals remain only partly quantified, and the pathway lacks an ongoing process for monitoring and adjustment. The battery example above illustrates the future scenario; its decisions would still need technical and economic evaluation in practice."
+        }
+      ]
+    },
+    "manuscript_url": "https://publikationen.bibliothek.kit.edu/1000190352",
+    "image_credit": "© 2026 Association for Information Systems"
+  },
+  {
     "id": "enterprise-ai",
     "topic": "Enterprise AI",
     "question": "How should people and AI share the work?",

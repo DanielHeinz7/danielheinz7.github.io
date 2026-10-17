@@ -47,6 +47,7 @@ const explainer = paper.explainer;
           <h3><a href={paper.url}>{paper.title}</a></h3>
           <p class="authors">{paper.full_authors}</p>
           <p class="venue">{paper.venue}</p>
+          {'manuscript_url' in paper && <p class="paper-source"><a href={paper.manuscript_url}>Accepted manuscript · KITopen</a><br />{paper.image_credit}</p>}
           <a class="text-link" href={paper.url}>Read the original paper <Arrow /></a>
         </div>
       </div>

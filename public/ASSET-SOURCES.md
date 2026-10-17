@@ -5,6 +5,7 @@
 - Paper page images: published articles or their author manuscripts, linked to their original sources. Each PNG includes its source DOI in its provenance metadata.
   - JIT: https://doi.org/10.1177/02683962261461296
   - Information & Management: https://doi.org/10.1016/j.im.2026.104390
+  - CAIS: https://doi.org/10.17705/1CAIS.05835. First article page of the accepted manuscript (PDF page 2), from https://publikationen.bibliothek.kit.edu/1000190352/174771020. © 2026 Association for Information Systems; no Creative Commons license asserted. The image retains the manuscript footer and editorial placeholders and is labeled as an accepted manuscript beside both uses. The full PDF is not redistributed.
   - Hybrid intelligent service ecosystems: https://doi.org/10.1007/s12525-025-00798-4
   - Data sharing practices: https://doi.org/10.1007/s12525-024-00732-0
   - Entrepreneurial coaching: https://doi.org/10.1007/978-3-032-28313-9_2

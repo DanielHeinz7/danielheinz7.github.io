@@ -18,6 +18,7 @@
 .paper-citation h3 a{display:block;text-decoration-thickness:1px}
 .paper-citation .authors{margin-top:12px;color:var(--mute)}
 .paper-citation .venue{margin-top:4px;color:var(--mute)}
+.paper-citation .paper-source{margin-top:12px;color:var(--mute)}
 .research-approach{margin-top:48px;padding-top:20px;border-top:2px solid var(--ink)}
 .research-approach h2{font-size:20px;line-height:1.35}
 .research-approach p{margin-top:16px;max-width:55ch}
