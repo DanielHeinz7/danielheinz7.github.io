@@ -1,0 +1,15 @@
+.glance-page h1{max-width:22ch}
+.glance-page .lede{max-width:48ch}
+.glance-page .cv-link{margin-top:24px}
+.glance-section{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule)}
+.glance-section h2{font-size:20px;line-height:1.35}
+.glance-section p{margin-top:16px;max-width:65ch}
+.glance-section .text-link{margin-top:20px}
+.academic-record{margin-top:20px}
+.academic-record>div{display:grid;grid-template-columns:100px minmax(0,1fr);gap:20px;margin-top:20px}
+.academic-record dt{color:var(--mute)}
+.academic-record dd{margin:0}
+.academic-record dd span{display:block;margin-top:4px}
+.service-list{padding-left:20px;margin-top:16px}
+.service-list li+li{margin-top:8px}
+@media(max-width:550px){.academic-record>div{grid-template-columns:1fr;gap:4px}.glance-section{margin-top:32px}}

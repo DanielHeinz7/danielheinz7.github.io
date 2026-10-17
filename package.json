@@ -8,10 +8,16 @@
     "dev": "astro dev --host 127.0.0.1",
     "build": "astro build",
     "preview": "astro preview --host 127.0.0.1",
-    "check": "astro check"
+    "check": "astro check",
+    "check:site": "node scripts/check-site.mjs",
+    "build:cv": "python3 scripts/build-public-cv.py"
   },
-  "engines": { "node": ">=22.22.0" },
-  "dependencies": { "astro": "7.4.0" },
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "dependencies": {
+    "astro": "7.4.0"
+  },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
     "typescript": "6.0.3"

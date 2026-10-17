@@ -1,6 +1,7 @@
 # Asset sources
 
 - Portrait: supplied by Daniel Heinz for his personal academic website.
+- Research-harness session image: public demonstration from https://github.com/DanielHeinz7/research-harness. Data sources and credits: https://github.com/DanielHeinz7/research-harness/blob/main/docs/media/README.md#where-the-content-comes-from.
 - Paper page images: published articles or their author manuscripts, linked to their original sources. Each PNG includes its source DOI in its provenance metadata.
   - JIT: https://doi.org/10.1177/02683962261461296
   - Information & Management: https://doi.org/10.1016/j.im.2026.104390
