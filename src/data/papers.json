@@ -37,7 +37,20 @@
           "body": "Before deciding what to replace, identify the data and routines a new offering can build on. Then make responsibility for the connections between old and new systems explicit. The paper offers explanations for such changes, not a universal migration plan."
         }
       ],
-      "method": "The theory comes from retrospective case studies of successful reconfigurations in German manufacturing firms. Its mechanisms are context-dependent explanations. The study does not establish that reconfiguration is always preferable to replacement."
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "We compared five established German manufacturers that had successfully reconfigured their enterprise systems while keeping daily operations running. The study looks back at completed changes to explain how they happened. Cases ranged from agricultural machinery to food-processing equipment, with digital offerings such as remote diagnostics and predictive maintenance."
+        },
+        {
+          "heading": "Evidence and analysis",
+          "body": "We interviewed 32 people, including managers at different levels and external partners. Interviews were recorded and transcribed, then checked against company records, field notes, and other documents. For each firm, we reconstructed a timeline of decisions and changes to its systems. Comparing those timelines helped us identify recurring mechanisms: the conditions that enabled change, the actions taken, and the outcomes. We checked alternative explanations and searched for evidence that challenged each mechanism."
+        },
+        {
+          "heading": "What the findings support",
+          "body": "The result explains paths that worked in these firms. Because we deliberately selected successful cases, it cannot establish how often reconfiguration succeeds or whether it outperforms replacement. The findings are most relevant where established systems remain essential to reliable operations. The agentic maintenance workflow above is an illustrative application of these ideas; it was not one of the studied cases."
+        }
+      ]
     },
     "slug": "legacy-systems"
   },
@@ -73,7 +86,20 @@
           "body": "Start with the service outcome, then specify who decides and who acts. For unattended operation, define which changes the service can make and when an expert takes over. For remote support, agree on access and control."
         }
       ],
-      "method": "The study combines research literature with public descriptions of implemented services. It maps service configurations; it does not establish which configuration causes better performance or how common each is in the market. Public descriptions can underrepresent failed or internal projects."
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "We developed the classification by moving between research literature and descriptions of 100 implemented B2B smart services. Cases had to explain the customer value and how the service worked in practice. They covered several industries, including manufacturing, healthcare, and agriculture. We revised the categories through repeated rounds of coding and feedback from researchers."
+        },
+        {
+          "heading": "Evidence and analysis",
+          "body": "We tested whether other researchers could apply the categories to the same service descriptions. We then grouped the 100 cases by their shared characteristics using cluster analysis and interpreted the groups as recurring service types. A separate check used interviews and archival material from two providers whose portfolios had not been used to build the classification. This tested whether the types also helped distinguish services beyond the original sample."
+        },
+        {
+          "heading": "What the findings support",
+          "body": "The study provides a way to compare service designs and the combinations of capabilities and roles they use. Public descriptions favor visible successes, so the sample cannot tell us how common each type is or which performs best. Judgments about a service's novelty were less consistent than judgments about its other characteristics. The factory scenarios above illustrate how to apply the framework; they are not study cases."
+        }
+      ]
     },
     "slug": "smart-services"
   },
@@ -111,7 +137,20 @@
           "body": "Who is acting, what resources can they use, and what rules apply? Mapping those relationships is one way to use the framework when discussing a new AI service. This is a practical application of the concept, rather than a method tested in this paper."
         }
       ],
-      "method": "This is a conceptual synthesis of human–AI collaboration and service research, illustrated through scenarios. It develops a framework and propositions for further empirical study; it does not measure whether a particular arrangement improves performance."
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "This is a conceptual study: we bring existing theories together to explain a problem they address separately. We combine research on human–AI collaboration with service ecosystem theory and research on agency, the capacity of people and software to act and influence outcomes. The aim is to explain how collaboration changes across a whole service network."
+        },
+        {
+          "heading": "How we developed the framework",
+          "body": "We connected concepts from these research streams into a framework covering participants, their resources, and the rules governing their interactions. We then worked through scenarios, including elderly care and IT customer support, to examine whether the framework could describe different forms of collaboration. This process led to propositions about how human and AI roles develop and affect the wider network."
+        },
+        {
+          "heading": "What the study can tell us",
+          "body": "The framework provides a way to analyze who does what when AI enters a service. The scenarios illustrate its use; they are not field trials. Whether particular arrangements improve outcomes still needs empirical testing, especially in settings where human–AI collaboration is less established."
+        }
+      ]
     },
     "slug": "human-ai-work"
   },
@@ -149,7 +188,20 @@
           "body": "The taxonomy provides a vocabulary for comparing a proposed arrangement with existing practices. A useful starting question is what the participants expect to gain from sharing. Technical choices can then be discussed in relation to that purpose."
         }
       ],
-      "method": "The taxonomy and patterns draw on literature and publicly documented cases. They describe practices at a point in time. Confidential arrangements and technical implementation details may be missing, and the study does not test which configuration causes economic success."
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "We developed a taxonomy, a shared set of characteristics for describing how organizations share data. Starting with existing classifications and a review of 44 research articles, we refined it against publicly documented practices across industries. This helped us connect decisions about the data with the organizations involved and the relationships between them."
+        },
+        {
+          "heading": "Evidence and analysis",
+          "body": "We classified 121 cases using the taxonomy, with independent researchers checking parts of the coding. Cluster analysis then grouped cases with similar characteristics. We interpreted those groups by returning to the case descriptions and examining which choices commonly occurred together. Separately, four experts involved in a chemical-industry data-sharing arrangement applied the taxonomy to their own case and assessed its usefulness."
+        },
+        {
+          "heading": "How to use the findings",
+          "body": "The patterns offer reference points for comparing a proposed arrangement with existing practices. The groups were only weakly separated, so they should be treated as broad patterns with overlap. The study captures publicly visible practices at a point in time. Confidential arrangements and detailed technical implementation may be missing, and the analysis does not establish which configuration causes better business results."
+        }
+      ]
     },
     "slug": "data-sharing"
   },
@@ -187,7 +239,20 @@
           "body": "Keep assumptions, experiments, evidence, and decisions connected. Let founders accept, revise, or reject a recommendation with their own reasoning. These are design proposals intended to support learning, with effectiveness still to be evaluated."
         }
       ],
-      "method": "The study analyzes interviews in predominantly university-linked German coaching settings for early technology ventures. It develops design requirements. It does not demonstrate that a deployed AI coach improves judgment, learning, or venture success."
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "The study uses design science research to define what an AI coaching system should support. In 2025, we interviewed 19 startup founders and eight coaches in Germany across two rounds. Founders described their use of AI and the support they wanted; coaches contributed experience across ventures."
+        },
+        {
+          "heading": "From interviews to requirements",
+          "body": "We recorded and transcribed the interviews, then coded accounts of current problems separately from ideas for future support. Comparing founder and coach perspectives helped us group recurring concerns into themes and derive four design requirements. Two researchers discussed the coding and interpretations. The author team checked that each requirement could be traced to the interviews, was consistent with the others, and could guide system design."
+        },
+        {
+          "heading": "What the evidence supports",
+          "body": "The findings offer a starting point for designing AI coaching in early technology ventures, based largely on university-linked coaching settings. Their usefulness in other settings still needs testing. The paper develops requirements; it does not evaluate a deployed AI coach or establish improvements in founders' judgment or venture success. Building and evaluating systems is the next research step."
+        }
+      ]
     },
     "slug": "ai-coaching"
   }
