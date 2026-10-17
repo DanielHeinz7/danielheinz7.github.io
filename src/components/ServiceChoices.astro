@@ -1,28 +1,22 @@
 ---
 const choices = [
   {
-    key: 'inform', label: 'Inform',
-    service: 'Reports unusual vibration in a machine.',
-    human: 'A technician interprets the alert and decides whether to inspect the machine.',
-    needs: 'Reliable data and someone responsible for responding to the alert.',
+    key: 'remote', label: 'Remote experts',
+    service: 'A remote specialist investigates failed seals on a packaging line, checks the film specification, and changes sealing temperature with the plant\'s approval.',
+    human: 'The supplier\'s specialist chooses the intervention. The plant grants control and can stop the change.',
+    needs: 'Machine access and shared process data, with a service agreement defining control rights and escalation.',
   },
   {
-    key: 'recommend', label: 'Recommend',
-    service: 'Suggests a maintenance window based on the machine’s condition.',
-    human: 'A technician reviews the recommendation and approves or changes the plan.',
-    needs: 'An explanation of the recommendation and a way to check it against operating needs.',
-  },
-  {
-    key: 'act', label: 'Act',
-    service: 'Automatically creates a maintenance order when agreed conditions are met.',
-    human: 'The team sets those conditions, monitors the service, and can override its actions.',
-    needs: 'Permission to trigger the action, a record of what happened, and a fallback when something goes wrong.',
+    key: 'autonomous', label: 'Dark factory',
+    service: 'For an unattended shift, a service sets sealing temperature and film tension from product dimensions and film specifications. It checks seal quality and adjusts within validated limits.',
+    human: 'Engineers approve the operating limits. An exception pauses the affected line for a specialist to investigate.',
+    needs: 'Reliable inspection and feedback, permission to change settings, and a tested recovery procedure. Responsibility for defective output must be agreed.',
   },
 ];
 ---
 <section class="service-example" aria-labelledby="example-title">
-  <h2 id="example-title">One machine, different service choices</h2>
-  <p class="example-context">Illustrative example: maintenance on a factory floor.</p>
+  <h2 id="example-title">Remote expertise or a dark factory?</h2>
+  <p class="example-context">Illustrative applications of the paper's service types to a packaging line.</p>
   <div class="service-tabs" role="tablist" aria-label="Compare service choices">
     {choices.map(({ key, label }, index) => (
       <button type="button" role="tab" id={`tab-${key}`} aria-controls={`panel-${key}`} aria-selected={index === 0 ? 'true' : 'false'} tabindex={index === 0 ? 0 : -1}>{label}</button>
@@ -34,7 +28,7 @@ const choices = [
       <p class="depends"><strong>What it needs</strong><br />{needs}</p>
     </div>
   ))}
-  <p class="example-context">These choices can be combined. The example illustrates design differences discussed in the paper.</p>
+  <p class="example-context">The paper describes complementary service types. A factory could handle routine adjustments autonomously and bring in remote experts for exceptions.</p>
 </section>
 <script>
   document.querySelectorAll<HTMLElement>('.service-tabs[role="tablist"]').forEach(list => {
