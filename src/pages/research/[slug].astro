@@ -28,9 +28,14 @@ const explainer = paper.explainer;
         {(Array.isArray(section.body) ? section.body : [section.body]).map(paragraph => <p>{paragraph}</p>)}
       </section>
     ))}
-    <details class="study-scope">
-      <summary>About the study</summary>
-      <p>{explainer.method}</p>
+    <details class="study-scope" id="about-study">
+      <summary><h2>About the study</h2></summary>
+      {explainer.method.map(section => (
+        <section class="study-section">
+          <h3>{section.heading}</h3>
+          <p>{section.body}</p>
+        </section>
+      ))}
     </details>
     <section class="original-paper" aria-labelledby="original-title">
       <h2 id="original-title">The paper</h2>
