@@ -3,6 +3,7 @@ import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Arrow from '../../components/Arrow.astro';
 import ServiceChoices from '../../components/ServiceChoices.astro';
+import CircularPathway from '../../components/CircularPathway.astro';
 import papers from '../../data/papers.json';
 import '../../styles/research.css';
 import '../../styles/paper.css';
@@ -23,10 +24,13 @@ const explainer = paper.explainer;
   <p class="paper-meta">{paper.venue}</p>
   <article>
     {explainer.sections.map(section => 'interactive' in section && section.interactive === 'service-choices' ? <ServiceChoices /> : (
+      <Fragment>
       <section class:list={['essay-section', { 'example-note': 'kind' in section && section.kind === 'example' }]}>
         <h2>{section.heading}</h2>
         {(Array.isArray(section.body) ? section.body : [section.body]).map(paragraph => <p>{paragraph}</p>)}
       </section>
+      {'figure' in section && section.figure === 'circular-pathway' && <CircularPathway />}
+      </Fragment>
     ))}
     <details class="study-scope" id="about-study">
       <summary><h2>About the study</h2></summary>
