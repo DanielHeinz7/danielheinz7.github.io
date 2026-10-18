@@ -1,0 +1,9 @@
+---
+import variants from '../data/image-variants.json';
+interface Props { file: string; alt: string; sizes: string; loading?: 'lazy' | 'eager'; }
+const { file, alt, sizes, loading = 'lazy' } = Astro.props;
+const image = variants[file as keyof typeof variants];
+if (!image) throw new Error(`No image variants for ${file}`);
+const fallback = image.sources.find(source => source.width === 640) ?? image.sources[image.sources.length - 1];
+---
+<img src={fallback.src} srcset={image.sources.map(source => `${source.src} ${source.width}w`).join(', ')} sizes={sizes} alt={alt} width={image.width} height={image.height} loading={loading} decoding="async" />

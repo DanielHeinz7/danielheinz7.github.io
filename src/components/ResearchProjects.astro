@@ -1,0 +1,19 @@
+---
+import projects from '../data/projects.json';
+---
+<div class="funded-projects">
+  {projects.map(project => (
+    <article class="funded-project" id={project.id}>
+      <h3><a href={project.url}>{project.name}</a></h3>
+      <p class="project-question">{project.question}</p>
+      <p class="project-context">{project.period} · {project.funding}</p>
+      <p class="project-role">{project.role}</p>
+    </article>
+  ))}
+</div>
+<style>
+  .funded-project { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--rule); max-width: 65ch; }
+  .funded-project h3 { font-size: 16px; }
+  .funded-project p { margin-top: 8px; }
+  .project-context { color: var(--mute); }
+</style>

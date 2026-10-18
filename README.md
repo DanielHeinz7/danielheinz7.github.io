@@ -57,6 +57,19 @@ Use title case for formal paper titles in `src/data/cv-publications.json` and `s
 
 To regenerate the CV, install `scripts/requirements-pdf.txt` in a Python environment, then run `npm run build:cv`. Review every page of the resulting `public/files/daniel-heinz-cv.pdf` before committing it. Check journal-list completeness against the master CV and verify current citation metadata before adding records. The PDF uses only public profile information.
 
+The complete CV is also available at `/cv/` as semantic HTML. Both formats use the same public profile, publication, project, and doctoral-research data. Keep the HTML version complete when extending the PDF.
+
+## Web assets
+
+The web uses responsive WebP images and WOFF2 fonts. Source images and TTF fonts remain unchanged. Regenerate the variants in a Python environment with `scripts/requirements-assets.txt` installed:
+
+```sh
+python scripts/build-image-variants.py
+python scripts/build-font-variants.py
+```
+
+The image script also updates `src/data/image-variants.json`, consumed by the portrait and paper-image components. It converts the portrait’s embedded color profile to sRGB and uses lossless compression for paper pages. Review the result in the browser, including on mobile, when changing source images or display sizes.
+
 ## Release
 
 The GitHub Pages workflow is manual only. A release requires the finished source on the repository's release branch, GitHub Pages configured to use Actions, and an explicit run of **Publish website**. The workflow checks and builds the static output before deployment. Its structure follows the [Astro GitHub Pages guide](https://docs.astro.build/en/guides/deploy/github/).

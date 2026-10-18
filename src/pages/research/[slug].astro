@@ -2,6 +2,7 @@
 import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Arrow from '../../components/Arrow.astro';
+import PaperImage from '../../components/PaperImage.astro';
 import ServiceChoices from '../../components/ServiceChoices.astro';
 import CircularPathway from '../../components/CircularPathway.astro';
 import papers from '../../data/papers.json';
@@ -45,7 +46,7 @@ const explainer = paper.explainer;
       <h2 id="original-title">The paper</h2>
       <div class="original-body">
         <a class="paper-sheet" href={paper.url} aria-label={`Read ${paper.title}`}>
-          <img src={`/images/papers/${paper.image}`} alt={`First page of ${paper.title}`} width="750" height="1000" loading="lazy" />
+          <PaperImage file={paper.image} alt={`First page of ${paper.title}`} sizes="(max-width: 380px) 64px, (max-width: 1150px) 88px, 120px" />
         </a>
         <div class="paper-citation">
           <h3><a href={paper.url}>{paper.title}</a></h3>
@@ -56,6 +57,7 @@ const explainer = paper.explainer;
         </div>
       </div>
     </section>
+    {paper.slug === 'ai-coaching' && <p class="return-link"><a class="text-link" href="/tools/#innocompass">InnoCompass in use <Arrow /></a></p>}
   </article>
   <footer><span>Daniel Heinz · Karlsruhe</span><a href="/privacy/">Privacy</a><a href="#content">Back to top <Arrow /></a></footer>
 </SiteLayout>

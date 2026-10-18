@@ -1,6 +1,7 @@
 .glance-page h1{max-width:22ch}
 .glance-page .lede{max-width:48ch}
 .glance-page .cv-link{margin-top:24px}
+.cv-options{display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px;margin-top:24px}
 .glance-section{margin-top:40px;padding-top:16px;border-top:1px solid var(--rule)}
 .glance-section h2{font-size:20px;line-height:1.35}
 .glance-section p{margin-top:16px;max-width:65ch}
