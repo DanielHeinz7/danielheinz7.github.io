@@ -11,6 +11,16 @@
     "question": "Which parts of a job should people keep practicing, even when AI can do them faster?"
   },
   {
+    "id": "understanding-our-thinking",
+    "label": "Metacognition",
+    "title": "How do we know what we understand?",
+    "paragraphs": [
+      "Imagine reading an explanation that makes sense, then trying to use it in a different situation. A new question comes up. Working through it might help you see which parts you understand and what you want to explore further.",
+      "This awareness of our own thinking is part of metacognition. I’m interested in how it develops when we work with AI. A conversation might help us recognize what we already know, or find a useful way into something unfamiliar."
+    ],
+    "question": "What helps us recognize when we understand enough to move on, and when another question would be useful?"
+  },
+  {
     "id": "thinking-with-ai",
     "label": "Thinking with AI",
     "title": "How can AI leave room for doubt?",
