@@ -16,6 +16,6 @@ export const navigation = [
   { label: 'Lab', href: '/lab/' },
   { label: 'Tools in use', href: '/tools/' },
   { label: 'Teaching', href: '/teaching/' },
-  { label: 'Research at a glance', href: '/at-a-glance/' },
+  { label: 'At a glance', href: '/at-a-glance/' },
   { label: 'Ideas', href: '/ideas/' },
 ];
