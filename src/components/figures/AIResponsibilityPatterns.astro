@@ -1,0 +1,15 @@
+---
+import FigureFrame from './FigureFrame.astro';
+---
+<FigureFrame id="ai-responsibility-patterns" title="Who carries the use case forward?" intro="Primary responsibility can stay in one team or move as an AI project enters production.">
+  <table class="sharing-table">
+    <thead><tr><th scope="col">Arrangement</th><th scope="col">During the pilot</th><th scope="col">In production</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Business-led</th><td><span class="mobile-table-label">Pilot: </span>Business function leads</td><td><span class="mobile-table-label">Production: </span>Business function keeps the lead</td></tr>
+      <tr><th scope="row">Handover</th><td><span class="mobile-table-label">Pilot: </span>Technical team leads</td><td><span class="mobile-table-label">Production: </span>Business function takes the lead</td></tr>
+      <tr><th scope="row">Technology-led</th><td><span class="mobile-table-label">Pilot: </span>Technical team leads</td><td><span class="mobile-table-label">Production: </span>Technical team keeps the lead</td></tr>
+    </tbody>
+  </table>
+  <p class="figure-reading">Technical and business teams can contribute in every arrangement. The question is who carries primary responsibility for the use case.</p>
+  <Fragment slot="caption">Simplified explanation of the responsibility patterns in <a href="https://doi.org/10.5445/IR/1000197565">Hendriks et al. (2026)</a>, Figure 2 and the case examples. The paper calls these domain-driven, handover, and tech-driven patterns. These are alternative arrangements, not steps in a maturity model or a ranking of performance.</Fragment>
+</FigureFrame>

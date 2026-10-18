@@ -1,0 +1,20 @@
+---
+import FigureFrame from './FigureFrame.astro';
+---
+<FigureFrame id="startup-agency-configurations" title="AI takes different roles in a venture" intro="The task changes how much initiative founders give an assistant.">
+  <dl class="agency-configurations">
+    <div><dt>Getting oriented</dt><dd>The founder directs the inquiry. AI retrieves information, explains unfamiliar subjects, or offers feedback.</dd></div>
+    <div><dt>Creating together</dt><dd>The founder and AI shape an idea or prototype through repeated suggestions and revisions.</dd></div>
+    <div><dt>Routine work</dt><dd>The founder specifies a bounded task, such as proofreading. AI carries it out with little discretion.</dd></div>
+    <div class="agency-aspiration"><dt>Coordinating across tools</dt><dd><strong>Mostly envisioned.</strong> The founder would set goals and limits; AI would initiate actions across tools and channels.</dd></div>
+  </dl>
+  <p class="figure-reading">In the interviews, founders remained cautious about allowing assistants to contact customers or partners directly.</p>
+  <Fragment slot="caption">Task arrangements explained from Section 4.3 and the task matrix in Figure 2 of <a href="https://aisel.aisnet.org/ecis2026/is_adopt/is_adopt/20/">Liebschner et al. (2026)</a>. Labels and layout are simplified. These are interview accounts and expectations, not measured levels of autonomy or demonstrated effects.</Fragment>
+</FigureFrame>
+
+<style>
+  .agency-configurations > div { display: grid; grid-template-columns: 1fr 2fr; gap: 24px; padding: 20px 0; border-top: 1px solid var(--rule); }
+  .agency-configurations dd { margin: 0; }
+  .agency-configurations .agency-aspiration { padding: 20px 16px; background: var(--wash); }
+  @container (max-width: 540px) { .agency-configurations > div { grid-template-columns: minmax(0,1fr); gap: 8px; } }
+</style>
