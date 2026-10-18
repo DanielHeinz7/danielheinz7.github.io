@@ -1,6 +1,6 @@
 # Daniel Heinz's website
 
-Personal academic website at https://danielheinz7.github.io, built with Astro as a static site.
+Personal academic website at https://daniel-heinz.de, built with Astro as a static site and hosted on GitHub Pages.
 
 ## Local development
 
@@ -85,7 +85,7 @@ For an update:
 
 For a rollback, revert the faulty update in a new commit on `master`; the verified deployment workflow publishes the corrected tree. Keep history intact and avoid force-pushing a deployed branch.
 
-The canonical site URL uses the repository’s existing GitHub Pages address. If a custom domain is added later, update `site` in `astro.config.mjs` and add the corresponding `public/CNAME` as part of that release.
+The canonical address is `https://daniel-heinz.de`. Set the custom domain in the repository’s GitHub Pages settings and maintain its DNS records at IONOS. This workflow deployment does not use a `CNAME` file. Keep `site` in `astro.config.mjs` and the online-CV link in `scripts/build-public-cv.py` consistent with the Pages setting. After a domain change, rebuild the PDF and check HTTPS, redirects, and analytics on the live site.
 
 ## Monthly upkeep
 
