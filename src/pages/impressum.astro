@@ -1,0 +1,32 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import OperatorAddress from '../components/OperatorAddress.astro';
+import Arrow from '../components/Arrow.astro';
+import '../styles/legal.css';
+---
+<SiteLayout title="Impressum / Legal notice" description="Operator, contact address, and content responsibility for Daniel Heinz’s personal academic website.">
+  <nav class="page-nav" aria-label="Back to home"><a href="/"><Arrow /> Home</a></nav>
+  <PageHeader title="Impressum" intro="Legal notice for this personal academic website." />
+  <div class="legal-copy">
+    <section>
+      <h2>Website operator</h2>
+      <OperatorAddress />
+      <p>I operate this website in my own name. My affiliation and correspondence address are at KIT; this website is not an official KIT publication.</p>
+    </section>
+    <section>
+      <h2>Responsibility for content</h2>
+      <p>Responsible for the editorial content under Section 18(2) of the German State Media Treaty (MStV): Dr. Daniel Heinz, at the address above.</p>
+    </section>
+    <section>
+      <h2>Images and other materials</h2>
+      <p>Publication previews carry credits and links to their source articles. Further sources and license information for portraits, screenshots, fonts, and icons are listed in the <a href="/ASSET-SOURCES.md">asset credits</a>.</p>
+    </section>
+    <section>
+      <h2>Privacy</h2>
+      <p>The <a href="/privacy/">privacy notice</a> explains hosting, visitor statistics, and your data protection rights.</p>
+    </section>
+  </div>
+  <SiteFooter />
+</SiteLayout>
