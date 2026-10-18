@@ -22,6 +22,16 @@
     "question": "What is the smallest amount of structure that helps people think together and take responsibility for a claim?"
   },
   {
+    "id": "finding-design-knowledge",
+    "label": "Finding design knowledge",
+    "title": "What can another field teach us about design?",
+    "paragraphs": [
+      "Suppose you’re designing a digital service and find a useful study in another field. It explains why a feature helped people in that setting, but offers no guidance for building your own system. What can you carry across?",
+      "I’m interested in how AI could help researchers find design knowledge in studies that never set out to formulate design principles. The difficult part is deciding what a finding justifies. A recommendation may depend on who used a system or the conditions under which it was tested. I want to understand how tools can help us examine those limits when we draw on research from other fields."
+    ],
+    "question": "How can we turn research findings into useful design guidance while keeping the limits of the evidence visible?"
+  },
+  {
     "id": "cooperation-between-firms",
     "label": "Cooperation between firms",
     "title": "What makes cooperation between agents worthwhile?",
