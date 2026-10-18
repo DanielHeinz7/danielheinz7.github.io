@@ -48,5 +48,17 @@ for (const [file, html] of cache) {
     }
   }
 }
+// Every publication actually offered in the CV must have a click label.
+const cvHtml = cache.get(path.join(root, 'cv/index.html')) || '';
+const analyticsJson = cvHtml.match(/<script[^>]*id="site-analytics"[^>]*>([\s\S]*?)<\/script>/)?.[1];
+if (!analyticsJson) {
+  errors.push('cv/index.html: missing analytics configuration');
+} else {
+  const analytics = JSON.parse(analyticsJson);
+  const publications = JSON.parse(await readFile('src/data/cv-publications.json', 'utf8'));
+  for (const paper of [...publications.journal_articles, ...publications.selected_conference_papers]) {
+    if (!analytics.links[new URL(paper.url).href]) errors.push(`cv/index.html: publication click is not counted: ${paper.url}`);
+  }
+}
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log(`Checked ${pages.length} pages: local links, responsive images, downloads, metadata, sitemap coverage, and private-path exclusions passed.`);
