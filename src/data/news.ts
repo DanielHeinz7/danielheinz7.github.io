@@ -42,6 +42,12 @@ export const news: NewsItem[] = [
     link: { href: 'https://publikationen.bibliothek.kit.edu/1000191287', label: 'Dissertation record' },
   },
   {
+    date: '2025-09',
+    label: 'Sep 2025',
+    text: 'Ida Meier joined the lab as a research associate, focusing on how organizations adopt AI.',
+    link: { href: 'https://dsi.win.kit.edu/team_1232.php', label: 'Ida’s research' },
+  },
+  {
     date: '2025-07-08',
     label: 'Jul 2025',
     text: 'Our Electronic Markets paper introduces a framework for how people and AI work together in service ecosystems.',
@@ -54,10 +60,33 @@ export const news: NewsItem[] = [
     link: { href: '/research/data-selection/', label: 'Explore the idea' },
   },
   {
+    date: '2024-10',
+    label: 'Oct 2024',
+    text: 'I joined the teaching team for Digital Services at HECTOR School, working with business professionals on digital service innovation.',
+    link: { href: '/teaching/#executive-education', label: 'Executive education' },
+  },
+  {
     date: '2024-09-26',
     label: 'Sep 2024',
     text: 'Our Electronic Markets paper offers a taxonomy for comparing how organizations share data and what they aim to achieve.',
     link: { href: '/research/data-sharing/', label: 'Explore the idea' },
+  },
+  {
+    date: '2024-04',
+    label: 'Apr 2024',
+    text: 'Jonas Liebschner and Linda Sagnier Eckert joined the Digital Service Design & Innovation Lab as research associates.',
+    link: { href: '/lab/', label: 'About the lab' },
+  },
+  {
+    date: '2024-03',
+    label: 'Mar 2024',
+    text: 'I became head of the Digital Service Design & Innovation Lab at KIT.',
+    link: { href: '/lab/', label: 'About the lab' },
+  },
+  {
+    date: '2024-03',
+    label: 'Mar 2024',
+    text: 'I was a visiting researcher at the University of Cambridge, hosted by Veronica Martinez.',
   },
   {
     date: '2024-02-13',
@@ -66,9 +95,43 @@ export const news: NewsItem[] = [
     link: { href: 'https://doi.org/10.1007/s12525-024-00692-5', label: 'Read the paper' },
   },
   {
+    date: '2023-09',
+    label: 'Sep 2023',
+    text: 'Our paper on digital service innovation for sustainable development was nominated for the Best Paper Award at WI 2023.',
+    link: { href: 'https://aisel.aisnet.org/wi2023/75/', label: 'Read the paper' },
+  },
+  {
+    date: '2023',
+    label: 'Summer 2023',
+    text: 'I co-developed and began co-teaching Digital Services: Innovation & Business Models at KIT, combining recorded lectures with live case discussions.',
+    link: { href: '/teaching/#digital-services', label: 'About the course' },
+  },
+  {
+    date: '2022-10',
+    label: 'Oct 2022',
+    text: 'I began a research stay at The University of Queensland, working with Christoph F. Breidbach on smart service innovation.',
+  },
+  {
+    date: '2022-02',
+    label: 'Feb 2022',
+    text: 'Our paper on smart service systems was first runner-up for the Best Paper Award at WI 2022.',
+    link: { href: 'https://doi.org/10.5445/IR/1000140996', label: 'Read the paper' },
+  },
+  {
     date: '2021-10-27',
     label: 'Oct 2021',
     text: 'Our Electronic Markets paper examines how different types of analytics-based services create value for customers.',
     link: { href: 'https://doi.org/10.1007/s12525-021-00506-y', label: 'Read the paper' },
+  },
+  {
+    date: '2021-05',
+    label: 'May 2021',
+    text: 'I began my doctoral research as a research associate in KIT’s Digital Service Innovation group, studying smart service innovation in incumbent firms.',
+    link: { href: '/at-a-glance/', label: 'Research background' },
+  },
+  {
+    date: '2020',
+    label: 'Winter 2020/21',
+    text: 'I began teaching exercise sessions for KIT’s master’s course Digital Services: Business Models and Transformation.',
   },
 ];
