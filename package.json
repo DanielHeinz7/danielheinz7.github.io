@@ -11,6 +11,7 @@
     "check": "astro check",
     "check:site": "node scripts/check-site.mjs",
     "check:analytics": "node --test scripts/analytics.test.mjs",
+    "verify": "npm run check && npm run check:analytics && npm run build && npm run check:site",
     "build:cv": "python3 scripts/build-public-cv.py"
   },
   "engines": {

@@ -28,6 +28,7 @@ const olderNews = news.slice(4);
         <a class="text-link" href="/research/legacy-systems/">Explore the idea <Arrow /></a>
       </div>
     </div>
+    <p class="sample-credit">Paper preview: © Association for Information Technology Trust 2026 · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
   </section>
   <nav class="tiles" aria-label="Explore the site">
     {navigation.map(({ href, label }) => <a class="tile" href={href}><span class="tile-title">{label}<Arrow /></span></a>)}
@@ -53,6 +54,7 @@ const olderNews = news.slice(4);
 </SiteLayout>
 
 <style>
+  .sample-credit { margin-top: 16px; font-size: 12px; line-height: 1.5; color: var(--mute); }
   .ideas-preview { margin-top: 40px; }
   .ideas-preview > p { margin-top: 16px; max-width: 60ch; }
   .news-archive > summary { display: flex; align-items: center; gap: 12px; min-height: 44px; width: fit-content; margin-top: 8px; padding: 8px 0; list-style: none; cursor: pointer; font-weight: 700; }

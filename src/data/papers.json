@@ -53,7 +53,12 @@
         }
       ]
     },
-    "slug": "legacy-systems"
+    "slug": "legacy-systems",
+    "image_source": {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "label": "Paper preview · CC BY 4.0",
+      "credit": "© Association for Information Technology Trust 2026"
+    }
   },
   {
     "id": "smart-services",
@@ -103,7 +108,12 @@
         }
       ]
     },
-    "slug": "smart-services"
+    "slug": "smart-services",
+    "image_source": {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "label": "Paper preview · CC BY 4.0",
+      "credit": "© The authors 2026"
+    }
   },
   {
     "id": "circular-industry",
@@ -162,7 +172,7 @@
     "image_source": {
       "url": "https://publikationen.bibliothek.kit.edu/1000190352",
       "label": "Accepted manuscript · KITopen",
-      "credit": "© 2026 Association for Information Systems"
+      "credit": "© 2026 Association for Information Systems · Noncommercial use only"
     }
   },
   {
@@ -215,7 +225,12 @@
         }
       ]
     },
-    "slug": "human-ai-work"
+    "slug": "human-ai-work",
+    "image_source": {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "label": "Paper preview · CC BY 4.0",
+      "credit": "© The authors 2025"
+    }
   },
   {
     "id": "data-ecosystems",
@@ -267,7 +282,12 @@
         }
       ]
     },
-    "slug": "data-sharing"
+    "slug": "data-sharing",
+    "image_source": {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "label": "Paper preview · CC BY 4.0",
+      "credit": "© The authors 2024"
+    }
   },
   {
     "id": "data-selection",
@@ -382,6 +402,11 @@
         }
       ]
     },
-    "slug": "ai-coaching"
+    "slug": "ai-coaching",
+    "image_source": {
+      "url": "https://doi.org/10.1007/978-3-032-28313-9_2",
+      "label": "Author manuscript · Published version",
+      "credit": "© The authors 2026, under exclusive license to Springer Nature Switzerland AG"
+    }
   }
 ]

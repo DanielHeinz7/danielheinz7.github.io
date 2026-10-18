@@ -4,7 +4,7 @@ Personal academic website at https://danielheinz7.github.io, built with Astro as
 
 ## Local development
 
-Requires Node.js 22.22 or later (an even-numbered release).
+Use Node.js 24, as recorded in `.node-version` and used by CI.
 
 ```sh
 npm ci
@@ -14,8 +14,7 @@ npm run dev
 The development server listens on localhost. Before sharing a build:
 
 ```sh
-npm run check
-npm run build
+npm run verify
 npm run preview
 ```
 
@@ -37,7 +36,7 @@ Local development and builds do not publish the site.
 
 Research summaries and paper explainers share `src/data/papers.json`. The overview and CV use `src/data/profile.json`. The CV publication record lives in `src/data/cv-publications.json`: all published or accepted journal articles, followed by selected conference papers. Keep it complete independently of the website explainer selection and label accepted work that is not yet published. Keep descriptions grounded in published work and current institutional information. Only public material belongs in `src/` and `public/`.
 
-After changes, run `npm run check`, `npm run build`, and `npm run check:site`. The last command checks generated routes, local links and fragments, downloads, metadata, and accidental local paths. It does not replace reading the pages at desktop and mobile widths.
+After changes, run `npm run verify`. It checks Astro types, analytics behavior, the build, and the generated site. The site check covers routes, local links and fragments, downloads, metadata, and accidental local paths. Read the changed pages at desktop and mobile widths as well.
 
 ## Analytics
 
@@ -72,6 +71,24 @@ The image script also updates `src/data/image-variants.json`, consumed by the po
 
 ## Release
 
-The GitHub Pages workflow is manual only. A release requires the finished source on the repository's release branch, GitHub Pages configured to use Actions, and an explicit run of **Publish website**. The workflow checks and builds the static output before deployment. Its structure follows the [Astro GitHub Pages guide](https://docs.astro.build/en/guides/deploy/github/).
+`master` is the publishing branch. Pull requests to `master` run **Verify website** with the committed npm lockfile. After a merge or push to `master`, the same workflow verifies the source, uploads only `dist/`, and deploys that artifact to GitHub Pages. A failed check prevents deployment. Manual workflow runs publish only when run from `master`.
 
-The canonical site URL currently uses the repository's existing GitHub Pages address. When the custom domain is connected, update `site` in `astro.config.mjs` and add the corresponding `public/CNAME` as part of that release.
+GitHub Pages must use **GitHub Actions** as its build source. The deployment uses GitHub’s built-in token and OIDC permissions; no personal access token or local hook is required. See the [GitHub Pages workflow guide](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+
+For an update:
+
+1. Create a branch from the current `master` and edit the public source. Check dates, publication status, roles, and asset permissions against their sources.
+2. If profile, projects, advising, or publication data changes, regenerate the PDF CV and inspect every page. Keep the HTML and PDF versions consistent.
+3. Run `npm run verify`, inspect the changed pages in the browser, and commit all required source and asset changes.
+4. Push the branch and open a pull request to `master`. Review the diff and wait for **Verify website** to pass before merging.
+5. Confirm that **Publish website** succeeds, then open the live changed pages and check relevant links or downloads. The first release also needs a real visit confirmed in the private analytics dashboard.
+
+For a rollback, revert the faulty update in a new commit on `master`; the verified deployment workflow publishes the corrected tree. Keep history intact and avoid force-pushing a deployed branch.
+
+The canonical site URL uses the repository’s existing GitHub Pages address. If a custom domain is added later, update `site` in `astro.config.mjs` and add the corresponding `public/CNAME` as part of that release.
+
+## Monthly upkeep
+
+During the monthly review, compare the last website update with confirmed publication, teaching, role, project, and tool milestones. Suggest only changes with a source and a date. Group useful changes into one update; an uneventful month needs no commit. Keep private notes and unpublished project details outside this repository.
+
+The monthly review proposes content changes. The update process above handles verification and publication. There is no scheduled scraper or unattended content rewrite.

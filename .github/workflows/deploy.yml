@@ -1,27 +1,42 @@
-name: Publish website
+name: Website
 on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: website-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   build:
+    name: Verify website
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
-      - name: Check, build, and upload
-        uses: withastro/action@v6
+      - uses: actions/setup-node@v7
         with:
-          node-version: 24
-          package-manager: npm
-          build-cmd: npm run check && npm run check:analytics && npm run build && npm run check:site
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run verify
+      - name: Upload verified site
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
   deploy:
+    name: Publish website
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
