@@ -29,6 +29,10 @@ import { news } from '../data/news';
     {navigation.map(({ href, label }) => <a class="tile" href={href}><span class="tile-title">{label}<Arrow /></span></a>)}
   </nav>
   <a class="glance text-link" href="/at-a-glance/">Research at a glance <Arrow /></a>
+  <section class="ideas-preview" aria-labelledby="ideas-title">
+    <header class="section-head"><h2 id="ideas-title"><a class="text-link" href="/ideas/">Ideas <Arrow /></a></h2></header>
+    <p>Questions I’m working through about human judgment, research with AI, and the organizations we build around it.</p>
+  </section>
   <section class="news" id="news" aria-labelledby="news-title">
     <h2 id="news-title">News</h2>
     {news.map(item => <div class="news-row">
@@ -38,3 +42,8 @@ import { news } from '../data/news';
   </section>
   <SiteFooter />
 </SiteLayout>
+
+<style>
+  .ideas-preview { margin-top: 40px; }
+  .ideas-preview > p { margin-top: 16px; max-width: 60ch; }
+</style>
