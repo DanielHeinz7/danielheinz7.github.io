@@ -45,6 +45,7 @@
   display: block;
   border: 1px solid var(--rule);
   background: #fff;
+  cursor: zoom-in;
 }
 
 .tool-figure img {

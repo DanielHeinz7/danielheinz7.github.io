@@ -1,0 +1,18 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  label: string;
+}
+
+const { src, alt, width, height, label } = Astro.props;
+---
+
+<figure class="tool-figure">
+  <a href={src} aria-label={`Open the ${label} screenshot at full size`}>
+    <img {src} {alt} {width} {height} loading="lazy" decoding="async" />
+  </a>
+  <figcaption><slot /></figcaption>
+</figure>
