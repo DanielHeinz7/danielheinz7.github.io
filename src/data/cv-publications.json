@@ -1,0 +1,122 @@
+{
+  "journal_articles": [
+    {
+      "title": "A mechanism-based theory of legacy enterprise information system reconfiguration in incumbent firms",
+      "full_authors": "Daniel Heinz & Christoph F. Breidbach",
+      "year": 2026,
+      "venue": "Journal of Information Technology",
+      "volume": "41",
+      "issue": "3",
+      "pages": "221–249",
+      "article_number": null,
+      "url": "https://doi.org/10.1177/02683962261461296",
+      "status": "published"
+    },
+    {
+      "title": "Smart services in B2B contexts: A taxonomy and archetypes",
+      "full_authors": "Daniel Heinz, Marcel Fassnacht, Carina Benz, Philipp Luchner & Gerhard Satzger",
+      "year": 2026,
+      "venue": "Information & Management",
+      "volume": "63",
+      "issue": "7",
+      "pages": null,
+      "article_number": "104390",
+      "url": "https://doi.org/10.1016/j.im.2026.104390",
+      "status": "published"
+    },
+    {
+      "title": "Backcasting the Future of the Automotive Industry: Leveraging Digital Technologies for the Circular Economy",
+      "full_authors": "Linda Sagnier Eckert, Ann-Sophie Finner, Daniel Heinz & Gerhard Satzger",
+      "year": 2026,
+      "venue": "Communications of the Association for Information Systems",
+      "volume": "58",
+      "issue": "1",
+      "pages": "878–912",
+      "article_number": null,
+      "url": "https://doi.org/10.17705/1CAIS.05835",
+      "status": "in press"
+    },
+    {
+      "title": "Selecting Data Assets in Data Marketplaces: Leveraging Machine Learning and Explainable AI for Value Quantification",
+      "full_authors": "Dominik Martin, Daniel Heinz, Moritz Glauner & Niklas Kühl",
+      "year": 2026,
+      "venue": "Business & Information Systems Engineering",
+      "volume": "68",
+      "issue": "3",
+      "pages": "523–558",
+      "article_number": null,
+      "url": "https://doi.org/10.1007/s12599-025-00940-8",
+      "status": "published"
+    },
+    {
+      "title": "Conceptualizing hybrid intelligent service ecosystems",
+      "full_authors": "Christian Bartelheimer, Daniel Heinz, Sarah Hönigsberg, Dominik Siemon, Mahei Manhai Li, Timo Strohmann, Jens Poeppelbuss & Christoph Peters",
+      "year": 2025,
+      "venue": "Electronic Markets",
+      "volume": "35",
+      "issue": "1",
+      "pages": null,
+      "article_number": "63",
+      "url": "https://doi.org/10.1007/s12525-025-00798-4",
+      "status": "published"
+    },
+    {
+      "title": "Unlocking the value from car data: A taxonomy and archetypes of connected car business models",
+      "full_authors": "Felix Sterk, Alexander Stocker, Daniel Heinz & Christof Weinhardt",
+      "year": 2024,
+      "venue": "Electronic Markets",
+      "volume": "34",
+      "issue": "1",
+      "pages": null,
+      "article_number": "13",
+      "url": "https://doi.org/10.1007/s12525-024-00692-5",
+      "status": "published"
+    },
+    {
+      "title": "Data sharing practices: The interplay of data, organizational structures, and network dynamics",
+      "full_authors": "Marcel Fassnacht, Jannis Leimstoll, Carina Benz, Daniel Heinz & Gerhard Satzger",
+      "year": 2024,
+      "venue": "Electronic Markets",
+      "volume": "34",
+      "issue": "1",
+      "pages": null,
+      "article_number": "47",
+      "url": "https://doi.org/10.1007/s12525-024-00732-0",
+      "status": "published"
+    },
+    {
+      "title": "Creating customer value from data: foundations and archetypes of analytics-based services",
+      "full_authors": "Fabian Hunke, Daniel Heinz & Gerhard Satzger",
+      "year": 2022,
+      "venue": "Electronic Markets",
+      "volume": "32",
+      "issue": "2",
+      "pages": "503–521",
+      "article_number": null,
+      "url": "https://doi.org/10.1007/s12525-021-00506-y",
+      "status": "published"
+    },
+    {
+      "title": "Exploring the Potential of Smart Service Systems: A Multi-Actor View on Affordances and Their Actualization",
+      "full_authors": "Daniel Heinz, Carina Benz, Jan Bode, Fabian Hunke & Gerhard Satzger",
+      "year": 2022,
+      "venue": "Journal of Service Management Research",
+      "volume": "6",
+      "issue": "2",
+      "pages": "132–146",
+      "article_number": null,
+      "url": "https://doi.org/10.5771/2511-8676-2022-2-132",
+      "status": "published"
+    }
+  ],
+  "selected_conference_papers": [
+    {
+      "title": "Designing AI-Based Entrepreneurial Coaching Systems",
+      "full_authors": "Jonas Liebschner, Daniel Heinz, and Gerhard Satzger",
+      "url": "https://doi.org/10.1007/978-3-032-28313-9_2",
+      "year": 2026,
+      "venue": "DESRIST",
+      "status": "published"
+    }
+  ]
+}

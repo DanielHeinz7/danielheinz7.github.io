@@ -1,4 +1,4 @@
-"""Generate the website CV from the site's public profile and selected papers."""
+"""Generate the website CV from its public profile and publication record."""
 from pathlib import Path
 from html import escape
 import json
@@ -8,11 +8,11 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, KeepTogether
+from reportlab.platypus import SimpleDocTemplate, Paragraph, PageBreak, KeepTogether
 
 root = Path(__file__).resolve().parents[1]
 profile = json.loads((root / 'src/data/profile.json').read_text())
-papers = json.loads((root / 'src/data/papers.json').read_text())
+publications = json.loads((root / 'src/data/cv-publications.json').read_text())
 for name, weight in [('Schibsted', '400'), ('SchibstedBold', '700')]:
     pdfmetrics.registerFont(TTFont(name, str(root / f'public/fonts/schibsted-{weight}.ttf')))
 pdfmetrics.registerFontFamily('Schibsted', normal='Schibsted', bold='SchibstedBold')
@@ -24,6 +24,7 @@ styles = {
     'body': ParagraphStyle('body', fontName='Schibsted', fontSize=10.5, leading=14.5, textColor=ink, spaceAfter=7),
     'small': ParagraphStyle('small', fontName='Schibsted', fontSize=9, leading=13, textColor=green, spaceAfter=7),
 }
+styles['publication'] = ParagraphStyle('publication', parent=styles['body'], spaceAfter=2)
 output = root / 'public/files/daniel-heinz-cv.pdf'
 output.parent.mkdir(parents=True, exist_ok=True)
 def p(text, style='body'):
@@ -32,13 +33,32 @@ def section(title):
     return p(escape(title), 'section')
 def item(row):
     return KeepTogether([p(f'<b>{escape(row["date"])} · {escape(row["title"])}</b><br/>{escape(row["place"])}' + (f'<br/>{escape(row["note"])}' if row.get('note') else ''))])
+def citation_details(paper):
+    details = paper['venue']
+    if paper.get('volume'):
+        details += ' ' + paper['volume']
+        if paper.get('issue'):
+            details += '(' + paper['issue'] + ')'
+    if paper.get('pages'):
+        details += ', ' + paper['pages']
+    elif paper.get('article_number'):
+        details += ', Article ' + paper['article_number']
+    details += ' · ' + str(paper['year'])
+    if paper['status'] != 'published':
+        details += ' · ' + paper['status'].capitalize()
+    return details
 flow = [p(profile['name'], 'name'), p(escape(profile['role'])+'<br/>'+escape(profile['institution'])), p('Curriculum vitae · '+profile['updated'], 'small'), p(f'<link href="mailto:{profile["email"]}">{profile["email"]}</link> · <link href="{profile["profileUrl"]}">Institutional profile</link>', 'small'), section('Research'), p(escape(profile['agenda'])), p(escape(profile['approach'])), section('Academic appointments')]
 flow.extend(item(row) for row in profile['appointments'])
 flow.append(section('Education'))
 flow.extend(item(row) for row in profile['education'])
-flow.extend([p(escape(profile['visits'])), section('Academic service'), p('<br/>'.join(escape(row) for row in profile['service'])), section('Volunteering'), p(escape(profile['outsideWork'])), PageBreak(), section('Selected publications')])
-for paper in papers:
-    flow.append(KeepTogether([p('<b>'+escape(paper['title'])+'</b><br/>'+escape(paper['full_authors'])+'<br/>'+escape(paper['venue'])),p(f'<link href="{paper["url"]}">{paper["url"]}</link>', 'small'),Spacer(1, 5)]))
+flow.extend([p(escape(profile['visits'])), section('Academic service'), p('<br/>'.join(escape(row) for row in profile['service'])), section('Volunteering'), p(escape(profile['outsideWork'])), PageBreak()])
+for heading, papers in [('Journal articles', publications['journal_articles']), ('Selected conference papers', publications['selected_conference_papers'])]:
+    if papers:
+        if heading == 'Selected conference papers':
+            flow.append(PageBreak())
+        flow.append(section(heading))
+        for paper in papers:
+            flow.append(KeepTogether([p('<b>'+escape(paper['title'])+'</b><br/>'+escape(paper['full_authors'])+'<br/>'+escape(citation_details(paper)), 'publication'),p(f'<link href="{paper["url"]}">{paper["url"]}</link>', 'small')]))
 flow.append(section('Teaching and advising'))
 for row in profile['teaching']:
     flow.append(p('<b>'+escape(row['title'])+'</b><br/>'+escape(row['context'])))
