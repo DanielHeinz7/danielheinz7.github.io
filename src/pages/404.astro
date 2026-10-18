@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Arrow from '../components/Arrow.astro';
 import { navigation } from '../data/site';
@@ -11,4 +12,5 @@ import { navigation } from '../data/site';
   <nav class="tiles" aria-label="Explore the site">
     {navigation.map(({ href, label }) => <a class="tile" href={href}><span class="tile-title">{label}<Arrow /></span></a>)}
   </nav>
+  <SiteFooter />
 </SiteLayout>

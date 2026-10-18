@@ -1,0 +1,7 @@
+.legal-copy { max-width: 65ch; }
+.legal-copy section { margin-top: 36px; }
+.legal-copy p, .legal-copy address { margin-top: 16px; }
+.legal-copy address { font-style: normal; }
+.legal-copy ul { margin: 16px 0 0; padding-left: 24px; }
+.legal-copy li + li { margin-top: 8px; }
+.legal-copy a { overflow-wrap: anywhere; }
