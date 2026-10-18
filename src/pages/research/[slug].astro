@@ -46,10 +46,10 @@ const explainer = paper.explainer;
     </details>
     <section class="original-paper" aria-labelledby="original-title">
       <h2 id="original-title">The paper</h2>
-      <div class="original-body">
-        <a class="paper-sheet" href={paper.url} aria-label={`Read ${paper.title}`}>
+      <div class:list={['original-body', { 'without-preview': !('image' in paper && paper.image) }]}>
+        {'image' in paper && paper.image && <a class="paper-sheet" href={paper.url} aria-label={`Read ${paper.title}`}>
           <PaperImage file={paper.image} alt={`First page of ${paper.title}`} sizes="(max-width: 380px) 64px, (max-width: 1150px) 88px, 120px" />
-        </a>
+        </a>}
         <div class="paper-citation">
           <h3><a href={paper.url}>{paper.title}</a></h3>
           <p class="authors">{paper.full_authors}</p>

@@ -17,14 +17,14 @@ const topics = papers.filter((paper, index) => papers.findIndex(item => item.top
   {papers.map(paper => (
     <section class="research-stream" id={paper.id} aria-labelledby={`${paper.id}-title`}>
       <h2 id={`${paper.id}-title`}>{paper.question}</h2>
-      <div class="stream-body">
+      <div class:list={['stream-body', { 'without-preview': !('image' in paper && paper.image) }]}>
         <div class="stream-idea">
           <p>{paper.idea}</p>
           <a class="idea-link text-link" href={`/research/${paper.slug}/`} aria-label={`Explore the idea: ${paper.question}`}>Explore the idea <Arrow /></a>
         </div>
-        <a class="paper-sheet" href={paper.url} aria-label={`Read ${paper.title}`}>
+        {'image' in paper && paper.image && <a class="paper-sheet" href={paper.url} aria-label={`Read ${paper.title}`}>
           <PaperImage file={paper.image} alt={`First page of ${paper.title}`} sizes="(max-width: 380px) 64px, (max-width: 850px) 88px, (max-width: 1150px) 160px, (max-width: 1500px) 230px, 310px" />
-        </a>
+        </a>}
         <div class="paper-citation">
           <h3><a href={paper.url}>{paper.title}</a></h3>
           <p class="authors">{paper.authors}</p>

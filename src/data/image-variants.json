@@ -158,5 +158,27 @@
         "width": 960
       }
     ]
+  },
+  "pilot-production-first-page.png": {
+    "width": 1237,
+    "height": 1600,
+    "sources": [
+      {
+        "src": "/images/responsive/pilot-production-first-page-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/responsive/pilot-production-first-page-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/images/responsive/pilot-production-first-page-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/responsive/pilot-production-first-page-960.webp",
+        "width": 960
+      }
+    ]
   }
 }

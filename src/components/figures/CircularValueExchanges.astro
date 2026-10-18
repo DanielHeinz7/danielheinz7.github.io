@@ -1,0 +1,47 @@
+---
+import FigureFrame from './FigureFrame.astro';
+import FlowArrow from './FlowArrow.astro';
+---
+<FigureFrame id="circular-value-exchanges" title="Two ways to pass a product on" intro="A service can handle the goods itself or connect the people who exchange them.">
+  <section class="exchange-option">
+    <h3>Through an intermediary</h3>
+    <div class="exchange-route">
+      <div class="exchange-actor">Current holder</div>
+      <div class="product-link"><span>Products</span><FlowArrow /></div>
+      <div class="exchange-actor exchange-service">Redistribution service</div>
+      <div class="product-link"><span>Products</span><FlowArrow /></div>
+      <div class="exchange-actor">Next user</div>
+    </div>
+    <p class="figure-footnote">The service receives and passes on the goods.</p>
+  </section>
+  <section class="exchange-option">
+    <h3>Direct exchange</h3>
+    <p class="matching-service">Matching service connects both sides</p>
+    <div class="matching-links" aria-hidden="true"></div>
+    <div class="direct-exchange">
+      <div class="exchange-actor">Current holder</div>
+      <div class="product-link"><span>Products</span><FlowArrow /></div>
+      <div class="exchange-actor">Next user</div>
+    </div>
+    <p class="figure-footnote">The service arranges the match; goods move directly between participants.</p>
+  </section>
+  <Fragment slot="caption">Two resource-redistribution patterns explained from Figure 3 in <a href="https://doi.org/10.5445/IR/1000183238">Sagnier Eckert et al. (2025)</a>, using simplified labels and layout. The arrows show product flows; the dashed connections show matchmaking. Supporting services and other value exchanges are omitted.</Fragment>
+</FigureFrame>
+
+<style>
+  .exchange-option + .exchange-option { border-top: 1px solid var(--rule); padding-top: 24px; margin-top: 24px; }
+  .exchange-option h3 { font-size: 16px; margin-bottom: 16px; }
+  .exchange-route { display: grid; grid-template-columns: minmax(0,1fr) 64px minmax(0,1fr) 64px minmax(0,1fr); gap: 8px; align-items: center; }
+  .exchange-actor { padding: 16px 8px; background: var(--wash); border: 1px solid var(--rule); text-align: center; }
+  .exchange-service, .matching-service { background: var(--cover); color: var(--cover-ink); }
+  .product-link { display: flex; flex-direction: column; align-items: center; font-size: 14px; }
+  .product-link :global(.flow-arrow) { transform: rotate(-90deg); }
+  .matching-service { padding: 16px; text-align: center; }
+  .matching-links { height: 24px; margin: 0 20%; border-left: 1px dashed var(--cover); border-right: 1px dashed var(--cover); }
+  .direct-exchange { display: grid; grid-template-columns: minmax(0,1fr) 64px minmax(0,1fr); gap: 8px; align-items: center; }
+  @container (max-width: 540px) {
+    .exchange-route { grid-template-columns: minmax(0,1fr); }
+    .exchange-route .product-link { flex-direction: row; justify-content: center; gap: 8px; }
+    .exchange-route .product-link :global(.flow-arrow) { transform: none; }
+  }
+</style>

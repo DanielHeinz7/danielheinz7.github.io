@@ -38,6 +38,7 @@
 .original-body .text-link{margin-top:20px}
 .original-body .paper-sheet{grid-area:auto}
 .original-body .paper-citation{grid-area:auto}
+.original-body.without-preview{grid-template-columns:minmax(0,1fr)}
 .paper-detail footer{margin-top:40px}
 .idea-link{margin-top:16px}
 @media(max-width:1150px) and (min-width:851px){.original-body{grid-template-columns:88px minmax(0,1fr);gap:20px}.comparison-panel dl{grid-template-columns:1fr;gap:4px}.comparison-panel dd+dt{margin-top:12px}}

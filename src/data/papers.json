@@ -176,6 +176,63 @@
     }
   },
   {
+    "id": "circular-value",
+    "topic": "Transforming firms",
+    "question": "Who makes reuse work?",
+    "idea": "Keeping products in use depends on how partners exchange resources and organize the work. The study maps recurring arrangements for making those connections.",
+    "title": "Actor-Value Constellations in Circular Ecosystems",
+    "authors": "Sagnier Eckert, Fassnacht, Heinz, Alamo Alonso & Satzger",
+    "full_authors": "Linda Sagnier Eckert, Marcel Fassnacht, Daniel Heinz, Sebastian Alamo Alonso, and Gerhard Satzger",
+    "venue": "WI · 2025",
+    "url": "https://doi.org/10.5445/IR/1000183238",
+    "slug": "circular-value",
+    "explainer": {
+      "headline": "A circular product needs a working network.",
+      "intro": "An unwanted product can be useful to someone else. Making that exchange work means finding partners, agreeing on their contributions, and deciding who coordinates the handover.",
+      "sections": [
+        {
+          "heading": "Follow what each partner contributes",
+          "body": "A circular business depends on exchanges between organizations. A manufacturer may contribute knowledge that helps a supplier change its materials. A service provider may connect an owner with the next user of a product. Mapping these contributions reveals how the arrangement works and what each participant receives in return."
+        },
+        {
+          "heading": "Different ways to organize the same ambition",
+          "body": "The study identifies recurring arrangements for developing circular products, making better use of existing resources, and recovering products or materials after use. The coordinating role can sit with a producer, a service provider, or a recovery specialist. One useful distinction is whether an intermediary receives and redistributes products itself or helps participants exchange them directly.",
+          "figure": "circular-value-exchanges"
+        },
+        {
+          "heading": "Giving office furniture another use",
+          "body": [
+            "Illustrative scenario: a firm has desks left over after an office move. It could hand them to a resale service that checks their condition, stores them, and finds another buyer. Alternatively, a platform could connect the firm directly with an organization that needs them.",
+            "Both arrangements aim to keep the desks in use, but they need different services. In the first, the intermediary handles the goods. In the second, the two organizations still need to agree on pickup and condition, while the platform provides the match. A useful design question is which work each participant is willing and able to take on."
+          ],
+          "kind": "example"
+        },
+        {
+          "heading": "Start with the exchanges",
+          "body": "Choose a circular offering and map who supplies the products, who performs the supporting work, and what each participant gains. Then check whether any contribution lacks a willing provider. This gives partners a practical starting point for discussing their arrangement; it does not establish that the offering will be profitable or reduce environmental impacts."
+        }
+      ],
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "We analyzed publicly documented circular-economy initiatives, drawing primarily on the Ellen MacArthur Foundation’s case library. We screened 148 descriptions and retained 48 that fit the ecosystem definition, provided enough detail about actors and their exchanges, were available in English, and had been published after 2018. This is a study of existing case descriptions, not an interview study or a forecast."
+        },
+        {
+          "heading": "Modeling and comparison",
+          "body": "For each case, we used e³-value modeling to represent participants and the tangible or intangible resources exchanged between them. The models describe value relationships rather than the timing of individual process steps. We coded actor roles and exchanged resources, compared the cases, and developed eight recurring constellations. Team discussions helped resolve differences in the models. We then grouped the constellations by their main circular purpose: innovation, more efficient resource use, or recovery after use."
+        },
+        {
+          "heading": "Evaluation and revision",
+          "body": "Ten researchers and circular-economy experts applied the framework to three additional cases and rated its usefulness, clarity, and completeness. Their feedback supported its usefulness but also exposed confusing terminology and diagrams. The paper reports inter-coder reliability of 57%, so assigning a case to a constellation was not straightforward. We revised the explanations and visuals in response. This evaluation concerns how people understand and use the framework, not the business or environmental performance of the cases."
+        },
+        {
+          "heading": "What the findings support",
+          "body": "The constellations offer a vocabulary for comparing partnerships and considering alternative roles. The sample relies heavily on one public case library and cannot represent every sector or emerging practice. The study does not establish which arrangement performs best, measure its environmental benefits, or explain how relationships change over time. The office-furniture scenario above is an illustration, not a case studied in the paper."
+        }
+      ]
+    }
+  },
+  {
     "id": "enterprise-ai",
     "topic": "Enterprise AI",
     "question": "How should people and AI share the work?",
@@ -230,6 +287,67 @@
       "url": "https://creativecommons.org/licenses/by/4.0/",
       "label": "Paper preview · CC BY 4.0",
       "credit": "© The authors 2025"
+    }
+  },
+  {
+    "id": "pilot-production",
+    "topic": "Enterprise AI",
+    "question": "How does an AI pilot become everyday work?",
+    "idea": "An AI pilot needs people who can take responsibility for it in daily use. We examine how that responsibility stays with technical teams or business functions, or moves between them as a project enters production.",
+    "title": "From Pilot to Production: Microfoundations and Responsibility Patterns for Enterprise AI Projects",
+    "authors": "Hendriks, Meier, Wiegand, Benz, Heinz & Spitzer",
+    "full_authors": "Daniel Hendriks, Ida Meier, Henrik Wiegand, Carina Benz, Daniel Heinz, and Philipp Spitzer",
+    "venue": "ICIS · 2026 · Accepted",
+    "url": "https://doi.org/10.5445/IR/1000197565",
+    "image": "pilot-production-first-page.png",
+    "detail": "paper-pilot-production.html",
+    "slug": "pilot-to-production",
+    "explainer": {
+      "headline": "How does an AI pilot become everyday work?",
+      "intro": "A promising AI pilot can leave a harder question unresolved: who will keep it useful once people depend on it? We study how technical teams and business functions share that responsibility as systems move into production.",
+      "sections": [
+        {
+          "heading": "The work continues after launch",
+          "body": "Putting an AI system into production creates continuing work. Someone needs to monitor its outputs as data and use change, help colleagues judge its results, and keep the system working. The projects we studied combined these routines with documentation and reusable technical components, so the knowledge gained could support later projects."
+        },
+        {
+          "heading": "Who leads in each phase?",
+          "body": "We found projects where business functions led both the pilot and production, projects where technical teams retained the lead, and projects where responsibility moved from technical teams to a business function. These patterns describe where primary responsibility sits; both sides can contribute throughout. The expertise available within each function appears to shape which arrangement it can sustain.",
+          "figure": "ai-responsibility-patterns"
+        },
+        {
+          "heading": "Technical support and ownership can diverge",
+          "body": "In one studied project, an agent prepared briefings for customer meetings. IT rebuilt and integrated the system for wider use, while the account teams kept responsibility for the content it produced. Moving engineering work to IT did not transfer ownership of the use case. Looking only at who builds the software would miss this distinction."
+        },
+        {
+          "heading": "Prepare the receiving team during the pilot",
+          "body": "Illustrative application: imagine an agent that drafts answers to supplier queries. Technical staff could test its retrieval and tool use while procurement specialists check the answers against purchasing rules. If procurement will own daily operation, the pilot is also a chance to build the team’s expertise, document the system, and agree when to call technical support. The study does not establish a universally best arrangement.",
+          "kind": "example"
+        }
+      ],
+      "method": [
+        {
+          "heading": "Study design and scope",
+          "body": "We conducted a qualitative multiple-case study of 14 AI projects across seven large established firms. The systems were customized for internal use, including retrieval-based assistants, agents, and predictive models. We selected projects already embedded in their intended setting or being integrated into it. This definition concerns deployment; it does not establish sustained adoption, financial returns, or other benefits."
+        },
+        {
+          "heading": "Interviews and analysis",
+          "body": "Between June 2025 and April 2026, we conducted 15 case interviews and two contextual interviews with senior managers. The interviews were recorded and transcribed. One author led the inductive coding, refining interpretations with coauthors. We first developed the categories from participants’ accounts, then organized them around identifying opportunities, pursuing them, and building capabilities that last beyond an individual project. The resulting framework distinguishes concrete activities from the broader capabilities they support."
+        },
+        {
+          "heading": "Comparing responsibility across phases",
+          "body": "The responsibility analysis used 11 projects with enough evidence about both piloting and production. One case offered only a user-side perspective; two lacked sufficiently specific project evidence. Two researchers independently classified responsibility in each phase on a scale from technical to business ownership, then resolved differences by returning to the transcripts. AI specialists embedded in a business function counted on that function’s side. The patterns came from this comparison; the three detailed case examples illustrate them."
+        },
+        {
+          "heading": "What the evidence can tell us",
+          "body": "The study describes arrangements found in projects that reached or approached production. It does not compare them with failed projects or show which activities cause success. Most cases rely on one interviewee’s account, and the study reconstructs the transition rather than following projects over time. The sample cannot establish that the patterns cover every possible arrangement. The proposed link between expertise and responsibility remains exploratory, including how teams develop the expertise needed to take over a system."
+        }
+      ]
+    },
+    "image_source": {
+      "url": "https://publikationen.bibliothek.kit.edu/1000197565",
+      "label": "Author manuscript · KITopen",
+      "credit": "© The authors 2026 · Noncommercial use only"
     }
   },
   {
@@ -407,6 +525,60 @@
       "url": "https://doi.org/10.1007/978-3-032-28313-9_2",
       "label": "Author manuscript · Published version",
       "credit": "© The authors 2026, under exclusive license to Springer Nature Switzerland AG"
+    }
+  },
+  {
+    "id": "startup-agency",
+    "topic": "Entrepreneurship",
+    "question": "How do founders decide what to hand over to AI?",
+    "idea": "Founders use AI to take on unfamiliar work, but set different boundaries around routine tasks, shared problem-solving, and autonomous action. Our study explains how they negotiate those boundaries.",
+    "title": "The Adoption of AI-Based Assistants in Startup Innovation: Configuring Human–AI Agency in Entrepreneurial Work",
+    "authors": "Liebschner, Meier, Heinz & Satzger",
+    "full_authors": "Jonas Liebschner, Ida Meier, Daniel Heinz, and Gerhard Satzger",
+    "venue": "ECIS · 2026",
+    "url": "https://aisel.aisnet.org/ecis2026/is_adopt/is_adopt/20/",
+    "slug": "startup-agency",
+    "explainer": {
+      "headline": "How much should founders hand over to AI?",
+      "intro": "Founders described using AI to take on work beyond their own expertise. They also drew boundaries around what an assistant could decide or do in their name.",
+      "sections": [
+        {
+          "heading": "A different role for each task",
+          "body": "A founder asking about an unfamiliar market keeps the lead in the conversation. Building a prototype together gives the assistant more room to shape the result. Routine editing often means requesting a bounded change and checking the output. Our study distinguishes these arrangements from autonomous coordination across tools, which founders mostly described as something they wanted in the future.",
+          "figure": "startup-agency-configurations"
+        },
+        {
+          "heading": "Delegation stays conditional",
+          "body": "Founders usually kept reviewing the assistant’s work, particularly when a mistake could affect customers or the venture’s reputation. They wanted more proactive help, such as reminders and warnings about unresolved issues. Some imagined handing over bounded tasks after repeated checks had built confidence. Their accounts suggest that delegation can expand or be taken back; they do not establish a fixed path toward full autonomy."
+        },
+        {
+          "heading": "Preparing the next customer conversation",
+          "body": "Illustrative application: a founder could ask an assistant to summarize interview notes and challenge an assumption about customer demand. The founder would check the notes and decide what to test next. The assistant could then draft follow-up messages and suggest meeting times, while the founder keeps approval over what goes to customers. These choices give AI a useful role without treating plausible suggestions as evidence of demand.",
+          "kind": "example"
+        },
+        {
+          "heading": "Watch what becomes part of the workflow",
+          "body": "Founders described storing pitch decks, code, and other venture knowledge in their assistants. This context made the tools more useful, but also made switching harder. Team rules often lagged behind everyday use. A practical question is therefore what the team needs to retain outside any one tool: the knowledge behind decisions, who can act on it, and which actions still need approval."
+        }
+      ],
+      "method": [
+        {
+          "heading": "Who we spoke with",
+          "body": "We conducted semi-structured interviews with 19 founders of active German startups between December 2024 and August 2025. Participants already had experience using AI in innovation work. Recruitment combined accessible networks with deliberate selection for variation, including ventures receiving university startup support and ventures featured in startup magazines. The sample covered software and hardware businesses at different stages of development."
+        },
+        {
+          "heading": "What the interviews captured",
+          "body": "Founders described the tools and tasks involved, what they delegated, and how they judged the results. We also asked about team practices and the support they wanted from an ideal assistant. Video interviews were audio-recorded with consent and transcribed verbatim. The findings therefore include both accounts of current use and desired capabilities; autonomous coordination was mostly an expectation rather than established practice."
+        },
+        {
+          "heading": "How we analyzed the accounts",
+          "body": "Two researchers divided the transcripts and coded them line by line, staying close to founders’ own descriptions. They then jointly compared codes and grouped them into broader themes. The author team discussed the resulting categories and their interpretation. This Gioia-inspired analysis connected motives for adoption and tool requirements with task types, patterns of oversight, and emerging team rules. Data collection and analysis proceeded iteratively until further interviews added little to the developing categories."
+        },
+        {
+          "heading": "What the findings support",
+          "body": "The study explains how these founders described using and controlling AI. It does not measure productivity, output quality, or venture success, and it did not observe their work over time. All participants were active users in Germany, so the findings do not represent founders who avoid or abandon AI. The accounts also reflect the tools available during the interview period. The example above applies the findings hypothetically; it was not an evaluated workflow."
+        }
+      ]
     }
   }
 ]
