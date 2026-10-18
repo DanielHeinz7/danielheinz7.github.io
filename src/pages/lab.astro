@@ -37,9 +37,10 @@ import '../styles/lab-teaching.css';
     <div class="doctoral-projects">
       {researchers.map(researcher => (
         <article class="doctoral-project">
+          <img class="researcher-portrait" src={researcher.portrait.src} width={researcher.portrait.width} height={researcher.portrait.height} alt="" loading="lazy" decoding="async" />
           <h3>{researcher.topic}</h3>
-          <p>{researcher.question}</p>
-          <p class="researcher"><a href={researcher.url}>{researcher.name}</a> · {researcher.since}</p>
+          <p class="research-question">{researcher.question}</p>
+          <p class="researcher"><a href={researcher.url}>{researcher.name}</a><span>{researcher.since}</span></p>
         </article>
       ))}
     </div>
@@ -66,8 +67,35 @@ import '../styles/lab-teaching.css';
 </SiteLayout>
 
 <style>
-  .doctoral-project { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--rule); }
-  .doctoral-project h3 { font-size: 16px; }
-  .doctoral-project p { margin-top: 12px; }
-  .doctoral-project .researcher { color: var(--mute); }
+  .doctoral-projects { container-type: inline-size; }
+  .doctoral-project {
+    display: grid;
+    grid-template-columns: 104px minmax(0, 1fr);
+    grid-template-areas: "portrait topic" "portrait question" "portrait researcher";
+    gap: 12px 24px;
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+  .researcher-portrait {
+    grid-area: portrait;
+    width: 104px;
+    height: 104px;
+    object-fit: cover;
+  }
+  .doctoral-project h3 { grid-area: topic; font-size: 16px; }
+  .research-question { grid-area: question; }
+  .researcher { grid-area: researcher; color: var(--mute); }
+  .researcher span { display: block; }
+
+  @container (max-width: 420px) {
+    .doctoral-project {
+      grid-template-columns: 72px minmax(0, 1fr);
+      grid-template-areas: "portrait researcher" "topic topic" "question question";
+      column-gap: 16px;
+    }
+    .researcher-portrait { width: 72px; height: 72px; }
+    .researcher { align-self: center; }
+    .doctoral-project h3 { margin-top: 4px; }
+  }
 </style>

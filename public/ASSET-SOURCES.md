@@ -1,6 +1,10 @@
 # Asset sources
 
 - Portrait: supplied by Daniel Heinz for his personal academic website.
+- Doctoral researcher portraits: original JPEGs embedded in the official KIT profiles, retrieved on October 18, 2026 and stored unchanged. The Lab page displays square crops with CSS; no edits to the source files. No open license is asserted.
+  - Jonas Liebschner: [KIT profile](https://dsi.win.kit.edu/team_1074.php), image `portrait_img_1074` → `images/researchers/jonas-liebschner.jpg`.
+  - Linda Sagnier Eckert: [KIT profile](https://dsi.win.kit.edu/team_1071.php), image `portrait_img_1071` → `images/researchers/linda-sagnier-eckert.jpg`.
+  - Ida Meier: [KIT profile](https://dsi.win.kit.edu/team_1232.php), image `portrait_img_1232` → `images/researchers/ida-meier.jpg`.
 - Research-harness session image: public demonstration from https://github.com/DanielHeinz7/research-harness. Data sources and credits: https://github.com/DanielHeinz7/research-harness/blob/main/docs/media/README.md#where-the-content-comes-from.
 - InnoCompass update review: screenshot of implemented components using synthetic demo data. Cropped to remove the test harness; application content unchanged. Prepared for this website on October 18, 2026.
 - KIT LENS search screen: prototype video frame embedded in the master’s thesis presentation, slide 12. Cropped to remove the browser address and video border; interface content unchanged.
