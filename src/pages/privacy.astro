@@ -1,0 +1,29 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Arrow from '../components/Arrow.astro';
+---
+<SiteLayout title="Privacy" description="How this website counts visits and handles analytics data.">
+  <nav class="page-nav" aria-label="Back to home"><a href="/"><Arrow /> Home</a></nav>
+  <PageHeader title="Privacy" intro="A small amount of analytics helps me understand which parts of this site people read." />
+  <section>
+    <h2>Visits and clicks</h2>
+    <p>The published site sends page visits and clicks on the CV or original papers to GoatCounter. The dashboard is private. The site’s analytics code uses no cookies or browser storage and sends no URL query strings, fragments, referring URLs, or screen dimensions.</p>
+    <p>Each request contains a fixed page name or a predefined click label. Like other web requests, it also reaches the service with network information such as an IP address and browser headers. GoatCounter describes how it temporarily uses this information to distinguish repeat visits and stores aggregate statistics in its <a href="https://www.goatcounter.com/help/privacy">privacy policy</a>.</p>
+  </section>
+  <section>
+    <h2>Your browser’s choices</h2>
+    <p>Analytics stays off when your browser sends Do Not Track or Global Privacy Control. Blocking analytics or disabling JavaScript does not affect access to the site. Local previews do not report visits.</p>
+  </section>
+  <section>
+    <h2>Hosting and contact</h2>
+    <p>This site is hosted on GitHub Pages. GitHub processes requests under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>.</p>
+    <p>For questions about this website, contact <a href="mailto:daniel.heinz@kit.edu">daniel.heinz@kit.edu</a>.</p>
+  </section>
+  <SiteFooter />
+</SiteLayout>
+<style>
+  section { margin-top: 36px; max-width: 65ch; }
+  section p { margin-top: 16px; }
+</style>

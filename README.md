@@ -39,6 +39,18 @@ Research summaries and paper explainers share `src/data/papers.json`. The overvi
 
 After changes, run `npm run check`, `npm run build`, and `npm run check:site`. The last command checks generated routes, local links and fragments, downloads, metadata, and accidental local paths. It does not replace reading the pages at desktop and mobile widths.
 
+## Analytics
+
+The private dashboard is [daniel-heinz.goatcounter.com](https://daniel-heinz.goatcounter.com/). `Analytics.astro` supplies its public counting endpoint and fixed page/link metadata to `src/lib/analytics.mjs`. No dashboard password or API token belongs in the repository.
+
+Only a production build served over HTTPS at the exact origin in `astro.config.mjs` reports visits. Local development, local previews, other preview hosts, frames, automated browsers, Do Not Track, and Global Privacy Control are excluded. Changing the canonical domain also changes the allowed analytics origin. Set `enabled: false` in `Analytics.astro` to disable collection entirely.
+
+The small local script uses GoatCounter’s [documented counting endpoint](https://www.goatcounter.com/help/pixel). It sends fixed page paths/titles and allowlisted paper/CV click labels, with no query strings, fragments, referring URLs, screen size, cookies, or browser storage. Requests omit credentials and the HTTP referrer. No third-party JavaScript is loaded. Original-paper targets come from the existing publication data; internal paper explainers are counted as pages.
+
+Keep the dashboard private and individual-pageview storage disabled in GoatCounter settings. GoatCounter’s [privacy policy](https://www.goatcounter.com/help/privacy) describes its temporary network-data processing and aggregate storage. The website’s factual notice is at `/privacy/`.
+
+Run `npm run check:analytics` to verify local-host/privacy exclusions, event allowlisting, payload contents, and transport failure behavior. The release workflow includes this check. A live count still needs confirmation in the dashboard after publication; local QA deliberately sends no real events. Counts are approximate: ad blockers and disabled JavaScript can exclude visits, and a CV click does not prove a completed download. Direct PDF opens cannot run the site’s script. These statistics do not reconstruct individual browsing journeys.
+
 To regenerate the CV, install `scripts/requirements-pdf.txt` in a Python environment, then run `npm run build:cv`. Review every page of the resulting `public/files/daniel-heinz-cv.pdf` before committing it. Check journal-list completeness against the master CV and verify current citation metadata before adding records. The PDF uses only public profile information.
 
 ## Release
