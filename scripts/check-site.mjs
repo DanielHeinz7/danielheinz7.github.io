@@ -12,7 +12,8 @@ for (const file of required) {
   try { await access(path.join(root, file)); } catch { errors.push(`Missing route or download: ${file}`); }
 }
 const files = await walk(root);
-const pages = files.filter(f => f.endsWith('.html'));
+// Search-engine ownership files are plain tokens, not pages.
+const pages = files.filter(f => f.endsWith('.html') && !/^google[0-9a-f]+\.html$/.test(path.basename(f)));
 const cache = new Map(await Promise.all(pages.map(async f => [f, await readFile(f, 'utf8')])));
 const decode = s => s.replaceAll('&amp;', '&').replaceAll('&#39;', "'").replaceAll('&quot;', '"');
 const sitemap = await readFile(path.join(root, 'sitemap.xml'), 'utf8');
