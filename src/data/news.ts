@@ -1,4 +1,4 @@
-type NewsItem = {
+export type NewsItem = {
   date: string;
   label: string;
   text: string;
@@ -46,5 +46,29 @@ export const news: NewsItem[] = [
     label: 'Jul 2025',
     text: 'Our Electronic Markets paper introduces a framework for how people and AI work together in service ecosystems.',
     link: { href: '/research/human-ai-work/', label: 'Explore the idea' },
+  },
+  {
+    date: '2025-06-02',
+    label: 'Jun 2025',
+    text: 'Our Business & Information Systems Engineering paper introduces a mechanism for estimating which data assets improve a prediction before buying them.',
+    link: { href: '/research/data-selection/', label: 'Explore the idea' },
+  },
+  {
+    date: '2024-09-26',
+    label: 'Sep 2024',
+    text: 'Our Electronic Markets paper offers a taxonomy for comparing how organizations share data and what they aim to achieve.',
+    link: { href: '/research/data-sharing/', label: 'Explore the idea' },
+  },
+  {
+    date: '2024-02-13',
+    label: 'Feb 2024',
+    text: 'Our Electronic Markets paper compares business models built around connected car data.',
+    link: { href: 'https://doi.org/10.1007/s12525-024-00692-5', label: 'Read the paper' },
+  },
+  {
+    date: '2021-10-27',
+    label: 'Oct 2021',
+    text: 'Our Electronic Markets paper examines how different types of analytics-based services create value for customers.',
+    link: { href: 'https://doi.org/10.1007/s12525-021-00506-y', label: 'Read the paper' },
   },
 ];

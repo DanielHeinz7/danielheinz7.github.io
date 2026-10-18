@@ -1,0 +1,10 @@
+---
+import type { NewsItem } from '../data/news';
+interface Props { item: NewsItem }
+const { item } = Astro.props;
+---
+
+<div class="news-row">
+  <time datetime={item.date}>{item.label}</time>
+  <p>{item.text}{item.link && <>{' '}<a href={item.link.href}>{item.link.label}</a></>}</p>
+</div>
