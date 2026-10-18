@@ -7,6 +7,24 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: '2026-11',
+    label: 'Nov 2026',
+    text: 'Coming up: Pandora Dietle will join the lab in November.',
+    link: { href: '/lab/', label: 'About the lab' },
+  },
+  {
+    date: '2026-10',
+    label: 'Oct 2026',
+    text: 'Coming up: our new course Building Digital Services with AI kicks off this October. Students will develop their own web apps with AI coding tools.',
+    link: { href: '/teaching/#building-with-ai', label: 'About the course' },
+  },
+  {
+    date: '2026-09',
+    label: 'Sep 2026',
+    text: 'I began co-leading the Conferences Division of Die WI e.V. with Julia Seitz Sänger.',
+    link: { href: 'https://new.wirtschaftsinformatik.de/en/club/club-sections/', label: 'Association divisions' },
+  },
+  {
     date: '2026-09',
     label: 'Sep 2026',
     text: 'Visiting Fellow Grant from the University of Jyväskylä for a research stay in spring 2027.',
@@ -24,10 +42,22 @@ export const news: NewsItem[] = [
     link: { href: '/research/smart-services/', label: 'Explore the idea' },
   },
   {
+    date: '2026-06-14',
+    label: 'Jun 2026',
+    text: 'I took part in the Junior Faculty Consortium at ECIS 2026 in Milan.',
+    link: { href: 'https://ecis2026.it/junior-faculty-consortium/', label: 'About the consortium' },
+  },
+  {
     date: '2026-06',
     label: 'Jun 2026',
     text: 'Best Paper Runner-up at DESRIST 2026 for our work on AI-based coaching for founders.',
     link: { href: '/research/ai-coaching/', label: 'Explore the idea' },
+  },
+  {
+    date: '2026-05',
+    label: 'May 2026',
+    text: 'I was appointed Chair for Workshops, Tutorials & Community Events at WI 2027 in Karlsruhe.',
+    link: { href: 'https://wi2027.wirtschaftsinformatik.de/organisation/organisation/', label: 'Organizing committee' },
   },
   {
     date: '2026-04',
@@ -40,6 +70,12 @@ export const news: NewsItem[] = [
     label: 'Dec 2025',
     text: 'I completed my doctorate at KIT on smart service innovation in incumbent firms.',
     link: { href: 'https://publikationen.bibliothek.kit.edu/1000191287', label: 'Dissertation record' },
+  },
+  {
+    date: '2025-09',
+    label: 'Sep 2025',
+    text: 'Our paper “Actor-Value Constellations in Circular Ecosystems” received the Second Runner-up Best Full Paper Award at WI 2025.',
+    link: { href: 'https://publikationen.bibliothek.kit.edu/1000183238', label: 'Read the paper' },
   },
   {
     date: '2025-09',
@@ -58,6 +94,18 @@ export const news: NewsItem[] = [
     label: 'Jun 2025',
     text: 'Our Business & Information Systems Engineering paper introduces a mechanism for estimating which data assets improve a prediction before buying them.',
     link: { href: '/research/data-selection/', label: 'Explore the idea' },
+  },
+  {
+    date: '2025-02',
+    label: 'Feb 2025',
+    text: 'I initiated a workshop on digital sustainability and the circular economy at KIT with Linda Sagnier Eckert and Christoph Hoppe.',
+    link: { href: 'https://www.win.kit.edu/news_1554.php', label: 'Workshop recap' },
+  },
+  {
+    date: '2024-11',
+    label: 'Nov 2024',
+    text: 'I completed Helmholtz’s InnoSuper program on bringing research into practice and supporting researchers in transfer projects.',
+    link: { href: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7292833570765570048/', label: 'About the program' },
   },
   {
     date: '2024-10',
@@ -101,8 +149,8 @@ export const news: NewsItem[] = [
     link: { href: 'https://aisel.aisnet.org/wi2023/75/', label: 'Read the paper' },
   },
   {
-    date: '2023',
-    label: 'Summer 2023',
+    date: '2023-04',
+    label: 'Apr 2023',
     text: 'I co-developed and began co-teaching Digital Services: Innovation & Business Models at KIT, combining recorded lectures with live case discussions.',
     link: { href: '/teaching/#digital-services', label: 'About the course' },
   },
@@ -110,6 +158,12 @@ export const news: NewsItem[] = [
     date: '2022-10',
     label: 'Oct 2022',
     text: 'I began a research stay at The University of Queensland, working with Christoph F. Breidbach on smart service innovation.',
+  },
+  {
+    date: '2022-02-18',
+    label: 'Feb 2022',
+    text: 'I presented my doctoral research on smart service systems at the WI 2022 Doctoral Consortium.',
+    link: { href: 'https://publikationen.bibliothek.kit.edu/1000143867', label: 'Doctoral research' },
   },
   {
     date: '2022-02',
@@ -130,8 +184,13 @@ export const news: NewsItem[] = [
     link: { href: '/at-a-glance/', label: 'Research background' },
   },
   {
-    date: '2020',
-    label: 'Winter 2020/21',
+    date: '2020-10',
+    label: 'Oct 2020',
     text: 'I began teaching exercise sessions for KIT’s master’s course Digital Services: Business Models and Transformation.',
+  },
+  {
+    date: '2020-04',
+    label: 'Apr 2020',
+    text: 'I joined KIT’s Digital Service Innovation group as a junior researcher.',
   },
 ];
