@@ -18,6 +18,15 @@
     "url": "https://dsi.win.kit.edu/projects_933.php"
   },
   {
+    "id": "bismart",
+    "name": "bi.smart",
+    "question": "How can small and medium-sized manufacturers develop connected products and digital services around customer needs?",
+    "period": "2021–2024",
+    "funding": "BMBF · Advanced Systems Engineering",
+    "role": "Project lead at KIT",
+    "url": "https://dsi.win.kit.edu/projects_629.php"
+  },
+  {
     "id": "ai-adoption",
     "name": "AI Adoption",
     "question": "How do organizations move from AI pilots to sustained use across the enterprise?",
@@ -25,5 +34,14 @@
     "funding": "Industry-funded collaboration · BASF",
     "role": "Proposal development and scientific project lead at KIT",
     "url": "https://dsi.win.kit.edu/projects_1237.php"
+  },
+  {
+    "id": "daimler-truck",
+    "name": "Daimler Truck",
+    "question": "How can lifecycle data help companies reuse, remanufacture, and recycle trucks and their components?",
+    "period": "2025–2026",
+    "funding": "Industry-funded collaboration · Daimler Truck",
+    "role": "Proposal development and scientific project lead at KIT",
+    "url": "https://dsi.win.kit.edu/team_1071.php"
   }
 ]
