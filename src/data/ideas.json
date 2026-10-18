@@ -11,14 +11,14 @@
     "question": "Which parts of a job should people keep practicing, even when AI can do them faster?"
   },
   {
-    "id": "understanding-our-thinking",
-    "label": "Metacognition",
-    "title": "How do we know what we understand?",
+    "id": "vibe-coding-entrepreneurship",
+    "label": "Vibe coding & entrepreneurship",
+    "title": "What changes when founders can build their own software?",
     "paragraphs": [
-      "Imagine reading an explanation that makes sense, then trying to use it in a different situation. A new question comes up. Working through it might help you see which parts you understand and what you want to explore further.",
-      "This awareness of our own thinking is part of metacognition. I’m interested in how it develops when we work with AI. A conversation might help us recognize what we already know, or find a useful way into something unfamiliar."
+      "Suppose a founder can turn an idea into a working prototype by describing it to AI. How might that affect who starts a software venture and which ideas get a chance? I’m interested in how vibe coding shapes the path from an initial idea to something customers can try.",
+      "The next question is what founders learn along the way. Faster prototyping could make it easier to test demand and respond to users. It could also make it tempting to keep adding features before finding out whether anyone needs them."
     ],
-    "question": "What helps us recognize when we understand enough to move on, and when another question would be useful?"
+    "question": "How does easier software creation change the path from an idea to a viable venture?"
   },
   {
     "id": "thinking-with-ai",
