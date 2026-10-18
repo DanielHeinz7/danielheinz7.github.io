@@ -1,5 +1,6 @@
 ---
 import Cover from '../components/Cover.astro';
+import Analytics from '../components/Analytics.astro';
 import { site } from '../data/site';
 import '../styles/global.css';
 
@@ -40,5 +41,6 @@ const image = new URL('/images/portrait.jpg', Astro.site);
       <Cover />
       <main id="content" tabindex="-1"><slot /></main>
     </div>
+    <Analytics title={pageTitle} />
   </body>
 </html>

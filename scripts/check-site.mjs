@@ -2,7 +2,7 @@ import { readFile, readdir, access } from 'node:fs/promises';
 import path from 'node:path';
 
 const root = path.resolve('dist');
-const required = ['index.html', 'research/index.html', 'ideas/index.html', 'lab/index.html', 'tools/index.html', 'teaching/index.html', 'at-a-glance/index.html', '404.html', 'files/daniel-heinz-cv.pdf'];
+const required = ['index.html', 'research/index.html', 'ideas/index.html', 'lab/index.html', 'tools/index.html', 'teaching/index.html', 'at-a-glance/index.html', 'privacy/index.html', '404.html', 'files/daniel-heinz-cv.pdf'];
 const errors = [];
 async function walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });

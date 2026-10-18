@@ -10,6 +10,7 @@
     "preview": "astro preview --host 127.0.0.1",
     "check": "astro check",
     "check:site": "node scripts/check-site.mjs",
+    "check:analytics": "node --test scripts/analytics.test.mjs",
     "build:cv": "python3 scripts/build-public-cv.py"
   },
   "engines": {
