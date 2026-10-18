@@ -1,0 +1,162 @@
+{
+  "portrait.jpg": {
+    "width": 1737,
+    "height": 1737,
+    "sources": [
+      {
+        "src": "/images/responsive/portrait-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/responsive/portrait-280.webp",
+        "width": 280
+      },
+      {
+        "src": "/images/responsive/portrait-560.webp",
+        "width": 560
+      },
+      {
+        "src": "/images/responsive/portrait-840.webp",
+        "width": 840
+      }
+    ]
+  },
+  "bise-first-page.png": {
+    "width": 1355,
+    "height": 1800,
+    "sources": [
+      {
+        "src": "/images/responsive/bise-first-page-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/responsive/bise-first-page-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/images/responsive/bise-first-page-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/responsive/bise-first-page-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "cais-first-page.png": {
+    "width": 1391,
+    "height": 1800,
+    "sources": [
+      {
+        "src": "/images/responsive/cais-first-page-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/responsive/cais-first-page-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/images/responsive/cais-first-page-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/responsive/cais-first-page-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "coaching-first-page.png": {
+    "width": 773,
+    "height": 1000,
+    "sources": [
+      {
+        "src": "/images/responsive/coaching-first-page-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/responsive/coaching-first-page-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/images/responsive/coaching-first-page-640.webp",
+        "width": 640
+      }
+    ]
+  },
+  "data-sharing-first-page.png": {
+    "width": 753,
+    "height": 1000,
+    "sources": [
+      {
+        "src": "/images/responsive/data-sharing-first-page-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/responsive/data-sharing-first-page-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/images/responsive/data-sharing-first-page-640.webp",
+        "width": 640
+      }
+    ]
+  },
+  "hybrid-first-page.png": {
+    "width": 753,
+    "height": 1000,
+    "sources": [
+      {
+        "src": "/images/responsive/hybrid-first-page-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/responsive/hybrid-first-page-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/images/responsive/hybrid-first-page-640.webp",
+        "width": 640
+      }
+    ]
+  },
+  "im-first-page.png": {
+    "width": 751,
+    "height": 1000,
+    "sources": [
+      {
+        "src": "/images/responsive/im-first-page-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/responsive/im-first-page-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/images/responsive/im-first-page-640.webp",
+        "width": 640
+      }
+    ]
+  },
+  "jit-first-page.png": {
+    "width": 1351,
+    "height": 1800,
+    "sources": [
+      {
+        "src": "/images/responsive/jit-first-page-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/responsive/jit-first-page-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/images/responsive/jit-first-page-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/responsive/jit-first-page-960.webp",
+        "width": 960
+      }
+    ]
+  }
+}

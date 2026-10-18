@@ -2,12 +2,13 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Arrow from '../components/Arrow.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import researchers from '../data/doctoral-research.json';
 import '../styles/lab-teaching.css';
 ---
 
 <SiteLayout
   title="Lab"
-  description="How Daniel Heinz and the Digital Service Design & Innovation Lab build data and AI systems and study organizational change at KIT."
+  description="Digital services, doctoral research, and organizational change in Daniel Heinz’s lab at KIT."
   active="lab"
   bodyClass="lab-teaching-page"
 >
@@ -16,7 +17,7 @@ import '../styles/lab-teaching.css';
   </nav>
 
   <h1>Lab</h1>
-  <p class="lede">We build data and AI systems with organizations and study what changes when people use them.</p>
+  <p class="lede">We develop digital services with organizations, using data and AI in the services and in how we build them.</p>
 
   <section class="field-section" aria-labelledby="practice-title">
     <h2 id="practice-title">Research from inside the work</h2>
@@ -28,6 +29,21 @@ import '../styles/lab-teaching.css';
       <div><dt>Study</dt><dd>Follow what happens through fieldwork and evaluation.</dd></div>
       <div><dt>Teach</dt><dd>Bring the questions and methods into courses where students build and test their own ideas.</dd></div>
     </dl>
+  </section>
+
+  <section class="field-section" aria-labelledby="doctoral-title">
+    <h2 id="doctoral-title">Doctoral research</h2>
+    <p>I provide day-to-day research advising and work closely with doctoral researchers in the lab. Prof. Gerhard Satzger provides formal doctoral supervision for the projects below.</p>
+    <div class="doctoral-projects">
+      {researchers.map(researcher => (
+        <article class="doctoral-project">
+          <h3>{researcher.topic}</h3>
+          <p>{researcher.question}</p>
+          <p class="researcher"><a href={researcher.url}>{researcher.name}</a> · {researcher.since}</p>
+        </article>
+      ))}
+    </div>
+    <p>These questions also connect to our <a href="/at-a-glance/#funded-projects">funded research projects</a>.</p>
   </section>
 
   <section class="field-section" aria-labelledby="instrument-title">
@@ -48,3 +64,10 @@ import '../styles/lab-teaching.css';
   </nav>
   <SiteFooter />
 </SiteLayout>
+
+<style>
+  .doctoral-project { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .doctoral-project h3 { font-size: 16px; }
+  .doctoral-project p { margin-top: 12px; }
+  .doctoral-project .researcher { color: var(--mute); }
+</style>

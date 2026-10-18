@@ -17,6 +17,7 @@ import ideas from '../../data/ideas.json';
         <h2 id={`${idea.id}-title`}>{idea.title}</h2>
         {idea.paragraphs.map(paragraph => <p>{paragraph}</p>)}
         <p class="open-question">{idea.question}</p>
+        {'related' in idea && idea.related && <p><a class="text-link" href={idea.related.href}>{idea.related.label} <Arrow /></a></p>}
       </article>
     ))}
   </div>

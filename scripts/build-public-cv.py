@@ -13,6 +13,8 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, PageBreak, KeepToge
 root = Path(__file__).resolve().parents[1]
 profile = json.loads((root / 'src/data/profile.json').read_text())
 publications = json.loads((root / 'src/data/cv-publications.json').read_text())
+projects = json.loads((root / 'src/data/projects.json').read_text())
+researchers = json.loads((root / 'src/data/doctoral-research.json').read_text())
 for name, weight in [('Schibsted', '400'), ('SchibstedBold', '700')]:
     pdfmetrics.registerFont(TTFont(name, str(root / f'public/fonts/schibsted-{weight}.ttf')))
 pdfmetrics.registerFontFamily('Schibsted', normal='Schibsted', bold='SchibstedBold')
@@ -47,11 +49,21 @@ def citation_details(paper):
     if paper['status'] != 'published':
         details += ' · ' + paper['status'].capitalize()
     return details
-flow = [p(profile['name'], 'name'), p(escape(profile['role'])+'<br/>'+escape(profile['institution'])), p('Curriculum vitae · '+profile['updated'], 'small'), p(f'<link href="mailto:{profile["email"]}">{profile["email"]}</link> · <link href="{profile["profileUrl"]}">Institutional profile</link>', 'small'), section('Research'), p(escape(profile['agenda'])), p(escape(profile['approach'])), section('Academic appointments')]
+flow = [p(profile['name'], 'name'), p(escape(profile['role'])+'<br/>'+escape(profile['institution'])), p('Curriculum vitae · '+profile['updated'], 'small'), p(f'<link href="mailto:{profile["email"]}">{profile["email"]}</link> · <link href="{profile["profileUrl"]}">Institutional profile</link> · <link href="https://danielheinz7.github.io/cv/">Read this CV online</link>', 'small'), section('Research'), p(escape(profile['agenda'])), p(escape(profile['approach'])), section('Academic appointments')]
 flow.extend(item(row) for row in profile['appointments'])
 flow.append(section('Education'))
 flow.extend(item(row) for row in profile['education'])
 flow.extend([p(escape(profile['visits'])), section('Academic service'), p('<br/>'.join(escape(row) for row in profile['service'])), section('Volunteering'), p(escape(profile['outsideWork'])), PageBreak()])
+flow.extend([section('Selected funded projects'), p(escape(profile['funding']))])
+for project in projects:
+    flow.append(KeepTogether([
+        p(f'<b><link href="{project["url"]}">{escape(project["name"])}</link></b> · {escape(project["period"])}<br/>{escape(project["funding"])}'),
+        p(escape(project['question'])+'<br/>'+escape(project['role'])),
+    ]))
+flow.extend([section('Doctoral research'), p('I provide day-to-day research advising. Prof. Gerhard Satzger provides formal doctoral supervision for the projects below.')])
+for researcher in researchers:
+    flow.append(p(f'<b><link href="{researcher["url"]}">{escape(researcher["name"])}</link></b> · {escape(researcher["since"])}<br/>{escape(researcher["topic"])}'))
+flow.append(PageBreak())
 for heading, papers in [('Journal articles', publications['journal_articles']), ('Selected conference papers', publications['selected_conference_papers'])]:
     if papers:
         if heading == 'Selected conference papers':

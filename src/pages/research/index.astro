@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Arrow from '../../components/Arrow.astro';
+import PaperImage from '../../components/PaperImage.astro';
 import papers from '../../data/papers.json';
 import '../../styles/research.css';
 
@@ -22,7 +23,7 @@ const topics = papers.filter((paper, index) => papers.findIndex(item => item.top
           <a class="idea-link text-link" href={`/research/${paper.slug}/`} aria-label={`Explore the idea: ${paper.question}`}>Explore the idea <Arrow /></a>
         </div>
         <a class="paper-sheet" href={paper.url} aria-label={`Read ${paper.title}`}>
-          <img src={`/images/papers/${paper.image}`} alt={`First page of ${paper.title}`} width="750" height="1000" loading="lazy" />
+          <PaperImage file={paper.image} alt={`First page of ${paper.title}`} sizes="(max-width: 380px) 64px, (max-width: 850px) 88px, (max-width: 1150px) 160px, (max-width: 1500px) 230px, 310px" />
         </a>
         <div class="paper-citation">
           <h3><a href={paper.url}>{paper.title}</a></h3>

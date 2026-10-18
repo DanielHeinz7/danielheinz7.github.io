@@ -7,26 +7,60 @@
   "agenda": "I study how organizations change when data and AI enter everyday work: which responsibilities shift, which capabilities people need, and how existing systems can support renewal.",
   "approach": "My work combines qualitative field research with design science. Working systems let us study organizational change while it happens.",
   "appointments": [
-    {"date": "Since 2024", "title": "Head of the Digital Service Design & Innovation Lab", "place": "Karlsruhe Institute of Technology"},
-    {"date": "2021–2024", "title": "Research Associate", "place": "Karlsruhe Institute of Technology"}
+    {
+      "date": "Since 2024",
+      "title": "Head of the Digital Service Design & Innovation Lab",
+      "place": "Karlsruhe Institute of Technology"
+    },
+    {
+      "date": "2021–2024",
+      "title": "Research Associate",
+      "place": "Karlsruhe Institute of Technology"
+    }
   ],
   "education": [
-    {"date": "2025", "title": "Dr. rer. pol. in Information Systems", "place": "Karlsruhe Institute of Technology", "note": "Dissertation: Smart Service Innovation in Incumbent Firms. Summa cum laude."},
-    {"date": "2021", "title": "M.Sc. in Industrial Engineering & Management", "place": "Karlsruhe Institute of Technology"},
-    {"date": "2018", "title": "B.Sc. in Industrial Engineering & Management", "place": "Karlsruhe Institute of Technology"}
+    {
+      "date": "2025",
+      "title": "Dr. rer. pol. in Information Systems",
+      "place": "Karlsruhe Institute of Technology",
+      "note": "Dissertation: Smart Service Innovation in Incumbent Firms. Summa cum laude."
+    },
+    {
+      "date": "2021",
+      "title": "M.Sc. in Industrial Engineering & Management",
+      "place": "Karlsruhe Institute of Technology",
+      "note": "With distinction. Final grade: 1.0."
+    },
+    {
+      "date": "2018",
+      "title": "B.Sc. in Industrial Engineering & Management",
+      "place": "Karlsruhe Institute of Technology"
+    }
   ],
   "visits": "Visiting research stays at the University of Cambridge (2024) and The University of Queensland (2022).",
   "teaching": [
-    {"title": "Digital Services: Innovation & Business Models", "context": "Master’s course · KIT"},
-    {"title": "Building Digital Services with AI", "context": "Practical seminar · KIT · Winter 2026/27"},
-    {"title": "Doctoral Seminar", "context": "Co-developed · KIT · Winter 2026/27"},
-    {"title": "Digital Services at HECTOR School", "context": "Executive education · KIT"}
+    {
+      "title": "Digital Services: Innovation & Business Models",
+      "context": "Master’s course · KIT"
+    },
+    {
+      "title": "Building Digital Services with AI",
+      "context": "Practical seminar · KIT · Winter 2026/27"
+    },
+    {
+      "title": "Doctoral Seminar",
+      "context": "Co-developed · KIT · Winter 2026/27"
+    },
+    {
+      "title": "Digital Services at HECTOR School",
+      "context": "Executive education · KIT"
+    }
   ],
   "advising": "I provide day-to-day doctoral advising and supervise bachelor’s and master’s theses.",
-  "funding": "I lead proposal development and scientific work in publicly funded projects and industry collaborations at KIT. These collaborations provide settings in which to study digital services and organizational change in practice.",
+  "funding": "I lead proposal development and scientific work in publicly funded projects and industry collaborations at KIT. Prof. Gerhard Satzger is the formal principal investigator for the projects below.",
   "service": [
     "President of AIS SIG Services",
-    "Head of the Conferences Division, Die WI e.V.",
+    "Co-head of the Conferences Division, Die WI e.V.",
     "Chair for Workshops, Tutorials & Community Events, WI 2027"
   ],
   "outsideWork": "Outside work I volunteer with DPSG, Germany’s largest scout association. I lead its program for 15- to 21-year-olds in the Freiburg diocese, train youth leaders, and from 2023 to 2025 led CrOver, an international camp for about 250 scouts funded by Erasmus+.",

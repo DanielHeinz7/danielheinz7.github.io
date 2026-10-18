@@ -15,6 +15,9 @@
 .service-tabs button:hover{color:var(--ink)}
 .service-tabs button:focus-visible,.comparison-panel:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
 .comparison-panel{padding-top:20px}
+.service-tabs[hidden]{display:none}
+.service-label{font-size:16px;margin-bottom:16px}
+.service-example.is-enhanced .service-label{display:none}
 .comparison-panel[hidden]{display:none}
 .comparison-panel dl{margin:0;display:grid;grid-template-columns:100px minmax(0,1fr);gap:12px 20px}
 .comparison-panel dt{font-weight:700}
@@ -40,3 +43,5 @@
 @media(max-width:1150px) and (min-width:851px){.original-body{grid-template-columns:88px minmax(0,1fr);gap:20px}.comparison-panel dl{grid-template-columns:1fr;gap:4px}.comparison-panel dd+dt{margin-top:12px}}
 @media(max-width:850px){.paper-detail h1{max-width:28ch}.paper-detail article{margin-top:28px}.paper-meta{margin-top:16px}.essay-section{margin-top:28px}.example-note,.service-example{padding:20px}.service-tabs{gap:16px}.comparison-panel dl{grid-template-columns:1fr;gap:4px}.comparison-panel dd+dt{margin-top:12px}.original-body{grid-template-columns:88px minmax(0,1fr);gap:20px}}
 @media(max-width:380px){.service-tabs{gap:12px}.service-tabs button{padding-inline:0}.original-body{grid-template-columns:64px minmax(0,1fr);gap:16px}}
+
+@media print{.service-tabs{display:none}.comparison-panel[hidden]{display:block}.service-example.is-enhanced .service-label{display:block}.comparison-panel{break-inside:avoid}}

@@ -1,11 +1,13 @@
 ---
 import { site } from '../data/site';
+import images from '../data/image-variants.json';
+const portrait = images['portrait.jpg'];
 ---
 <aside class="cover" aria-label="About Daniel Heinz">
   <div class="cover-inner">
     <a class="mast" href="/">{site.name}</a>
     <div class="role">{site.role}<br />{site.institution}</div>
-    <img class="portrait" src="/images/portrait.jpg" alt="Daniel Heinz" width="1737" height="1737" fetchpriority="high" />
+    <img class="portrait" src="/images/responsive/portrait-560.webp" srcset={portrait.sources.map(source => `${source.src} ${source.width}w`).join(', ')} sizes="(max-width: 380px) 132px, (max-width: 850px) 140px, 280px" alt="Daniel Heinz" width={portrait.width} height={portrait.height} fetchpriority="high" />
   </div>
   <nav class="contact" aria-label="Contact">
     {site.email && <a href={`mailto:${site.email}`}>
@@ -16,9 +18,9 @@ import { site } from '../data/site';
     <a href={site.orcid}><img src="/icons/orcid.svg" alt="" width="20" height="20" /><span>ORCID</span></a>
     <div class="contact-pair">
       <a href={site.linkedin}><img src="/icons/linkedin.svg" alt="" width="20" height="20" /><span>LinkedIn</span></a>
-      {site.cv && <a href={site.cv}>
+      {site.cv && <a href="/cv/">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" /><path d="M14 3v6h6M8 13h8M8 17h6" /></svg>
-        <span>CV (PDF)</span>
+        <span>CV</span>
       </a>}
     </div>
   </nav>

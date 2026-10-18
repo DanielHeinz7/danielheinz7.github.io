@@ -27,7 +27,7 @@
           "heading": "An agent that coordinates maintenance",
           "body": [
             "An illustrative extension to agentic workflows: a vibration alert prompts an AI agent to retrieve repair history, call a failure-prediction model, and check compatible parts and production schedules. It proposes a repair window and prepares a work order. If a part is unavailable, it checks alternatives before sending the plan to a maintenance planner for approval.",
-            "The workflow depends on a shared machine identity across maintenance, inventory, and scheduling records. Historical failure data supports the prediction model. Interfaces let the agent reserve parts and submit approved work orders while the existing systems maintain stock balances and production commitments. This applies the paper's ideas about reusing accumulated data and connecting new capabilities through middleware.",
+            "The workflow depends on a shared machine identity across maintenance, inventory, and scheduling records. Historical failure data supports the prediction model. Interfaces let the agent reserve parts and submit approved work orders while the existing systems maintain stock balances and production commitments. This applies the paper’s ideas about reusing accumulated data and connecting new capabilities through middleware.",
             "A pilot could begin with one machine family and its established maintenance routines. If the manufacturer offers the service under an uptime contract, operating records also need to connect to contract and billing systems."
           ],
           "kind": "example"
@@ -72,7 +72,7 @@
       "sections": [
         {
           "heading": "Start with the job",
-          "body": "A factory buying remote support needs the supplier's expertise. An unattended production shift also needs a service that can decide and act within agreed limits. The same equipment can support both arrangements."
+          "body": "A factory buying remote support needs the supplier’s expertise. An unattended production shift also needs a service that can decide and act within agreed limits. The same equipment can support both arrangements."
         },
         {
           "interactive": "service-choices"
@@ -97,7 +97,7 @@
         },
         {
           "heading": "What the findings support",
-          "body": "The study provides a way to compare service designs and the combinations of capabilities and roles they use. Public descriptions favor visible successes, so the sample cannot tell us how common each type is or which performs best. Judgments about a service's novelty were less consistent than judgments about its other characteristics. The factory scenarios above illustrate how to apply the framework; they are not study cases."
+          "body": "The study provides a way to compare service designs and the combinations of capabilities and roles they use. Public descriptions favor visible successes, so the sample cannot tell us how common each type is or which performs best. Judgments about a service’s novelty were less consistent than judgments about its other characteristics. The factory scenarios above illustrate how to apply the framework; they are not study cases."
         }
       ]
     },
@@ -323,7 +323,7 @@
     "slug": "data-selection",
     "image_source": {
       "url": "https://creativecommons.org/licenses/by/4.0/",
-      "label": "Published article · CC BY 4.0",
+      "label": "CC BY 4.0 license",
       "credit": "© The authors 2025"
     }
   },
@@ -372,7 +372,7 @@
         },
         {
           "heading": "What the evidence supports",
-          "body": "The findings offer a starting point for designing AI coaching in early technology ventures, based largely on university-linked coaching settings. Their usefulness in other settings still needs testing. The paper develops requirements; it does not evaluate a deployed AI coach or establish improvements in founders' judgment or venture success. Building and evaluating systems is the next research step."
+          "body": "The findings offer a starting point for designing AI coaching in early technology ventures, based largely on university-linked coaching settings. Their usefulness in other settings still needs testing. The paper develops requirements; it does not evaluate a deployed AI coach or establish improvements in founders’ judgment or venture success. Building and evaluating systems is the next research step."
         }
       ]
     },
