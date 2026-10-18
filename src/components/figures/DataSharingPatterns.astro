@@ -1,0 +1,21 @@
+---
+import FigureFrame from './FigureFrame.astro';
+const patterns = [
+  { name: 'Compliance', arrangement: 'Sensitive customer data is exchanged for services under strong privacy, security, and legal requirements.', example: 'Medical records' },
+  { name: 'Efficiency', arrangement: 'Continuous, real-time data is exchanged for services that support better operations, requiring compatible systems and organizational processes.', example: 'Supply chain optimization' },
+  { name: 'Revenue', arrangement: 'Data is monetized through arrangements such as marketplaces, with organizational and technical compatibility.', example: 'IoT data marketplace' },
+  { name: 'Society', arrangement: 'Multiple sources support social or environmental goals, free of charge and under use-specific agreements.', example: 'Environmental applications' },
+];
+---
+<FigureFrame id="data-sharing-patterns" title="The purpose shapes the sharing arrangement" intro="Different goals call for different ways of organizing access, exchange, and use.">
+  <table class="sharing-table" role="table" aria-label="Data sharing patterns and typical arrangements">
+    <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Pattern</th><th scope="col" role="columnheader">Typical arrangement</th><th scope="col" role="columnheader">Example</th></tr></thead>
+    <tbody role="rowgroup">{patterns.map(pattern => <tr role="row">
+      <th scope="row" role="rowheader">{pattern.name}</th>
+      <td role="cell">{pattern.arrangement}</td>
+      <td class="sharing-example" role="cell"><span class="mobile-table-label" aria-hidden="true">Example: </span>{pattern.example}</td>
+    </tr>)}</tbody>
+  </table>
+  <p class="figure-reading">These are descriptive patterns with overlapping characteristics. Compliance does not mean a duty to share; societal benefit does not mean unrestricted access.</p>
+  <Fragment slot="caption">Adapted and condensed from Table 5 (p. 17) of <a href="https://doi.org/10.1007/s12525-024-00732-0">Fassnacht et al. (2024)</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. The examples are indicative. The patterns are not stages or a ranking of success.</Fragment>
+</FigureFrame>

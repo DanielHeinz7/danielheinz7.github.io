@@ -1,0 +1,71 @@
+---
+const choices = [
+  {
+    key: 'remote', label: 'Remote experts',
+    service: 'A remote specialist investigates failed seals on a packaging line, checks the film specification, and changes sealing temperature with the plant’s approval.',
+    human: 'The supplier’s specialist chooses the intervention. The plant grants control and can stop the change.',
+    needs: 'Machine access and shared process data, with a service agreement defining control rights and escalation.',
+  },
+  {
+    key: 'autonomous', label: 'Dark factory',
+    service: 'For an unattended shift, a service sets sealing temperature and film tension from product dimensions and film specifications. It checks seal quality and adjusts within validated limits.',
+    human: 'Engineers approve the operating limits. An exception pauses the affected line for a specialist to investigate.',
+    needs: 'Reliable inspection and feedback, permission to change settings, and a tested recovery procedure. Responsibility for defective output must be agreed.',
+  },
+];
+---
+<section class="service-example" aria-labelledby="example-title">
+  <h2 id="example-title">Remote expertise or a dark factory?</h2>
+  <p class="example-context">Illustrative applications of the paper’s service types to a packaging line.</p>
+  <div class="service-tabs" role="tablist" aria-label="Compare service choices" hidden>
+    {choices.map(({ key, label }, index) => (
+      <button type="button" role="tab" id={`tab-${key}`} aria-controls={`panel-${key}`} aria-selected={index === 0 ? 'true' : 'false'} tabindex={index === 0 ? 0 : -1}>{label}</button>
+    ))}
+  </div>
+  {choices.map(({ key, label, service, human, needs }) => (
+    <section class="comparison-panel" id={`panel-${key}`} aria-labelledby={`label-${key}`}>
+      <h3 class="service-label" id={`label-${key}`}>{label}</h3>
+      <dl><dt>The service</dt><dd>{service}</dd><dt>Human role</dt><dd>{human}</dd></dl>
+      <p class="depends"><strong>What it needs</strong><br />{needs}</p>
+    </section>
+  ))}
+  <p class="example-context">The paper describes complementary service types. A factory could handle routine adjustments autonomously and bring in remote experts for exceptions.</p>
+</section>
+<script>
+  document.querySelectorAll<HTMLElement>('.service-tabs[role="tablist"]').forEach(list => {
+    const tabs = Array.from(list.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+    const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls') ?? ''));
+    if (panels.some(panel => !panel) || !tabs.length) return;
+    function select(tab: HTMLButtonElement, focus = false) {
+      tabs.forEach(item => {
+        const selected = item === tab;
+        item.setAttribute('aria-selected', String(selected));
+        item.tabIndex = selected ? 0 : -1;
+        const panel = document.getElementById(item.getAttribute('aria-controls') ?? '');
+        if (panel) panel.hidden = !selected;
+      });
+      if (focus) tab.focus();
+    }
+    tabs.forEach((tab, index) => {
+      const panel = panels[index]!;
+      panel.setAttribute('role', 'tabpanel');
+      panel.setAttribute('aria-labelledby', tab.id);
+      panel.tabIndex = 0;
+      tab.addEventListener('click', () => select(tab));
+      tab.addEventListener('keydown', event => {
+        let next: number | undefined;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = tabs.length - 1;
+        if (next !== undefined) {
+          event.preventDefault();
+          select(tabs[next], true);
+        }
+      });
+    });
+    select(tabs[0]);
+    list.closest('.service-example')?.classList.add('is-enhanced');
+    list.hidden = false;
+  });
+</script>

@@ -1,0 +1,70 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Arrow from '../components/Arrow.astro';
+import NewsRow from '../components/NewsRow.astro';
+import PaperImage from '../components/PaperImage.astro';
+import { navigation } from '../data/site';
+import { news } from '../data/news';
+const recentNews = news.slice(0, 4);
+const olderNews = news.slice(4);
+---
+<SiteLayout title="Daniel Heinz" active="home" bodyClass="compact-navigation">
+  <PageHeader title="What changes when organizations put data and AI to work?" intro="My lab develops digital services with firms, founders, and researchers, using data and AI both within the services and throughout their development. We study how these services change organizations." />
+  <section class="work sample" aria-labelledby="work-title">
+    <header class="section-head">
+      <h2 id="work-title">Inside the research</h2>
+      <span>Journal of Information Technology · 2026</span>
+    </header>
+    <div class="sample-body">
+      <a class="paper-image" href="/research/legacy-systems/" aria-label="Explore the idea: legacy systems as a foundation for renewal">
+        <PaperImage file="jit-first-page.png" loading="eager" sizes="(max-width: 498px) calc(100vw - 48px), (max-width: 850px) 450px, (max-width: 1150px) 200px, (max-width: 1500px) 270px, 370px" alt="First page of the Journal of Information Technology article by Daniel Heinz and Christoph F. Breidbach" />
+      </a>
+      <div class="annotation">
+        <h3>Legacy systems as a foundation for renewal.</h3>
+        <p>Legacy systems provide data and operational stability that firms can build on. Our theory explains how reconfiguring this installed base enables digital renewal while sustaining day-to-day operations.</p>
+        <p class="byline">Daniel Heinz &amp;<br />Christoph F. Breidbach</p>
+        <a class="text-link" href="/research/legacy-systems/">Explore the idea <Arrow /></a>
+      </div>
+    </div>
+    <p class="sample-credit">Paper preview: © Association for Information Technology Trust 2026 · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+  </section>
+  <nav class="tiles" aria-label="Explore the site">
+    {navigation.map(({ href, label }) => <a class="tile" href={href}><span class="tile-title">{label}<Arrow /></span></a>)}
+  </nav>
+  <a class="glance text-link" href="/at-a-glance/">Research at a glance <Arrow /></a>
+  <section class="ideas-preview" aria-labelledby="ideas-title">
+    <header class="section-head"><h2 id="ideas-title"><a class="text-link" href="/ideas/">Ideas <Arrow /></a></h2></header>
+    <p>Questions I’m working through about human judgment, research with AI, and the organizations we build around it.</p>
+  </section>
+  <section class="news" id="news" aria-labelledby="news-title">
+    <h2 id="news-title">News</h2>
+    {recentNews.map(item => <NewsRow item={item} />)}
+    {olderNews.length > 0 && <details class="news-archive">
+      <summary>
+        <span class="more-news">More news</span>
+        <span class="less-news">Less news</span>
+        <Arrow />
+      </summary>
+      {olderNews.map(item => <NewsRow item={item} />)}
+    </details>}
+  </section>
+  <SiteFooter />
+</SiteLayout>
+
+<style>
+  .sample-credit { margin-top: 16px; font-size: 12px; line-height: 1.5; color: var(--mute); }
+  .ideas-preview { margin-top: 40px; }
+  .ideas-preview > p { margin-top: 16px; max-width: 60ch; }
+  .news-archive > summary { display: flex; align-items: center; gap: 12px; min-height: 44px; width: fit-content; margin-top: 8px; padding: 8px 0; list-style: none; cursor: pointer; font-weight: 700; }
+  .news-archive > summary::-webkit-details-marker { display: none; }
+  .news-archive > summary span { text-decoration: underline; text-underline-offset: 4px; }
+  .news-archive > summary:hover { color: var(--cover); }
+  .news-archive > summary:focus-visible { outline: 2px solid currentColor; outline-offset: 6px; }
+  .news-archive > summary :global(.arrow) { transform: rotate(90deg); }
+  .news-archive .less-news { display: none; }
+  .news-archive[open] .more-news { display: none; }
+  .news-archive[open] .less-news { display: inline; }
+  .news-archive[open] > summary :global(.arrow) { transform: rotate(-90deg); }
+</style>

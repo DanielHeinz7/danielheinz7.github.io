@@ -1,0 +1,28 @@
+---
+import papers from '../data/papers.json';
+import publications from '../data/cv-publications.json';
+import { site } from '../data/site';
+
+interface Props { title: string }
+const { title } = Astro.props;
+const origin = Astro.site!.origin;
+const links = Object.fromEntries([...publications.journal_articles, ...papers].map(paper => [
+  new URL(paper.url).href,
+  { name: `paper-${new URL(paper.url).pathname.slice(1)}`, title: `Paper: ${paper.title}` },
+]));
+links[new URL(site.cv, origin).href] = { name: 'cv-pdf', title: 'CV (PDF)' };
+const config = {
+  enabled: import.meta.env.PROD,
+  endpoint: 'https://daniel-heinz.goatcounter.com/count',
+  origin,
+  path: Astro.url.pathname,
+  title,
+  links,
+};
+---
+<script type="application/json" id="site-analytics" set:html={JSON.stringify(config).replaceAll('<', '\\u003c')} />
+<script>
+  import { startAnalytics } from '../lib/analytics.mjs';
+  const data = document.getElementById('site-analytics')?.textContent;
+  if (data) startAnalytics(JSON.parse(data));
+</script>

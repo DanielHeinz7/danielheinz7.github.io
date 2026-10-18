@@ -1,0 +1,160 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Arrow from '../components/Arrow.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import '../styles/lab-teaching.css';
+
+const courses = [
+  {
+    id: 'building-with-ai',
+    shortTitle: 'Building with AI',
+    title: 'Building Digital Services with AI',
+    context: 'Practical seminar · KIT · Winter 2026/27',
+    description: 'Students develop an idea of their own into a working web app with AI coding tools. Each student keeps the project and its repository.',
+    parts: [
+      {
+        label: 'Problem and scope',
+        description: 'Students use early evidence to define whose problem they want to solve, separate needs from proposed features, and prepare context documents for a focused use case.',
+      },
+      {
+        label: 'User experience',
+        description: 'They map the core user journey, choose a visual direction, and prototype the main screens. Peer walkthroughs reveal where the interface needs clearer guidance.',
+      },
+      {
+        label: 'Building the service',
+        description: 'Using AI coding agents, students connect the interface to a database, add login and access controls, and deploy the app. They inspect generated code and debug the complete user journey.',
+      },
+      {
+        label: 'Testing and reflection',
+        description: 'Students refine code quality and test important paths before presenting a live demonstration. A build log records their decisions and setbacks, with reflection on what they learned from working with AI.',
+      },
+    ],
+    href: 'https://dsi.win.kit.edu/courses_1335.php',
+    linkLabel: 'Course details',
+  },
+  {
+    id: 'digital-services',
+    shortTitle: 'Digital services',
+    title: 'Digital Services: Innovation & Business Models',
+    context: 'Master’s course · KIT',
+    description: 'I teach innovation adoption, platforms and ecosystems, and smart services in this co-taught course. Students prepare the concepts before class and work through cases together.',
+    parts: [
+      {
+        label: 'Innovation adoption',
+        description: 'Students trace how an innovation spreads and why individuals accept or reject it. Cases examine customer needs, organizational resistance, and ways to make adoption easier.',
+      },
+      {
+        label: 'Platforms and ecosystems',
+        description: 'Using Apple and Epic’s dispute, students analyze network effects, platform roles, and governance. They consider how rules divide value between a platform, its complementors, and users.',
+      },
+      {
+        label: 'Smart services',
+        description: 'How do connected products become services? Students connect sensors and data to new offerings, then examine the technical and organizational work needed to develop them.',
+      },
+    ],
+    href: 'https://dsi.win.kit.edu/courses_1204.php',
+    linkLabel: 'Course details',
+  },
+  {
+    id: 'doctoral-seminar',
+    shortTitle: 'Doctoral seminar',
+    title: 'Doctoral Seminar',
+    context: 'KIT · Winter 2026/27',
+    description: 'What makes a research question worth asking, and what counts as a convincing answer? I co-lead this seminar, combining foundational readings with discussion of participants’ own research.',
+    parts: [
+      {
+        label: 'Questions and evidence',
+        description: 'Participants examine what makes a claim scientific, then reformulate a research question from another perspective to discuss how its evidence and possible answers would change.',
+      },
+      {
+        label: 'Contribution and relevance',
+        description: 'Participants work on a short statement of their research contribution. They discuss the role of technology in their study and who could benefit from its findings.',
+      },
+      {
+        label: 'Research judgment and AI',
+        description: 'Each participant develops a short statement of their position as a researcher, then discusses which research tasks they would hand to AI and which they would keep doing themselves.',
+      },
+    ],
+  },
+  {
+    id: 'executive-education',
+    shortTitle: 'Executive education',
+    title: 'Digital Services at HECTOR School',
+    context: 'Executive education · KIT',
+    description: 'My sessions at HECTOR School connect digital service concepts to decisions that professionals face in their organizations.',
+    parts: [
+      {
+        label: 'Innovation adoption',
+        description: 'Participants examine how an innovation gains support inside a company and acceptance among customers. Cases connect adoption barriers with the roles and changes needed to put a service into use.',
+      },
+      {
+        label: 'Platforms and ecosystems',
+        description: 'Participants map the roles and dependencies in platform ecosystems and consider where a company could compete. Cases explore network effects, openness, and tensions between platform owners and complementors.',
+      },
+      {
+        label: 'Smart services',
+        description: 'Connected products can enable remote monitoring, predictive maintenance, and new service models. Participants examine how the technology, customer offering, and business model have to develop together.',
+      },
+      {
+        label: 'Sustainable digital services',
+        description: 'Participants explore how digital services can support longer product use and circular business models. The discussion connects shared product data, digital product passports, and coordination across company boundaries.',
+      },
+    ],
+    href: 'https://www.hectorschool.kit.edu/specialization-digital-services.php',
+    linkLabel: 'Program details',
+  },
+];
+---
+
+<SiteLayout
+  title="Teaching"
+  description="Daniel Heinz’s teaching in digital services, AI-assisted development, a doctoral seminar, and executive education at KIT."
+  active="teaching"
+  bodyClass="lab-teaching-page"
+>
+  <nav class="page-nav" aria-label="Back to home">
+    <a href="/"><Arrow /> Home</a>
+  </nav>
+
+  <h1>Teaching</h1>
+  <p class="lede">Students explain their choices, try them in practice, and reflect on what they learned.</p>
+
+  <nav class="research-contents" aria-label="Courses on this page">
+    {courses.map(course => <a href={`#${course.id}`}>{course.shortTitle}</a>)}
+  </nav>
+
+  <div class="course-list">
+    {courses.map((course) => (
+      <section class="course-entry" id={course.id} aria-labelledby={`${course.id}-title`}>
+        <h2 id={`${course.id}-title`}>{course.title}</h2>
+        <p class="course-context">{course.context}</p>
+        <p>{course.description}</p>
+        <dl class="course-parts">
+          {course.parts.map(part => (
+            <div>
+              <dt>{part.label}</dt>
+              <dd>{part.description}</dd>
+            </div>
+          ))}
+        </dl>
+        {course.href && (
+          <a class="text-link section-link" href={course.href} aria-label={`${course.linkLabel}: ${course.title}`}>
+            {course.linkLabel} <Arrow />
+          </a>
+        )}
+      </section>
+    ))}
+  </div>
+
+  <section class="field-section" aria-labelledby="advising-title">
+    <h2 id="advising-title">Research through a thesis</h2>
+    <p>I advise doctoral researchers and bachelor’s and master’s students. Our meetings connect the research question to methodological choices and to the next piece of work.</p>
+    <a class="text-link section-link" href="https://dsi.win.kit.edu/theses.php">Thesis opportunities at KIT <Arrow /></a>
+  </section>
+
+  <nav class="related-pages" aria-label="Continue exploring">
+    <a class="text-link" href="/lab/">Lab <Arrow /></a>
+    <a class="text-link" href="/research/">Research <Arrow /></a>
+  </nav>
+  <SiteFooter />
+</SiteLayout>

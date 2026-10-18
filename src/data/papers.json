@@ -1,0 +1,412 @@
+[
+  {
+    "id": "renewal",
+    "topic": "Transforming firms",
+    "question": "How can firms renew what they already have?",
+    "idea": "Legacy systems carry data and operational stability. Reconfiguring them can open new paths for digital renewal.",
+    "title": "A Mechanism-Based Theory of Legacy Enterprise Information System Reconfiguration in Incumbent Firms",
+    "authors": "Heinz & Breidbach",
+    "venue": "Journal of Information Technology · 2026",
+    "url": "https://doi.org/10.1177/02683962261461296",
+    "image": "jit-first-page.png",
+    "detail": "paper-legacy-systems.html",
+    "full_authors": "Daniel Heinz and Christoph F. Breidbach",
+    "explainer": {
+      "headline": "Renewal can start with existing systems.",
+      "intro": "The systems that run a firm today can also support what it wants to do next. Their data and reliable routines are resources for change.",
+      "sections": [
+        {
+          "heading": "The tension",
+          "body": "Established firms depend on systems built over many years. Those systems can make change difficult, but they also hold the records, workflows, and controls that keep daily operations running."
+        },
+        {
+          "heading": "What the study explains",
+          "body": "We studied how manufacturers reconfigured existing systems for new digital activities. Firms used stable operations to support experiments, put accumulated data to new uses, connected new applications through interfaces, and adapted financial routines for new revenue models.",
+          "figure": "legacy-reconfiguration"
+        },
+        {
+          "heading": "An agent that coordinates maintenance",
+          "body": [
+            "An illustrative extension to agentic workflows: a vibration alert prompts an AI agent to retrieve repair history, call a failure-prediction model, and check compatible parts and production schedules. It proposes a repair window and prepares a work order. If a part is unavailable, it checks alternatives before sending the plan to a maintenance planner for approval.",
+            "The workflow depends on a shared machine identity across maintenance, inventory, and scheduling records. Historical failure data supports the prediction model. Interfaces let the agent reserve parts and submit approved work orders while the existing systems maintain stock balances and production commitments. This applies the paper’s ideas about reusing accumulated data and connecting new capabilities through middleware.",
+            "A pilot could begin with one machine family and its established maintenance routines. If the manufacturer offers the service under an uptime contract, operating records also need to connect to contract and billing systems."
+          ],
+          "kind": "example"
+        },
+        {
+          "heading": "A practical starting point",
+          "body": "Before deciding what to replace, identify the data and routines a new offering can build on. Then make responsibility for the connections between old and new systems explicit. The paper offers explanations for such changes, not a universal migration plan."
+        }
+      ],
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "We compared five established German manufacturers that had successfully reconfigured their enterprise systems while keeping daily operations running. The study looks back at completed changes to explain how they happened. Cases ranged from agricultural machinery to food-processing equipment, with digital offerings such as remote diagnostics and predictive maintenance."
+        },
+        {
+          "heading": "Evidence and analysis",
+          "body": "We interviewed 32 people, including managers at different levels and external partners. Interviews were recorded and transcribed, then checked against company records, field notes, and other documents. For each firm, we reconstructed a timeline of decisions and changes to its systems. Comparing those timelines helped us identify recurring mechanisms: the conditions that enabled change, the actions taken, and the outcomes. We checked alternative explanations and searched for evidence that challenged each mechanism."
+        },
+        {
+          "heading": "What the findings support",
+          "body": "The result explains paths that worked in these firms. Because we deliberately selected successful cases, it cannot establish how often reconfiguration succeeds or whether it outperforms replacement. The findings are most relevant where established systems remain essential to reliable operations. The agentic maintenance workflow above is an illustrative application of these ideas; it was not one of the studied cases."
+        }
+      ]
+    },
+    "slug": "legacy-systems",
+    "image_source": {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "label": "Paper preview · CC BY 4.0",
+      "credit": "© Association for Information Technology Trust 2026"
+    }
+  },
+  {
+    "id": "smart-services",
+    "topic": "Transforming firms",
+    "question": "What makes a smart service useful?",
+    "idea": "Connected products can inform, recommend, or act. Our taxonomy shows how service outcomes, users, and technical capabilities fit together in business-to-business settings.",
+    "title": "Smart Services in B2B Contexts: A Taxonomy and Archetypes",
+    "authors": "Heinz, Fassnacht, Benz, Luchner & Satzger",
+    "full_authors": "Daniel Heinz, Marcel Fassnacht, Carina Benz, Philipp Luchner, and Gerhard Satzger",
+    "venue": "Information & Management · 2026",
+    "url": "https://doi.org/10.1016/j.im.2026.104390",
+    "image": "im-first-page.png",
+    "detail": "paper-smart-services.html",
+    "explainer": {
+      "headline": "What makes a smart service useful?",
+      "intro": "The same machine data can support a remote specialist or a service that adjusts production on its own. Each choice calls for a different service design.",
+      "sections": [
+        {
+          "heading": "Start with the job",
+          "body": "A factory buying remote support needs the supplier’s expertise. An unattended production shift also needs a service that can decide and act within agreed limits. The same equipment can support both arrangements."
+        },
+        {
+          "interactive": "service-choices"
+        },
+        {
+          "heading": "What the study adds",
+          "body": "The taxonomy connects what a service delivers with who provides and uses it, the analytics behind it, and how it informs or acts. Remote management and autonomous operation emerge as distinct, compatible service types.",
+          "figure": "smart-service-routes"
+        },
+        {
+          "heading": "A practical starting point",
+          "body": "Start with the service outcome, then specify who decides and who acts. For unattended operation, define which changes the service can make and when an expert takes over. For remote support, agree on access and control."
+        }
+      ],
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "We developed the classification by moving between research literature and descriptions of 100 implemented B2B smart services. Cases had to explain the customer value and how the service worked in practice. They covered several industries, including manufacturing, healthcare, and agriculture. We revised the categories through repeated rounds of coding and feedback from researchers."
+        },
+        {
+          "heading": "Evidence and analysis",
+          "body": "We tested whether other researchers could apply the categories to the same service descriptions. We then grouped the 100 cases by their shared characteristics using cluster analysis and interpreted the groups as recurring service types. A separate check used interviews and archival material from two providers whose portfolios had not been used to build the classification. This tested whether the types also helped distinguish services beyond the original sample."
+        },
+        {
+          "heading": "What the findings support",
+          "body": "The study provides a way to compare service designs and the combinations of capabilities and roles they use. Public descriptions favor visible successes, so the sample cannot tell us how common each type is or which performs best. Judgments about a service’s novelty were less consistent than judgments about its other characteristics. The factory scenarios above illustrate how to apply the framework; they are not study cases."
+        }
+      ]
+    },
+    "slug": "smart-services",
+    "image_source": {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "label": "Paper preview · CC BY 4.0",
+      "credit": "© The authors 2026"
+    }
+  },
+  {
+    "id": "circular-industry",
+    "topic": "Transforming firms",
+    "question": "What would make a circular car industry possible?",
+    "idea": "Keeping components in use requires a shared view of their history. Our study works backward from a circular automotive industry to identify the data, agreements, and investments that would make it possible.",
+    "title": "Backcasting the Future of the Automotive Industry: Leveraging Digital Technologies for the Circular Economy",
+    "authors": "Sagnier Eckert, Finner, Heinz & Satzger",
+    "full_authors": "Linda Sagnier Eckert, Ann-Sophie Finner, Daniel Heinz, and Gerhard Satzger",
+    "venue": "Communications of the Association for Information Systems · 2026",
+    "url": "https://doi.org/10.17705/1CAIS.05835",
+    "image": "cais-first-page.png",
+    "detail": "paper-circular-industry.html",
+    "slug": "circular-industry",
+    "explainer": {
+      "headline": "Designing for a battery’s next life.",
+      "intro": "A retired car can leave behind a battery that still has useful life. The question is how another firm can recognize that value and act on it.",
+      "sections": [
+        {
+          "heading": "The decision begins before disposal",
+          "body": "A remanufacturer needs to know how a battery was built, used, and repaired. Those records originate with other firms, often years earlier. Choices about component design and access to product history shape what can be recovered later."
+        },
+        {
+          "heading": "Work backward from the future",
+          "figure": "circular-pathway",
+          "body": "We envisioned a circular European automotive industry in 2050, then traced the steps needed to get there. The resulting pathway connects better lifecycle data with agreements about who can use it, skills for acting on it, and investment in circular production. Digital tools and those organizational changes develop together."
+        },
+        {
+          "heading": "Choosing a battery’s next use",
+          "body": [
+            "Illustrative scenario: a battery returned from an electric vehicle has uneven wear across its modules. An authorized remanufacturer combines the battery’s usage history with fresh diagnostic tests. A model estimates remaining useful life, while a digital twin tests how it might perform as stationary storage.",
+            "That evidence helps the firm choose between a second use, rebuilding the pack from suitable modules, and material recovery. The decision and any replacements are written back to its digital product passport, so the next owner can understand what it contains. This depends on other firms agreeing which history to share and retaining control over sensitive information."
+          ],
+          "kind": "example"
+        },
+        {
+          "heading": "Start with one future decision",
+          "body": "Choose a component and ask what a future repairer or remanufacturer would need to know about it. Then work backward: who creates that information, who keeps it accessible, and what would make sharing it worthwhile? The paper’s scenarios offer a way to organize that discussion."
+        }
+      ],
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "We used backcasting: define a desirable future, then work backward to the actions needed to reach it. Our target was a circular, carbon-neutral European automotive industry by 2050. We developed future images for vehicle design and manufacturing and for recovering value when components finish their original use."
+        },
+        {
+          "heading": "Evidence and analysis",
+          "body": "We conducted 14 interviews across two rounds with representatives of eight organizations, then compared the findings with research and industry literature. Interview transcripts were coded into recurring themes. Two expert workshops challenged and refined the future images and the transition pathway. The first included nine research and industry participants; the second included five experts in circularity, automotive technology, and data sharing."
+        },
+        {
+          "heading": "What the findings support",
+          "body": "The result is a proposed pathway, grounded in expert judgment and existing knowledge. It does not predict what will happen or demonstrate the environmental gains of a deployed system. Some goals remain only partly quantified, and the pathway lacks an ongoing process for monitoring and adjustment. The battery example above illustrates the future scenario; its decisions would still need technical and economic evaluation in practice."
+        }
+      ]
+    },
+    "image_source": {
+      "url": "https://publikationen.bibliothek.kit.edu/1000190352",
+      "label": "Accepted manuscript · KITopen",
+      "credit": "© 2026 Association for Information Systems · Noncommercial use only"
+    }
+  },
+  {
+    "id": "enterprise-ai",
+    "topic": "Enterprise AI",
+    "question": "How should people and AI share the work?",
+    "idea": "Human and AI capabilities can be combined in different ways. Our framework explains how shared resources and rules shape this collaboration in service ecosystems.",
+    "title": "Conceptualizing Hybrid Intelligent Service Ecosystems",
+    "authors": "Bartelheimer, Heinz et al.",
+    "venue": "Electronic Markets · 2025",
+    "url": "https://doi.org/10.1007/s12525-025-00798-4",
+    "image": "hybrid-first-page.png",
+    "detail": "paper-human-ai-work.html",
+    "full_authors": "Christian Bartelheimer, Daniel Heinz, Sarah Hönigsberg, Dominik Siemon, Mahei Manhai Li, Timo Strohmann, Jens Poeppelbuss, and Christoph Peters",
+    "explainer": {
+      "headline": "Who does what when AI joins in?",
+      "intro": "AI changes how a service is delivered when people, software, and partner organizations take on different parts of the work.",
+      "sections": [
+        {
+          "heading": "Look beyond one person and one tool",
+          "body": "A service usually connects several participants. Customers, employees, and partner firms may all use AI. Understanding their collaboration requires looking at the resources they share and the rules that shape what each participant can do."
+        },
+        {
+          "heading": "What the paper contributes",
+          "body": "Our framework describes service networks in which humans and AI systems act together. It explains how the division of work depends on the situation and can evolve as participants change their capabilities and expectations.",
+          "figure": "hybrid-ecosystem"
+        },
+        {
+          "heading": "Following a customer request",
+          "body": "Illustrative example: an AI assistant prepares an answer, an employee checks it, and a partner supplies information needed to resolve the request. The service depends on all of those contributions and on agreements about access, responsibility, and disclosure.",
+          "kind": "example"
+        },
+        {
+          "heading": "A question to take into practice",
+          "body": "Who is acting, what resources can they use, and what rules apply? Mapping those relationships is one way to use the framework when discussing a new AI service. This is a practical application of the concept, rather than a method tested in this paper."
+        }
+      ],
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "This is a conceptual study: we bring existing theories together to explain a problem they address separately. We combine research on human–AI collaboration with service ecosystem theory and research on agency, the capacity of people and software to act and influence outcomes. The aim is to explain how collaboration changes across a whole service network."
+        },
+        {
+          "heading": "How we developed the framework",
+          "body": "We connected concepts from these research streams into a framework covering participants, their resources, and the rules governing their interactions. We then worked through scenarios, including elderly care and IT customer support, to examine whether the framework could describe different forms of collaboration. This process led to propositions about how human and AI roles develop and affect the wider network."
+        },
+        {
+          "heading": "What the study can tell us",
+          "body": "The framework provides a way to analyze who does what when AI enters a service. The scenarios illustrate its use; they are not field trials. Whether particular arrangements improve outcomes still needs empirical testing, especially in settings where human–AI collaboration is less established."
+        }
+      ]
+    },
+    "slug": "human-ai-work",
+    "image_source": {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "label": "Paper preview · CC BY 4.0",
+      "credit": "© The authors 2025"
+    }
+  },
+  {
+    "id": "data-ecosystems",
+    "topic": "Data ecosystems",
+    "question": "What makes data sharing work across firms?",
+    "idea": "Sharing data connects technical choices with organizational structures and relationships between firms. Our taxonomy helps explain how these choices fit together.",
+    "title": "Data Sharing Practices: The Interplay of Data, Organizational Structures, and Network Dynamics",
+    "authors": "Fassnacht, Leimstoll, Benz, Heinz & Satzger",
+    "venue": "Electronic Markets · 2024",
+    "url": "https://doi.org/10.1007/s12525-024-00732-0",
+    "image": "data-sharing-first-page.png",
+    "detail": "paper-data-sharing.html",
+    "full_authors": "Marcel Fassnacht, Jannis Leimstoll, Carina Benz, Daniel Heinz, and Gerhard Satzger",
+    "explainer": {
+      "headline": "What are we sharing data for?",
+      "intro": "Firms share data for different reasons. The purpose shapes who should participate, how they work together, and what the technical arrangement needs to support.",
+      "sections": [
+        {
+          "heading": "Start with the purpose",
+          "body": "A company may share data to meet a legal requirement, coordinate operations, earn revenue, or contribute to a societal goal. Those purposes can call for different relationships between the organizations involved."
+        },
+        {
+          "heading": "What the study adds",
+          "body": "We developed a taxonomy, a structured way to describe and compare data-sharing practices. It connects characteristics of the data with organizational choices and the wider network. The recurring patterns help explain why arrangements that look technically similar may serve different purposes.",
+          "figure": "data-sharing-patterns"
+        },
+        {
+          "heading": "The same data, a different arrangement",
+          "body": "Illustrative example: a firm might sell equipment-use data to another business or share it with a partner to coordinate maintenance. Before choosing a platform, the firms need to clarify the purpose of the exchange and how each participant benefits.",
+          "kind": "example"
+        },
+        {
+          "heading": "Using the idea",
+          "body": "The taxonomy provides a vocabulary for comparing a proposed arrangement with existing practices. A useful starting question is what the participants expect to gain from sharing. Technical choices can then be discussed in relation to that purpose."
+        }
+      ],
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "We developed a taxonomy, a shared set of characteristics for describing how organizations share data. Starting with existing classifications and a review of 44 research articles, we refined it against publicly documented practices across industries. This helped us connect decisions about the data with the organizations involved and the relationships between them."
+        },
+        {
+          "heading": "Evidence and analysis",
+          "body": "We classified 121 cases using the taxonomy, with independent researchers checking parts of the coding. Cluster analysis then grouped cases with similar characteristics. We interpreted those groups by returning to the case descriptions and examining which choices commonly occurred together. Separately, four experts involved in a chemical-industry data-sharing arrangement applied the taxonomy to their own case and assessed its usefulness."
+        },
+        {
+          "heading": "How to use the findings",
+          "body": "The patterns offer reference points for comparing a proposed arrangement with existing practices. The groups were only weakly separated, so they should be treated as broad patterns with overlap. The study captures publicly visible practices at a point in time. Confidential arrangements and detailed technical implementation may be missing, and the analysis does not establish which configuration causes better business results."
+        }
+      ]
+    },
+    "slug": "data-sharing",
+    "image_source": {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "label": "Paper preview · CC BY 4.0",
+      "credit": "© The authors 2024"
+    }
+  },
+  {
+    "id": "data-selection",
+    "topic": "Data ecosystems",
+    "question": "Which data is worth buying for a prediction?",
+    "idea": "We built a mechanism that ranks data sources and tests what each adds to a prediction. It helps buyers compare data bundles against their budget before acquiring them.",
+    "title": "Selecting Data Assets in Data Marketplaces: Leveraging Machine Learning and Explainable AI for Value Quantification",
+    "authors": "Martin, Heinz, Glauner & Kühl",
+    "venue": "Business & Information Systems Engineering · 2026",
+    "url": "https://doi.org/10.1007/s12599-025-00940-8",
+    "image": "bise-first-page.png",
+    "detail": "paper-data-selection.html",
+    "full_authors": "Dominik Martin, Daniel Heinz, Moritz Glauner, and Niklas Kühl",
+    "explainer": {
+      "headline": "Which data improves a prediction?",
+      "intro": "A marketplace may offer many sensor feeds. The useful ones are those that improve the prediction you need to make. We built a mechanism that estimates that contribution before a buyer acquires the data.",
+      "sections": [
+        {
+          "heading": "Start with a prediction",
+          "body": "The buyer provides historical outcomes, such as whether a component was healthy or failing. The mechanism assesses candidate data against those outcomes, using an existing prediction model or a surrogate model. The buyer receives an assessment before purchase; the marketplace performing that assessment still needs access to the underlying data."
+        },
+        {
+          "heading": "Rank signals, then test additions",
+          "body": [
+            "Feature-selection methods or explainable AI rank candidate inputs. SHAP, for example, estimates how inputs contribute to a model’s prediction. A global ranking summarizes their importance across cases; a local ranking can change with each case.",
+            "The prototype adds inputs in rank order and measures how model performance changes. Values of inputs not yet selected are permuted, or shuffled, to mask their information. This matters when signals overlap: two useful signals considered separately may add little extra together. Combining these performance estimates with marketplace prices helps the buyer choose a bundle within a budget or work back from a required performance level."
+          ],
+          "figure": "data-selection-flow"
+        },
+        {
+          "heading": "Choosing signals for a turbine",
+          "kind": "example",
+          "body": [
+            "Illustrative extension of the study’s seal-monitoring case: a wind-turbine operator wants to distinguish healthy hydraulic seals from failure modes. Candidate feeds include pressure, temperature, and vibration-derived signals. The mechanism ranks them against labeled examples, then tests what each successive addition contributes.",
+            "A second pressure feed might repeat information already available, while a vibration feature might add evidence under a particular operating condition. The buyer can inspect the estimated gain before paying for another feed. These signal outcomes are illustrative; the study evaluated seal data from a test bench."
+          ]
+        },
+        {
+          "heading": "What the experiments show",
+          "body": "SHAP performed strongly for context-specific selection in the reported comparisons. Sequential feature selection and permutation importance were also competitive in suitable settings. More demanding methods traded computation time for prediction performance. These estimates belong to a particular model and task; pricing and business returns require additional judgments."
+        }
+      ],
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "We used design science research to develop a data-selection mechanism for marketplaces. A structured review of 53 articles and initial interviews with four domain experts informed the requirements. Across two design cycles, we translated those requirements into design principles and implemented the mechanism in Python. Expert feedback helped refine the design."
+        },
+        {
+          "heading": "Technical evaluation",
+          "body": "We compared ranking strategies on ten public datasets and an industrial dataset for hydraulic seal condition monitoring. The industrial case contained 545 sensor features from a test bench. Experiments covered classification and regression, using F1 and R² scores. We compared cost–performance curves with random selection and averaged 50 repetitions of the masking procedure. Eleven experts assessed the prototype’s perceived usefulness and their attitudes toward using it."
+        },
+        {
+          "heading": "What the evidence supports",
+          "body": "The study demonstrates technical feasibility and compares methods under the tested conditions. It does not evaluate purchases in a deployed marketplace. Results depend on the model, available target labels, and how missing inputs are simulated. The assessing system needs access to candidate data; secure marketplace integration remains implementation work. Expert ratings measure expectations of usefulness, rather than observed purchasing behavior."
+        }
+      ]
+    },
+    "slug": "data-selection",
+    "image_source": {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "label": "CC BY 4.0 license",
+      "credit": "© The authors 2025"
+    }
+  },
+  {
+    "id": "entrepreneurship",
+    "topic": "Entrepreneurship",
+    "question": "How can AI help founders think for themselves?",
+    "idea": "AI coaching should help founders question assumptions and develop their judgment. We translate these needs into design requirements that preserve founders’ control over decisions.",
+    "title": "Designing AI-Based Entrepreneurial Coaching Systems",
+    "authors": "Liebschner, Heinz & Satzger",
+    "venue": "DESRIST · 2026",
+    "url": "https://doi.org/10.1007/978-3-032-28313-9_2",
+    "image": "coaching-first-page.png",
+    "detail": "paper-ai-coaching.html",
+    "full_authors": "Jonas Liebschner, Daniel Heinz, and Gerhard Satzger",
+    "explainer": {
+      "headline": "How can AI help founders think?",
+      "intro": "Founders need to test assumptions and make decisions under uncertainty. An AI coach should support that learning while keeping decisions with the founder.",
+      "sections": [
+        {
+          "heading": "The problem with agreeable answers",
+          "body": "Generic AI assistants can offer quick responses while losing the context of a venture or accepting its assumptions too readily. Human coaches also have limited time and cannot follow every decision between sessions."
+        },
+        {
+          "heading": "What the paper proposes",
+          "body": "Interviews with founders and coaches informed requirements for AI coaching systems. The system should help structure the venture, connect assumptions with tests and evidence, and support critical reflection across successive conversations.",
+          "figure": "coaching-requirements"
+        },
+        {
+          "heading": "Make an assumption testable",
+          "body": "Illustrative example: a founder believes customers will pay for a new service. An AI coach could ask what evidence supports that belief and help plan a test. The founder decides how to interpret the evidence and what to do next.",
+          "kind": "example"
+        },
+        {
+          "heading": "A design principle to carry forward",
+          "body": "Keep assumptions, experiments, evidence, and decisions connected. Let founders accept, revise, or reject a recommendation with their own reasoning. These are design proposals intended to support learning, with effectiveness still to be evaluated."
+        }
+      ],
+      "method": [
+        {
+          "heading": "Research approach",
+          "body": "The study uses design science research to define what an AI coaching system should support. In 2025, we interviewed 19 startup founders and eight coaches in Germany across two rounds. Founders described their use of AI and the support they wanted; coaches contributed experience across ventures."
+        },
+        {
+          "heading": "From interviews to requirements",
+          "body": "We recorded and transcribed the interviews, then coded accounts of current problems separately from ideas for future support. Comparing founder and coach perspectives helped us group recurring concerns into themes and derive four design requirements. Two researchers discussed the coding and interpretations. The author team checked that each requirement could be traced to the interviews, was consistent with the others, and could guide system design."
+        },
+        {
+          "heading": "What the evidence supports",
+          "body": "The findings offer a starting point for designing AI coaching in early technology ventures, based largely on university-linked coaching settings. Their usefulness in other settings still needs testing. The paper develops requirements; it does not evaluate a deployed AI coach or establish improvements in founders’ judgment or venture success. Building and evaluating systems is the next research step."
+        }
+      ]
+    },
+    "slug": "ai-coaching",
+    "image_source": {
+      "url": "https://doi.org/10.1007/978-3-032-28313-9_2",
+      "label": "Author manuscript · Published version",
+      "credit": "© The authors 2026, under exclusive license to Springer Nature Switzerland AG"
+    }
+  }
+]

@@ -1,0 +1,76 @@
+[
+  {
+    "id": "learning-at-work",
+    "label": "Learning at work",
+    "title": "What will people learn at work?",
+    "paragraphs": [
+      "Imagine joining a team where AI produces most of the analysis. Your job is to check it. How do you learn to spot a weak assumption if you rarely build an analysis yourself?",
+      "A job is also a place to develop judgment. I’m interested in how people acquire that judgment when more of their work arrives already done. Experienced staff face a related question: they may be able to correct an answer, yet have little say in which problem the system is solving.",
+      "Doing something yourself can look inefficient when a tool already has an answer. But that experience may be what prepares you for the next unfamiliar problem."
+    ],
+    "question": "Which parts of a job should people keep practicing, even when AI can do them faster?"
+  },
+  {
+    "id": "vibe-coding-entrepreneurship",
+    "label": "Vibe coding & entrepreneurship",
+    "title": "What changes when founders can build their own software?",
+    "paragraphs": [
+      "Suppose a founder can turn an idea into a working prototype by describing it to AI. How might that affect who starts a software venture and which ideas get a chance? I’m interested in how vibe coding shapes the path from an initial idea to something customers can try.",
+      "The next question is what founders learn along the way. Faster prototyping could make it easier to test demand and respond to users. It could also make it tempting to keep adding features before finding out whether anyone needs them."
+    ],
+    "question": "How does easier software creation change the path from an idea to a viable venture?"
+  },
+  {
+    "id": "thinking-with-ai",
+    "label": "Thinking with AI",
+    "title": "How can AI leave room for doubt?",
+    "paragraphs": [
+      "I use AI in my own research. Imagine returning to a project after a few weeks away. A draft offers a neat explanation of the problem. You can follow the sentences, but you’re less sure why this explanation seemed right or what would make you give it up.",
+      "I’m interested in tools and working habits that help researchers stay with those questions. A useful system might help us revisit an uncertain choice or find an observation that doesn’t fit. It would also need to leave room for ideas that are still half formed.",
+      "Keeping track of every step can take attention away from the research itself."
+    ],
+    "question": "What is the smallest amount of structure that helps people think together and take responsibility for a claim?",
+    "related": {
+      "label": "Researcher decisions in Placet",
+      "href": "/tools/#placet"
+    }
+  },
+  {
+    "id": "finding-design-knowledge",
+    "label": "Finding design knowledge",
+    "title": "What can another field teach us about design?",
+    "paragraphs": [
+      "Suppose you’re designing a digital service and find a useful study in another field. It explains why a feature helped people in that setting, but offers no guidance for building your own system. What can you carry across?",
+      "I’m interested in how AI could help researchers find design knowledge in studies that never set out to formulate design principles. The difficult part is deciding what a finding justifies. A recommendation may depend on who used a system or the conditions under which it was tested. I want to understand how tools can help us examine those limits when we draw on research from other fields."
+    ],
+    "question": "How can we turn research findings into useful design guidance while keeping the limits of the evidence visible?"
+  },
+  {
+    "id": "cooperation-between-firms",
+    "label": "Cooperation between firms",
+    "title": "What makes cooperation between agents worthwhile?",
+    "paragraphs": [
+      "Consider two companies that could improve a shared service by connecting their AI systems. One has useful records, but sharing them could expose commercial knowledge. Even with a working connection, the company may see little reason to participate if most of the benefit goes elsewhere.",
+      "I’m interested in arrangements that make contributing worthwhile and give firms a say in how their knowledge is used. This becomes more demanding when agents can request information or act on it without a person negotiating every exchange. Technical choices about access and control then become part of the economic relationship."
+    ],
+    "question": "What would make a company willing to keep contributing as the service and its participants change?",
+    "related": {
+      "label": "Published work on data sharing",
+      "href": "/research/data-sharing/"
+    }
+  },
+  {
+    "id": "organizing-agent-work",
+    "label": "Organizing work with agents",
+    "title": "What happens after the pilot works?",
+    "paragraphs": [
+      "Imagine a team that uses an AI agent to draft replies to routine requests. People check every response. Later, the agent begins resolving cases and passing exceptions to colleagues. Who owns the outcome, and when should a manager change the agent’s remit?",
+      "I’m interested in this move from an isolated experiment to everyday work. Responsibilities may need to change across departments as people and agents adapt to each other. Giving someone responsibility for an agent’s work also raises a practical question: what authority and information do they need to exercise it?"
+    ],
+    "question": "Which decisions need explicit rules, and which depend on people developing new ways of coordinating as they gain experience with agents?",
+    "related": {
+      "label": "Published work on human–AI collaboration",
+      "href": "/research/human-ai-work/"
+    }
+  }
+]

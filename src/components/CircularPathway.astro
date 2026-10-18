@@ -1,0 +1,171 @@
+---
+const phases = [
+  {
+    id: 'foundation', name: 'Foundation',
+    focus: 'Build a shared basis for change.', date: '2020–2027 in the proposed pathway',
+    data: 'Record a battery’s lifecycle and make its history accessible through digital product passports.',
+    practice: 'Design components for disassembly, reuse, and recycling.',
+    coordination: 'Establish data standards, responsibilities, and regulatory frameworks.',
+  },
+  {
+    id: 'exploration', name: 'Integration & exploration',
+    focus: 'Learn from the batteries coming back.',
+    data: 'Combine lifecycle records with predictive analytics to inform recovery decisions.',
+    practice: 'Test take-back systems and use returned batteries to improve circular designs.',
+    coordination: 'Agree how firms share data and collaborate across the value chain.',
+  },
+  {
+    id: 'scaling', name: 'Expansion & scaling',
+    focus: 'Turn isolated pilots into industrial capacity.',
+    data: 'Extend product passports and forecast component wear and return flows.',
+    practice: 'Expand remanufacturing and recycling capacity across the value chain.',
+    coordination: 'Align interoperability standards and incentives across markets.',
+  },
+  {
+    id: 'maturity', name: 'Ecosystem maturity',
+    focus: 'Keep materials in use across industries.',
+    data: 'Use shared lifecycle data to coordinate material flows and improve recovery.',
+    practice: 'Connect automotive, energy, and electronics industries through reuse and recovery.',
+    coordination: 'Keep adapting governance and regulation as technologies and expectations change.',
+  },
+];
+---
+
+<figure class="research-figure" id="circular-pathway" aria-labelledby="pathway-title" aria-describedby="pathway-caption">
+  <h2 id="pathway-title">How the transition could unfold</h2>
+  <p class="figure-intro">Data, production, and shared rules have to develop together.</p>
+
+  <circular-pathway>
+    <ol class="pathway-phases" aria-label="Explore the transition phases">
+      {phases.map(phase => (
+        <li>
+          <a id={`phase-link-${phase.id}`} href={`#phase-${phase.id}`}>
+            <span class="phase-point" aria-hidden="true"></span>
+            <span>{phase.name}</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+    {phases.map(phase => (
+      <section class="pathway-panel" id={`phase-${phase.id}`} aria-labelledby={`phase-focus-${phase.id}`}>
+        <h3 id={`phase-focus-${phase.id}`}>{phase.focus}</h3>
+        {phase.date && <p class="phase-date">{phase.date}</p>}
+        <dl>
+          <div><dt>Data and tools</dt><dd>{phase.data}</dd></div>
+          <div><dt>Industrial practice</dt><dd>{phase.practice}</dd></div>
+          <div><dt>Coordination</dt><dd>{phase.coordination}</dd></div>
+        </dl>
+      </section>
+    ))}
+  </circular-pathway>
+
+  <p class="pathway-destination">The aim: a circular, carbon-neutral European automotive industry by 2050. Even a mature ecosystem keeps adapting; raw material inputs and waste do not disappear.</p>
+  <figcaption id="pathway-caption">
+    Adapted and condensed from Figure 3 and Section 4.4 of <a href="https://doi.org/10.17705/1CAIS.05835">Sagnier Eckert et al. (2026)</a>.
+    This is a proposed pathway, not a forecast. The phases show a sequence, not their duration; only the foundation phase is dated in the study.
+  </figcaption>
+</figure>
+
+<script>
+  class CircularPathway extends HTMLElement {
+    connectedCallback() {
+      const list = this.querySelector<HTMLOListElement>('.pathway-phases');
+      const tabs = Array.from(this.querySelectorAll<HTMLAnchorElement>('.pathway-phases a'));
+      const panels = Array.from(this.querySelectorAll<HTMLElement>('.pathway-panel'));
+      if (!list || tabs.length !== panels.length) return;
+
+      list.setAttribute('role', 'tablist');
+      tabs.forEach((tab, index) => {
+        tab.parentElement?.setAttribute('role', 'presentation');
+        tab.setAttribute('role', 'tab');
+        tab.setAttribute('aria-controls', panels[index].id);
+        panels[index].setAttribute('role', 'tabpanel');
+        panels[index].setAttribute('aria-labelledby', tab.id);
+        panels[index].tabIndex = 0;
+      });
+      function select(index: number, focus = false) {
+        tabs.forEach((tab, i) => {
+          tab.setAttribute('aria-selected', String(i === index));
+          tab.tabIndex = i === index ? 0 : -1;
+          panels[i].hidden = i !== index;
+        });
+        if (focus) tabs[index].focus();
+      }
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', event => {
+          event.preventDefault();
+          select(index);
+        });
+        tab.addEventListener('keydown', event => {
+          let next: number | undefined;
+          if (event.key === ' ') next = index;
+          if (['ArrowRight', 'ArrowDown'].includes(event.key)) next = (index + 1) % tabs.length;
+          if (['ArrowLeft', 'ArrowUp'].includes(event.key)) next = (index - 1 + tabs.length) % tabs.length;
+          if (event.key === 'Home') next = 0;
+          if (event.key === 'End') next = tabs.length - 1;
+          if (next !== undefined) {
+            event.preventDefault();
+            select(next, true);
+          }
+        });
+      });
+      const orientation = new ResizeObserver(entries => {
+        list.setAttribute('aria-orientation', entries[0].contentRect.width <= 480 ? 'vertical' : 'horizontal');
+      });
+      orientation.observe(this);
+      this.observer = orientation;
+      const linkedPhase = panels.findIndex(panel => `#${panel.id}` === window.location.hash);
+      select(linkedPhase < 0 ? 0 : linkedPhase);
+    }
+    observer?: ResizeObserver;
+    disconnectedCallback() { this.observer?.disconnect(); }
+  }
+  if (!customElements.get('circular-pathway')) customElements.define('circular-pathway', CircularPathway);
+</script>
+
+<style>
+  .research-figure { margin: 36px 0; padding: 24px 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); container-type: inline-size; }
+  .research-figure h2 { font-size: 20px; line-height: 1.35; }
+  .figure-intro { margin-top: 8px; color: var(--mute); }
+  circular-pathway { display: block; }
+  .pathway-phases { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 0; margin: 28px 0 24px; list-style: none; }
+  .pathway-phases li { position: relative; min-width: 0; }
+  .pathway-phases li:not(:last-child)::after { content: ''; position: absolute; height: 1px; background: var(--mute); top: 10px; left: 20px; width: calc(100% - 20px); }
+  .pathway-phases li:last-child::after { content: ''; position: absolute; left: 32px; right: 0; top: 10px; height: 1px; background: var(--mute); }
+  .pathway-phases li:last-child::before { content: ''; position: absolute; right: 0; top: 6px; width: 8px; height: 8px; border-right: 1px solid var(--mute); border-top: 1px solid var(--mute); transform: rotate(45deg); }
+  .pathway-phases a { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; padding-right: 12px; font-size: 16px; line-height: 1.4; min-height: 88px; color: var(--mute); text-decoration: none; }
+  .pathway-phases a:hover { color: var(--ink); }
+  .pathway-phases a:hover span:last-child { text-decoration: underline; text-underline-offset: 5px; }
+  .phase-point { display: block; width: 20px; height: 20px; border: 1px solid var(--mute); background: var(--paper); border-radius: 50%; flex: none; }
+  .pathway-phases a[aria-selected='true'] { color: var(--ink); font-weight: 700; }
+  .pathway-phases a[aria-selected='true'] span:last-child { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
+  .pathway-phases a[aria-selected='true'] .phase-point { background: var(--accent); border-color: var(--accent); }
+  .pathway-panel { margin-top: 24px; padding: 24px; background: var(--wash); }
+  .pathway-panel[hidden] { display: none; }
+  .pathway-panel h3 { font-size: 20px; line-height: 1.35; }
+  .phase-date { margin-top: 8px; color: var(--mute); }
+  .pathway-panel dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 24px 0 0; }
+  .pathway-panel dt { font-weight: 700; }
+  .pathway-panel dd { margin: 8px 0 0; }
+  .pathway-panel:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+  .pathway-destination { margin-top: 24px; }
+  figcaption { margin-top: 16px; color: var(--mute); font-size: 16px; line-height: 1.5; }
+  @container (max-width: 600px) {
+    .pathway-panel dl { grid-template-columns: 1fr; gap: 16px; }
+    .pathway-panel dl > div { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 16px; }
+    .pathway-panel dd { margin: 0; }
+  }
+  @container (max-width: 480px) {
+    .pathway-phases { display: block; margin: 24px 0; }
+    .pathway-phases a { flex-direction: row; gap: 16px; min-height: 56px; padding: 0 0 20px; align-items: flex-start; }
+    .pathway-phases li:not(:last-child)::after { top: 20px; bottom: 0; left: 10px; width: 1px; height: auto; }
+    .pathway-phases li:last-child::before, .pathway-phases li:last-child::after { display: none; }
+    .pathway-panel { padding: 20px; }
+    .pathway-panel dl > div { display: block; }
+    .pathway-panel dd { margin-top: 4px; }
+  }
+  @media print {
+    .pathway-panel[hidden] { display: block; }
+    .pathway-panel { break-inside: avoid; }
+  }
+</style>

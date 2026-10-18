@@ -1,0 +1,65 @@
+---
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Arrow from '../../components/Arrow.astro';
+import PaperImage from '../../components/PaperImage.astro';
+import ServiceChoices from '../../components/ServiceChoices.astro';
+import CircularPathway from '../../components/CircularPathway.astro';
+import PaperFigure from '../../components/PaperFigure.astro';
+import papers from '../../data/papers.json';
+import '../../styles/research.css';
+import '../../styles/paper.css';
+
+export const getStaticPaths = (() => papers.map(paper => ({
+  params: { slug: paper.slug },
+  props: { paper },
+}))) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { paper } = Astro.props;
+const explainer = paper.explainer;
+---
+<SiteLayout title={explainer.headline} description={explainer.intro} active="research" bodyClass="research-page paper-detail">
+  <nav class="page-nav" aria-label="Back to research"><a href={`/research/#${paper.id}`}><Arrow /> Research</a></nav>
+  <h1>{explainer.headline}</h1>
+  <p class="lede">{explainer.intro}</p>
+  <p class="paper-meta">{paper.venue}</p>
+  <article>
+    {explainer.sections.map(section => 'interactive' in section && section.interactive === 'service-choices' ? <ServiceChoices /> : (
+      <Fragment>
+      <section class:list={['essay-section', { 'example-note': 'kind' in section && section.kind === 'example' }]}>
+        <h2>{section.heading}</h2>
+        {(Array.isArray(section.body) ? section.body : [section.body]).map(paragraph => <p>{paragraph}</p>)}
+      </section>
+      {'figure' in section && section.figure === 'circular-pathway' && <CircularPathway />}
+      {'figure' in section && section.figure && section.figure !== 'circular-pathway' && <PaperFigure kind={section.figure} />}
+      </Fragment>
+    ))}
+    <details class="study-scope" id="about-study">
+      <summary><h2>About the study</h2></summary>
+      {explainer.method.map(section => (
+        <section class="study-section">
+          <h3>{section.heading}</h3>
+          <p>{section.body}</p>
+        </section>
+      ))}
+    </details>
+    <section class="original-paper" aria-labelledby="original-title">
+      <h2 id="original-title">The paper</h2>
+      <div class="original-body">
+        <a class="paper-sheet" href={paper.url} aria-label={`Read ${paper.title}`}>
+          <PaperImage file={paper.image} alt={`First page of ${paper.title}`} sizes="(max-width: 380px) 64px, (max-width: 1150px) 88px, 120px" />
+        </a>
+        <div class="paper-citation">
+          <h3><a href={paper.url}>{paper.title}</a></h3>
+          <p class="authors">{paper.full_authors}</p>
+          <p class="venue">{paper.venue}</p>
+          {'image_source' in paper && paper.image_source && <p class="paper-source"><a href={paper.image_source.url}>{paper.image_source.label}</a><br />{paper.image_source.credit}</p>}
+          <a class="text-link" href={paper.url}>Read the original paper <Arrow /></a>
+        </div>
+      </div>
+    </section>
+    {paper.slug === 'ai-coaching' && <p class="return-link"><a class="text-link" href="/tools/#innocompass">InnoCompass in use <Arrow /></a></p>}
+  </article>
+  <footer><span>Daniel Heinz · Karlsruhe</span><a href="/privacy/">Privacy</a><a href="#content">Back to top <Arrow /></a></footer>
+</SiteLayout>

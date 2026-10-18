@@ -1,0 +1,11 @@
+---
+import '../../styles/figures.css';
+interface Props { id: string; title: string; intro: string }
+const { id, title, intro } = Astro.props;
+---
+<figure class="paper-figure" id={id} aria-labelledby={`${id}-title`} aria-describedby={`${id}-caption`}>
+  <h2 id={`${id}-title`}>{title}</h2>
+  <p class="figure-intro">{intro}</p>
+  <slot />
+  <figcaption id={`${id}-caption`}><slot name="caption" /></figcaption>
+</figure>
