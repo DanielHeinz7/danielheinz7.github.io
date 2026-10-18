@@ -49,7 +49,7 @@ def citation_details(paper):
     if paper['status'] != 'published':
         details += ' · ' + paper['status'].capitalize()
     return details
-flow = [p(profile['name'], 'name'), p(escape(profile['role'])+'<br/>'+escape(profile['institution'])), p('Curriculum vitae · '+profile['updated'], 'small'), p(f'<link href="mailto:{profile["email"]}">{profile["email"]}</link> · <link href="{profile["profileUrl"]}">Institutional profile</link> · <link href="https://danielheinz7.github.io/cv/">Read this CV online</link>', 'small'), section('Research'), p(escape(profile['agenda'])), p(escape(profile['approach'])), section('Academic appointments')]
+flow = [p(profile['name'], 'name'), p(escape(profile['role'])+'<br/>'+escape(profile['institution'])), p('Curriculum vitae · '+profile['updated'], 'small'), p(f'<link href="mailto:{profile["email"]}">{profile["email"]}</link> · <link href="{profile["profileUrl"]}">Institutional profile</link> · <link href="https://daniel-heinz.de/cv/">Read this CV online</link>', 'small'), section('Research'), p(escape(profile['agenda'])), p(escape(profile['approach'])), section('Academic appointments')]
 flow.extend(item(row) for row in profile['appointments'])
 flow.append(section('Education'))
 flow.extend(item(row) for row in profile['education'])
