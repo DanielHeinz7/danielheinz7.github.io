@@ -7,8 +7,9 @@ import NewsRow from '../components/NewsRow.astro';
 import PaperImage from '../components/PaperImage.astro';
 import { navigation } from '../data/site';
 import { news } from '../data/news';
-const recentNews = news.slice(0, 4);
-const olderNews = news.slice(4);
+const visibleNewsCount = 6;
+const recentNews = news.slice(0, visibleNewsCount);
+const olderNews = news.slice(visibleNewsCount);
 ---
 <SiteLayout title="Daniel Heinz" active="home" bodyClass="compact-navigation">
   <PageHeader title="What changes when organizations put data and AI to work?" intro="My lab develops digital services with firms, founders, and researchers, using data and AI both within the services and throughout their development. We study how these services change organizations." />
