@@ -54,6 +54,35 @@
   margin-top: 8px;
 }
 
+.course-entry {
+  scroll-margin-top: 24px;
+}
+
+.course-parts {
+  max-width: 65ch;
+  margin: 24px 0 0;
+}
+
+.course-parts > div {
+  display: grid;
+  grid-template-columns: minmax(0, 11rem) minmax(0, 1fr);
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.course-parts > div:last-child {
+  padding-bottom: 0;
+}
+
+.course-parts dt {
+  font-weight: 700;
+}
+
+.course-parts dd {
+  margin: 0;
+}
+
 .lab-teaching-page .related-pages {
   display: flex;
   flex-wrap: wrap;
@@ -80,6 +109,11 @@
   .practice-sequence > div {
     grid-template-columns: 64px minmax(0, 1fr);
     gap: 16px;
+  }
+
+  .course-parts > div {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 }
 
