@@ -51,6 +51,10 @@ Keep the dashboard private and individual-pageview storage disabled in GoatCount
 
 Run `npm run check:analytics` to verify local-host/privacy exclusions, event allowlisting, payload contents, and transport failure behavior. The release workflow includes this check. A live count still needs confirmation in the dashboard after publication; local QA deliberately sends no real events. Counts are approximate: ad blockers and disabled JavaScript can exclude visits, and a CV click does not prove a completed download. Direct PDF opens cannot run the site’s script. These statistics do not reconstruct individual browsing journeys.
 
+## Publications and CV
+
+Use title case for formal paper titles in `src/data/cv-publications.json` and `src/data/papers.json`: capitalize main words, keep articles, coordinating conjunctions, and prepositions lowercase unless they begin or end the title or subtitle, and preserve acronyms and proper names. Apply the same rule inside hyphenated terms, such as “AI-Based” and “Human-in-the-Loop”. Shared papers must have identical titles in both files. Editorial questions and explanatory headings stay in sentence case; original paper images retain their published lettering.
+
 To regenerate the CV, install `scripts/requirements-pdf.txt` in a Python environment, then run `npm run build:cv`. Review every page of the resulting `public/files/daniel-heinz-cv.pdf` before committing it. Check journal-list completeness against the master CV and verify current citation metadata before adding records. The PDF uses only public profile information.
 
 ## Release
