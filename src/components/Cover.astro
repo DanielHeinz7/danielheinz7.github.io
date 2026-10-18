@@ -2,11 +2,12 @@
 import { site } from '../data/site';
 import images from '../data/image-variants.json';
 const portrait = images['portrait.jpg'];
+const role = site.role.replace('Innovation Lab', 'Innovation\u00a0Lab');
 ---
 <aside class="cover" aria-label="About Daniel Heinz">
   <div class="cover-inner">
     <a class="mast" href="/">{site.name}</a>
-    <div class="role">{site.role}<br />{site.institution}</div>
+    <div class="role">{role}<br />{site.institution}</div>
     <img class="portrait" src="/images/responsive/portrait-560.webp" srcset={portrait.sources.map(source => `${source.src} ${source.width}w`).join(', ')} sizes="(max-width: 380px) 132px, (max-width: 850px) 140px, 280px" alt="Daniel Heinz" width={portrait.width} height={portrait.height} fetchpriority="high" />
   </div>
   <nav class="contact" aria-label="Contact">
