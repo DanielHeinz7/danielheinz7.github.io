@@ -1,0 +1,20 @@
+---
+import LegacyReconfiguration from './figures/LegacyReconfiguration.astro';
+import SmartServiceRoutes from './figures/SmartServiceRoutes.astro';
+import HybridEcosystem from './figures/HybridEcosystem.astro';
+import DataSharingPatterns from './figures/DataSharingPatterns.astro';
+import DataSelectionFlow from './figures/DataSelectionFlow.astro';
+import CoachingRequirements from './figures/CoachingRequirements.astro';
+const figures = {
+  'legacy-reconfiguration': LegacyReconfiguration,
+  'smart-service-routes': SmartServiceRoutes,
+  'hybrid-ecosystem': HybridEcosystem,
+  'data-sharing-patterns': DataSharingPatterns,
+  'data-selection-flow': DataSelectionFlow,
+  'coaching-requirements': CoachingRequirements,
+};
+interface Props { kind: string }
+const { kind } = Astro.props;
+const Figure = figures[kind as keyof typeof figures];
+---
+{Figure && <Figure />}

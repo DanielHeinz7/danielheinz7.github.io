@@ -5,6 +5,7 @@ import Arrow from '../../components/Arrow.astro';
 import PaperImage from '../../components/PaperImage.astro';
 import ServiceChoices from '../../components/ServiceChoices.astro';
 import CircularPathway from '../../components/CircularPathway.astro';
+import PaperFigure from '../../components/PaperFigure.astro';
 import papers from '../../data/papers.json';
 import '../../styles/research.css';
 import '../../styles/paper.css';
@@ -31,6 +32,7 @@ const explainer = paper.explainer;
         {(Array.isArray(section.body) ? section.body : [section.body]).map(paragraph => <p>{paragraph}</p>)}
       </section>
       {'figure' in section && section.figure === 'circular-pathway' && <CircularPathway />}
+      {'figure' in section && section.figure && section.figure !== 'circular-pathway' && <PaperFigure kind={section.figure} />}
       </Fragment>
     ))}
     <details class="study-scope" id="about-study">

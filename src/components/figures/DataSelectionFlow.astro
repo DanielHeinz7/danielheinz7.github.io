@@ -1,0 +1,25 @@
+---
+import FigureFrame from './FigureFrame.astro';
+import FlowArrow from './FlowArrow.astro';
+---
+<FigureFrame id="data-selection-flow" title="Rank the data, then test what it adds" intro="The mechanism separates relevance, additional predictive value, and the choice of a data bundle.">
+  <p class="flow-input">The assessing system needs candidate data and historical outcomes. It uses an existing model or a surrogate model.</p>
+  <ol class="selection-flow" aria-label="Data selection mechanism">
+    <li>
+      <div class="flow-stage-heading"><h3>Rank candidate inputs</h3><p>Estimate their relevance to the prediction.</p></div>
+      <dl class="ranking-choices">
+        <div><dt>Context</dt><dd>Across cases <span>or</span> for a specific case</dd></div>
+        <div><dt>Basis</dt><dd>Using the data <span>or</span> an existing model</dd></div>
+      </dl>
+    </li>
+    <li class="selection-quantify">
+      <div class="flow-stage-heading"><FlowArrow /><h3>Test each addition</h3><p>Add inputs in rank order and estimate the change in prediction performance.</p></div>
+      <p class="flow-detail">An input may add little when selected data already carries the same information. A high relevance score alone cannot tell you this.</p>
+    </li>
+    <li>
+      <div class="flow-stage-heading"><FlowArrow /><h3>Compare cost and performance</h3><p>Use the estimates to choose a data bundle.</p></div>
+      <ul class="selection-options" aria-label="Alternative selection criteria"><li>Within a budget</li><li>For a performance target</li><li>Balance both</li></ul>
+    </li>
+  </ol>
+  <Fragment slot="caption">Simplified from Figure 6 (p. 537) of <a href="https://doi.org/10.1007/s12599-025-00940-8">Martin et al. (2026)</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Context and basis are two combinable ranking choices. The mechanism supports a particular prediction task; it does not search every possible data combination or guarantee the best bundle.</Fragment>
+</FigureFrame>

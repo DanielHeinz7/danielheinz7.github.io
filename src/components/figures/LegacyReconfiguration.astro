@@ -1,0 +1,21 @@
+---
+import FigureFrame from './FigureFrame.astro';
+import FlowArrow from './FlowArrow.astro';
+const states = ['Existing configuration', 'After reconfiguration', 'Further reconfiguration'];
+---
+<FigureFrame id="legacy-reconfiguration" title="Make more of the systems already in place" intro="Reconfiguration can add capabilities and make more of the existing system base available for new uses.">
+  <div class="legacy-states">
+    {states.map((state, index) => <div class={`legacy-state legacy-state-${index}`}>
+      <div class="legacy-stock" aria-hidden="true"><div class="legacy-available"></div><div class="legacy-constrained"></div></div>
+      <h3>{state}</h3>
+      {index < 2 && <FlowArrow class="legacy-next" />}
+    </div>)}
+  </div>
+  <ul class="figure-key">
+    <li><span class="key-swatch key-available" aria-hidden="true"></span>Available for new uses</li>
+    <li><span class="key-swatch key-constrained" aria-hidden="true"></span>Constrained by technical debt</li>
+  </ul>
+  <p class="figure-reading">Each change builds on the previous configuration. The system base can grow while some technical debt remains: obligations that make change more costly or risky.</p>
+  <p class="figure-footnote">Reconfiguration may mean testing ideas on a stable core, using historical data, adding interfaces, or adapting billing for new services. These mechanisms can be combined; they have no fixed order.</p>
+  <Fragment slot="caption">Explanation based on Figure 1 and Table 12 of <a href="https://doi.org/10.1177/02683962261461296">Heinz and Breidbach (2026)</a>, online-first version. The configurations are condensed and schematic; their sizes represent no measured amounts.</Fragment>
+</FigureFrame>

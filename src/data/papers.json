@@ -21,7 +21,8 @@
         },
         {
           "heading": "What the study explains",
-          "body": "We studied how manufacturers reconfigured existing systems for new digital activities. Firms used stable operations to support experiments, put accumulated data to new uses, connected new applications through interfaces, and adapted financial routines for new revenue models."
+          "body": "We studied how manufacturers reconfigured existing systems for new digital activities. Firms used stable operations to support experiments, put accumulated data to new uses, connected new applications through interfaces, and adapted financial routines for new revenue models.",
+          "figure": "legacy-reconfiguration"
         },
         {
           "heading": "An agent that coordinates maintenance",
@@ -79,7 +80,8 @@
         },
         {
           "heading": "What the study adds",
-          "body": "The taxonomy connects what a service delivers with who provides and uses it, the analytics behind it, and how it informs or acts. Remote management and autonomous operation emerge as distinct, compatible service types."
+          "body": "The taxonomy connects what a service delivers with who provides and uses it, the analytics behind it, and how it informs or acts. Remote management and autonomous operation emerge as distinct, compatible service types.",
+          "figure": "smart-service-routes"
         },
         {
           "heading": "A practical starting point",
@@ -185,7 +187,8 @@
         },
         {
           "heading": "What the paper contributes",
-          "body": "Our framework describes service networks in which humans and AI systems act together. It explains how the division of work depends on the situation and can evolve as participants change their capabilities and expectations."
+          "body": "Our framework describes service networks in which humans and AI systems act together. It explains how the division of work depends on the situation and can evolve as participants change their capabilities and expectations.",
+          "figure": "hybrid-ecosystem"
         },
         {
           "heading": "Following a customer request",
@@ -236,7 +239,8 @@
         },
         {
           "heading": "What the study adds",
-          "body": "We developed a taxonomy, a structured way to describe and compare data-sharing practices. It connects characteristics of the data with organizational choices and the wider network. The recurring patterns help explain why arrangements that look technically similar may serve different purposes."
+          "body": "We developed a taxonomy, a structured way to describe and compare data-sharing practices. It connects characteristics of the data with organizational choices and the wider network. The recurring patterns help explain why arrangements that look technically similar may serve different purposes.",
+          "figure": "data-sharing-patterns"
         },
         {
           "heading": "The same data, a different arrangement",
@@ -290,7 +294,8 @@
           "body": [
             "Feature-selection methods or explainable AI rank candidate inputs. SHAP, for example, estimates how inputs contribute to a model’s prediction. A global ranking summarizes their importance across cases; a local ranking can change with each case.",
             "The prototype adds inputs in rank order and measures how model performance changes. Values of inputs not yet selected are permuted, or shuffled, to mask their information. This matters when signals overlap: two useful signals considered separately may add little extra together. Combining these performance estimates with marketplace prices helps the buyer choose a bundle within a budget or work back from a required performance level."
-          ]
+          ],
+          "figure": "data-selection-flow"
         },
         {
           "heading": "Choosing signals for a turbine",
@@ -349,7 +354,8 @@
         },
         {
           "heading": "What the paper proposes",
-          "body": "Interviews with founders and coaches informed requirements for AI coaching systems. The system should help structure the venture, connect assumptions with tests and evidence, and support critical reflection across successive conversations."
+          "body": "Interviews with founders and coaches informed requirements for AI coaching systems. The system should help structure the venture, connect assumptions with tests and evidence, and support critical reflection across successive conversations.",
+          "figure": "coaching-requirements"
         },
         {
           "heading": "Make an assumption testable",
