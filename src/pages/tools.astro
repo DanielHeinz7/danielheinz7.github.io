@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Arrow from '../components/Arrow.astro';
+import ToolScreenshot from '../components/ToolScreenshot.astro';
 import '../styles/tools.css';
 ---
 
@@ -48,22 +49,16 @@ import '../styles/tools.css';
       Explore research-harness <Arrow />
     </a>
 
-    <figure class="tool-figure">
-      <a href="/images/tools/research-harness-session.png" aria-label="Open the research-harness session view image at full size">
-        <img
-          src="/images/tools/research-harness-session.png"
-          alt="A research-harness session view showing a research question and an open question for the authors to discuss."
-          width="1440"
-          height="900"
-          loading="lazy"
-          decoding="async"
-        />
-      </a>
-      <figcaption>
-        The research-harness session view, using its public-data example.{' '}
-        <a href="https://github.com/DanielHeinz7/research-harness/blob/main/docs/media/README.md#where-the-content-comes-from">Demo sources and credits</a>.
-      </figcaption>
-    </figure>
+    <ToolScreenshot
+      src="/images/tools/research-harness-session.png"
+      alt="A research-harness session view showing a research question and an open question for the authors to discuss."
+      width={1440}
+      height={900}
+      label="research-harness session view"
+    >
+      The research-harness session view, using its public-data example.{' '}
+      <a href="https://github.com/DanielHeinz7/research-harness/blob/main/docs/media/README.md#where-the-content-comes-from">Demo sources and credits</a>.
+    </ToolScreenshot>
   </section>
 
   <section class="tool-section" id="innocompass" aria-labelledby="innocompass-heading">
@@ -84,6 +79,15 @@ import '../styles/tools.css';
     <a class="text-link tool-link" href="/research/ai-coaching/">
       Read the research behind it <Arrow />
     </a>
+    <ToolScreenshot
+      src="/images/tools/innocompass-review.png"
+      alt="InnoCompass reviewing a proposed venture profile update, with conflicting pricing assumptions awaiting a decision."
+      width={1024}
+      height={844}
+      label="InnoCompass update review"
+    >
+      Reviewing proposed changes to a venture profile. Demo data.
+    </ToolScreenshot>
   </section>
 
   <section class="tool-section" id="kit-lens" aria-labelledby="kit-lens-heading">
@@ -101,6 +105,15 @@ import '../styles/tools.css';
         identifying expertise and deciding whom to contact.
       </p>
     </div>
+    <ToolScreenshot
+      src="/images/tools/kit-lens-search.png"
+      alt="KIT LENS prototype with a field for a technology question and an optional company selector."
+      width={1920}
+      height={944}
+      label="KIT LENS search screen"
+    >
+      KIT LENS’s prototype search screen, from the master’s thesis presentation.
+    </ToolScreenshot>
   </section>
 
   <section class="tool-section" id="hub" aria-labelledby="hub-heading">
@@ -117,6 +130,15 @@ import '../styles/tools.css';
         through the group’s accounts and permissions.
       </p>
     </div>
+    <ToolScreenshot
+      src="/images/tools/hub-apps.png"
+      alt="DSI-WI4 Hub app catalog with category filters and example apps for publications, team meetings, datasets, room booking, and teaching."
+      width={1600}
+      height={950}
+      label="DSI-WI4 Hub app catalog"
+    >
+      The Hub’s app catalog, shown with demo entries.
+    </ToolScreenshot>
   </section>
 
   <footer>
