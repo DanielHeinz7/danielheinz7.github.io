@@ -1,0 +1,25 @@
+---
+import FigureFrame from './FigureFrame.astro';
+import FlowArrow from './FlowArrow.astro';
+---
+<FigureFrame id="hybrid-ecosystem" title="Human–AI collaboration extends beyond a pair" intro="People, AI systems, and human–AI hybrids bring resources into a shared service. Their roles depend on the task and the rules around them.">
+  <div class="ecosystem-framework"><h3>Rules and norms</h3><p>Laws, policies, and shared practices shape the interaction.</p></div>
+  <div class="ecosystem-actors">
+    <div class="ecosystem-hybrid">
+      <h3>Human–AI hybrid</h3>
+      <div class="hybrid-agencies"><span>Human agency</span><span>AI agency</span></div>
+      <p>Roles configured for the task: who decides, acts, and stays in control.</p>
+    </div>
+    <div class="ecosystem-other-actors">
+      <div><h3>Human actor</h3><p>The task is performed through human agency.</p></div>
+      <div><h3>AI actor</h3><p>The task is performed through AI agency.</p></div>
+    </div>
+  </div>
+  <div class="ecosystem-exchange">
+    <div><FlowArrow /><span>Actors provide access to resources</span></div>
+    <div><FlowArrow class="up-arrow" /><span>Actors experience value in use</span></div>
+  </div>
+  <div class="ecosystem-service"><h3>Hybrid intelligent service</h3><p>Actors combine resources to create value together.</p></div>
+  <div class="ecosystem-framework ecosystem-resources"><h3>Resources</h3><p>Skills, knowledge, data, and infrastructure</p></div>
+  <Fragment slot="caption">Adapted from Figure 2 of <a href="https://doi.org/10.1007/s12525-025-00798-4">Bartelheimer et al. (2025)</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Labels and layout are simplified; the two exchanges apply to each participating actor. A hybrid ecosystem needs at least one human–AI hybrid, but not necessarily every actor type shown. This is a conceptual model.</Fragment>
+</FigureFrame>

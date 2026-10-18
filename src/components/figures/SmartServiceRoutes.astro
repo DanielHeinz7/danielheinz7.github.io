@@ -1,0 +1,26 @@
+---
+import FigureFrame from './FigureFrame.astro';
+import FlowArrow from './FlowArrow.astro';
+---
+<FigureFrame id="smart-service-routes" title="Several routes to smarter services" intro="Remote management and autonomous operation can develop side by side.">
+  <div class="service-map">
+    <div class="service-origin"><h3>Connected product</h3><p>Data from equipment in use</p></div>
+    <div class="figure-connector"><FlowArrow /></div>
+    <div class="service-core"><h3>Improve daily operations</h3><p>Support the work customers already do.</p></div>
+    <p class="branch-label">Possible development paths</p>
+    <div class="service-branches">
+      <div class="service-branch"><FlowArrow /><h3>Manage products remotely</h3><p>Can provide remote support and control, or information for additional users.</p></div>
+      <div class="service-branch"><FlowArrow /><h3>Let the service decide and act</h3><p>Carry out actions within defined limits.</p></div>
+    </div>
+    <p class="service-coexist">These paths can coexist: remote support can complement autonomous operation.</p>
+    <div class="service-complements">
+      <h3>Complementary routes</h3>
+      <dl>
+        <div><dt>Upgrade existing equipment</dt><dd>Add sensing and connectivity to the installed base.</dd></div>
+        <div><dt>Help providers learn</dt><dd>Use product data to inform the provider’s decisions.</dd></div>
+      </dl>
+      <p>Both connect to the product and support development across these services.</p>
+    </div>
+  </div>
+  <Fragment slot="caption">Adapted from Figure 8 and Section 5.2 of <a href="https://doi.org/10.1016/j.im.2026.104390">Heinz et al. (2026)</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Labels and layout are simplified; the complementary connections are summarized in words. The arrows show proposed relationships, not a tested sequence or a ranking.</Fragment>
+</FigureFrame>
