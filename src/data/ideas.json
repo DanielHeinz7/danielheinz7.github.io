@@ -60,6 +60,16 @@
     }
   },
   {
+    "id": "ai-in-regulated-work",
+    "label": "AI in regulated work",
+    "title": "What can we delegate to AI in regulated work?",
+    "paragraphs": [
+      "Imagine an AI agent gathering supplier records for a digital product passport or preparing evidence for a sustainability audit. It could follow up on missing information and flag inconsistencies before someone has to work through every document. That becomes more demanding when records disagree or a gap can only be filled with an assumption.",
+      "I’m interested in how these workflows can save time while leaving a record that people can question. The person preparing the evidence and the person checking it may need different explanations of the same choice. A useful system would support both, even as agents take on more of the work."
+    ],
+    "question": "What can an agent decide on its own, and what needs a person’s judgment before others can rely on the result?"
+  },
+  {
     "id": "organizing-agent-work",
     "label": "Organizing work with agents",
     "title": "What happens after the pilot works?",

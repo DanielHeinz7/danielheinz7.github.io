@@ -186,7 +186,7 @@ export const news: NewsItem[] = [
   {
     date: '2021-04',
     label: 'Apr 2021',
-    text: 'I completed my M.Sc. in Industrial Engineering & Management at KIT with distinction (final grade: 1.0).',
+    text: 'I completed my M.Sc. in Industrial Engineering & Management at KIT with distinction.',
   },
   {
     date: '2020-10',
