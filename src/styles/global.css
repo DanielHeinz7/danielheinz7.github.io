@@ -72,7 +72,6 @@ h1{font-size:40px;font-weight:700;line-height:1.1;letter-spacing:-.02em;max-widt
 .tile-title{font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:12px;text-decoration:underline;text-underline-offset:5px}
 .tile>span:last-child:not(.tile-title){color:var(--mute)}
 .tile:hover{background:var(--wash)}
-.glance{margin-top:24px}
 .news{margin-top:48px}
 .news h2{font-size:16px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
 .news-row{display:grid;grid-template-columns:100px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--rule)}
@@ -135,7 +134,10 @@ footer{margin-top:40px}
 a .arrow,.tile{transition:none}
 }
 
-@media(max-width:380px){.tiles{grid-template-columns:1fr}
+@media(max-width:600px){.tiles{grid-template-columns:1fr}
+}
+
+@media(max-width:380px){
 .tile{min-height:100px}
 .cover-inner{grid-template-columns:minmax(0,1fr) 88px;gap:10px 16px}
 .portrait{width:88px;height:132px}
