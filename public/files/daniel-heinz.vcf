@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Heinz;Daniel;;Dr.;
+FN:Dr. Daniel Heinz
+ORG:Karlsruhe Institute of Technology (KIT);Digital Service Design & Innovation Lab
+TITLE:Head of the Digital Service Design & Innovation Lab
+EMAIL;TYPE=INTERNET,WORK:daniel.heinz@kit.edu
+ADR;TYPE=WORK:;Building 05.20\, Room 4B-01;Kaiserstraße 89;Karlsruhe;;76133;Germany
+URL:https://daniel-heinz.de/
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/daniel-heinz/
+END:VCARD
