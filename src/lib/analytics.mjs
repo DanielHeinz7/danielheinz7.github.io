@@ -3,7 +3,7 @@ export function validEndpoint(value) {
   return typeof value === 'string' && /^https:\/\/[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.goatcounter\.com\/count$/.test(value);
 }
 
-/** Count only the published origin and explicitly configured links. */
+/** Count only the published origin and explicitly configured links; page views carry an external referrer. */
 export function startAnalytics(config, browser = window) {
   const { document, navigator, location } = browser;
   const permitted = () => config.enabled && validEndpoint(config.endpoint)
@@ -13,6 +13,13 @@ export function startAnalytics(config, browser = window) {
     && navigator.globalPrivacyControl !== true;
   if (!permitted()) return;
 
+  const externalReferrer = () => {
+    try {
+      const referrer = new URL(document.referrer);
+      return referrer.origin === config.origin ? '' : referrer.href;
+    } catch { return ''; }
+  };
+
   const send = (name, title, event = false) => {
     if (!permitted()) return;
     const url = new URL(config.endpoint);
@@ -20,11 +27,13 @@ export function startAnalytics(config, browser = window) {
     url.searchParams.set('t', title);
     // A fresh cache buster is not saved or reused as a visitor identifier.
     url.searchParams.set('rnd', Math.random().toString(36).slice(2, 10));
+    const referrer = event ? '' : externalReferrer();
+    if (referrer) url.searchParams.set('r', referrer);
     if (event) {
       url.searchParams.set('e', 'true');
       url.searchParams.set('ns', 'true');
     }
-    // No browser URL, query, hash, referrer, screen size, cookie, or storage value.
+    // Besides the external referrer: no own URL, query, hash, screen size, cookie, or storage value.
     try {
       browser.fetch(url.href, {
         method: 'GET', mode: 'no-cors', credentials: 'omit',
