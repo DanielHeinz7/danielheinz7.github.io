@@ -3,9 +3,30 @@ export function validEndpoint(value) {
   return typeof value === 'string' && /^https:\/\/[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.goatcounter\.com\/count$/.test(value);
 }
 
+// GoatCounter’s own opt-out convention: https://www.goatcounter.com/help/skip-dev
+const optOutKey = 'skipgc';
+
+function countingSwitchedOff(browser) {
+  try { return browser.localStorage.getItem(optOutKey) === 't'; } catch { return false; }
+}
+
+/** Stores or clears the opt-out flag only when the visitor opens #toggle-goatcounter. */
+function toggleCounting(browser) {
+  const switchOff = !countingSwitchedOff(browser);
+  try {
+    if (switchOff) browser.localStorage.setItem(optOutKey, 't');
+    else browser.localStorage.removeItem(optOutKey);
+    browser.alert(switchOff ? 'Visit counting is now disabled in this browser.' : 'Visit counting is enabled again in this browser.');
+  } catch {
+    browser.alert('This browser does not allow the setting to be stored.');
+  }
+}
+
 /** Count only the published origin and explicitly configured links; page views carry an external referrer. */
 export function startAnalytics(config, browser = window) {
   const { document, navigator, location } = browser;
+  if (location.hash === '#toggle-goatcounter') toggleCounting(browser);
+  if (countingSwitchedOff(browser)) return;
   const permitted = () => config.enabled && validEndpoint(config.endpoint)
     && location.origin === config.origin && location.protocol === 'https:'
     && browser.self === browser.top && !navigator.webdriver
