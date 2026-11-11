@@ -60,19 +60,28 @@ test('no requests or listeners on local previews, foreign origins, or privacy op
   assert.equal(framed.requests.length, 0);
 });
 
-test('page request contains only fixed public metadata and sends no credentials/referrer', () => {
+test('page request contains fixed metadata plus the external referring URL, without credentials', () => {
   const { browser, requests } = fixture();
   startAnalytics(config, browser);
   assert.equal(requests.length, 1);
   const { url, options } = requests[0];
-  assert.deepEqual([...url.searchParams.keys()].sort(), ['p', 'rnd', 't']);
+  assert.deepEqual([...url.searchParams.keys()].sort(), ['p', 'r', 'rnd', 't']);
   assert.equal(url.searchParams.get('p'), '/research/');
   assert.equal(url.searchParams.get('t'), 'Research');
+  assert.equal(url.searchParams.get('r'), 'https://private.test/secret');
   assert.equal(options.credentials, 'omit');
   assert.equal(options.referrerPolicy, 'no-referrer');
   assert.equal(options.keepalive, true);
   assert.equal(options.mode, 'no-cors');
-  assert.doesNotMatch(url.href, /secret|private/);
+  assert.doesNotMatch(url.searchParams.get('p') + url.searchParams.get('t'), /secret|private/);
+});
+
+test('internal, missing, or malformed referrers are not sent', () => {
+  for (const referrer of ['', `${origin}/cv/`, 'not a url']) {
+    const { browser, requests } = fixture({ document: { referrer } });
+    startAnalytics(config, browser);
+    assert.deepEqual([...requests[0].url.searchParams.keys()].sort(), ['p', 'rnd', 't']);
+  }
 });
 
 test('only known paper/CV targets count, including keyboard and middle clicks', () => {
