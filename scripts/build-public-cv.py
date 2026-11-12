@@ -60,7 +60,7 @@ for project in projects:
         p(f'<b><link href="{project["url"]}">{escape(project["name"])}</link></b> · {escape(project["period"])}<br/>{escape(project["funding"])}'),
         p(escape(project['question'])+'<br/>'+escape(project['role'])),
     ]))
-flow.extend([section('Doctoral research'), p('I provide day-to-day research advising for Jonas Liebschner, Linda Sagnier Eckert, and Ida Meier. Prof. Gerhard Satzger provides formal doctoral supervision for these three researchers.')])
+flow.extend([section('Doctoral research'), p('I provide day-to-day research advising for Jonas Liebschner, Linda Sagnier Eckert, and Ida Meier. Prof. Gerhard Satzger provides formal doctoral supervision for these three researchers. I also provide day-to-day research supervision for Pandora Dietle, whose formal doctoral supervisor is Prof. Maximilian Förster.')])
 for researcher in researchers:
     flow.append(p(f'<b><link href="{researcher["url"]}">{escape(researcher["name"])}</link></b> · {escape(researcher["since"])}<br/>{escape(researcher["topic"])}'))
 flow.append(PageBreak())

@@ -96,7 +96,7 @@ for (const file of files) {
   if (/innocompass/i.test(file)) errors.push(`Old public tool path: ${file}`);
   if (/\.(?:html|css|js|json|md|txt|xml)$/.test(file) && /innocompass/i.test(await readFile(file, 'utf8'))) errors.push(`Old public tool name: ${file}`);
 }
-const boundedRole = 'I provide day-to-day research advising for Jonas Liebschner, Linda Sagnier Eckert, and Ida Meier. Prof. Gerhard Satzger provides formal doctoral supervision for these three researchers.';
+const boundedRole = 'I provide day-to-day research advising for Jonas Liebschner, Linda Sagnier Eckert, and Ida Meier. Prof. Gerhard Satzger provides formal doctoral supervision for these three researchers. I also provide day-to-day research supervision for Pandora Dietle, whose formal doctoral supervisor is Prof. Maximilian Förster.';
 for (const route of ['lab/index.html', 'cv/index.html']) {
   const html = cache.get(path.join(root, route)) || '';
   for (const text of ['Pandora Dietle', 'Human–agentic AI collaboration', 'Since November 2026', 'https://www.win.kit.edu/news_2135.php', boundedRole]) {
@@ -104,6 +104,22 @@ for (const route of ['lab/index.html', 'cv/index.html']) {
   }
   if (html.includes('for the projects below')) errors.push(`${route}: universal supervision claim`);
 }
+const projectRoles = {
+  shape: 'Co-wrote the proposal for the KIT sub-project; sub-project lead',
+  zirkulea: 'Co-wrote the proposal for the KIT sub-project; sub-project lead',
+  bismart: 'Project lead',
+  'ai-adoption': 'Shaped the research agenda of the proposal; project lead',
+  'daimler-truck': 'Led the acquisition; project lead',
+};
+const projects = JSON.parse(await readFile('src/data/projects.json', 'utf8'));
+for (const project of projects) {
+  if (project.role !== projectRoles[project.id]) errors.push(`Projects: unexpected CV role for ${project.id}`);
+  for (const route of ['at-a-glance/index.html', 'cv/index.html']) {
+    const html = cache.get(path.join(root, route)) || '';
+    const article = html.match(new RegExp(`<article\\b[^>]*\\bid="${project.id}"[^>]*>([\\s\\S]*?)</article>`))?.[1] || '';
+    if (!article.includes(`>${escapeHtml(project.role)}</p>`)) errors.push(`${route}: missing CV role for ${project.id}`);
+  }
+}
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
-console.log('Research: ten unchanged papers, three vision groups, stable anchors and links; VentureTool naming; Pandora source/date and bounded roles passed.');
+console.log('Research: ten unchanged papers, three vision groups, stable anchors and links; VentureTool naming; Pandora source/date and confirmed roles; five CV project roles passed.');
 console.log(`Checked ${pages.length} pages: local links, responsive images, downloads, metadata, sitemap coverage, and private-path exclusions passed.`);
