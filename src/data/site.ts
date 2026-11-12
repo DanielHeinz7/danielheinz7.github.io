@@ -14,8 +14,8 @@ export const site = {
 export const navigation = [
   { label: 'Research', href: '/research/' },
   { label: 'Lab', href: '/lab/' },
-  { label: 'Tools in use', href: '/tools/' },
   { label: 'Teaching', href: '/teaching/' },
+  { label: 'Tools in use', href: '/tools/' },
   { label: 'At a glance', href: '/at-a-glance/' },
   { label: 'Ideas', href: '/ideas/' },
 ];

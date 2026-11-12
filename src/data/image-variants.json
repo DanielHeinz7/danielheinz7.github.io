@@ -65,6 +65,28 @@
       }
     ]
   },
+  "circular-value-first-page.png": {
+    "width": 1131,
+    "height": 1600,
+    "sources": [
+      {
+        "src": "/images/responsive/circular-value-first-page-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/responsive/circular-value-first-page-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/images/responsive/circular-value-first-page-640.webp",
+        "width": 640
+      },
+      {
+        "src": "/images/responsive/circular-value-first-page-960.webp",
+        "width": 960
+      }
+    ]
+  },
   "coaching-first-page.png": {
     "width": 773,
     "height": 1000,
