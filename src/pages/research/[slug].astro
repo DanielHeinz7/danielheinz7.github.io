@@ -7,6 +7,7 @@ import ServiceChoices from '../../components/ServiceChoices.astro';
 import CircularPathway from '../../components/CircularPathway.astro';
 import PaperFigure from '../../components/PaperFigure.astro';
 import papers from '../../data/papers.json';
+import { paperPage } from '../../lib/structured-data';
 import '../../styles/research.css';
 import '../../styles/paper.css';
 
@@ -19,7 +20,7 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { paper } = Astro.props;
 const explainer = paper.explainer;
 ---
-<SiteLayout title={explainer.headline} description={explainer.intro} active="research" bodyClass="research-page paper-detail">
+<SiteLayout title={explainer.headline} description={explainer.intro} active="research" bodyClass="research-page paper-detail" structuredData={paperPage(paper, new URL(Astro.url.pathname, Astro.site), Astro.site!)}>
   <nav class="page-nav" aria-label="Back to research"><a href={`/research/#${paper.id}`}><Arrow /> Research</a></nav>
   <h1>{explainer.headline}</h1>
   <p class="lede">{explainer.intro}</p>

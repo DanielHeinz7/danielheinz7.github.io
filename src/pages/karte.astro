@@ -1,0 +1,21 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Arrow from '../components/Arrow.astro';
+import { site } from '../data/site';
+
+const office = 'Kaiserstraße 89, Building 05.20, Room 4B-01, 76133 Karlsruhe';
+---
+<SiteLayout title="Contact card" description="Save Daniel Heinz’s contact details or reach him at KIT." bodyClass="compact-navigation">
+  <!-- The Wallet pass QR code points here, so this URL must stay stable. -->
+  <meta slot="head" name="robots" content="noindex" />
+  <PageHeader title="Contact card" intro="Save my details to your phone or get in touch directly." />
+  <nav class="tiles" aria-label="Contact options">
+    <a class="tile" href="/files/daniel-heinz.vcf" download><span class="tile-title">Save contact<Arrow /></span><span>Adds me to your address book</span></a>
+    <a class="tile" href={`mailto:${site.email}`}><span class="tile-title">Email<Arrow /></span><span>{site.email}</span></a>
+    <a class="tile" href={site.linkedin}><span class="tile-title">LinkedIn<Arrow /></span><span>linkedin.com/in/daniel-heinz</span></a>
+    <a class="tile" href={`https://maps.apple.com/?q=${encodeURIComponent(office)}`}><span class="tile-title">Office<Arrow /></span><span>{office}</span></a>
+  </nav>
+  <SiteFooter />
+</SiteLayout>

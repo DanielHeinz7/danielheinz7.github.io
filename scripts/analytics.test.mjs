@@ -13,12 +13,20 @@ const config = {
   },
 };
 
-function fixture({ location = {}, navigator = {}, document = {}, fetch } = {}) {
+function fixture({ location = {}, navigator = {}, document = {}, fetch, stored = {} } = {}) {
   const listeners = new Map();
   const requests = [];
+  const alerts = [];
+  const storage = new Map(Object.entries(stored));
   const top = {};
   const browser = {
     self: top, top,
+    localStorage: {
+      getItem: key => storage.get(key) ?? null,
+      setItem: (key, value) => storage.set(key, value),
+      removeItem: key => storage.delete(key),
+    },
+    alert: message => alerts.push(message),
     location: { origin, protocol: 'https:', search: '?private=secret', hash: '#secret', ...location },
     navigator: { doNotTrack: null, ...navigator },
     document: {
@@ -33,8 +41,41 @@ function fixture({ location = {}, navigator = {}, document = {}, fetch } = {}) {
     listeners.get(type)?.({ type, button, defaultPrevented: false,
       target: { closest: () => ({ href }) }, ...rest });
   };
-  return { browser, requests, listeners, click };
+  return { browser, requests, listeners, click, storage, alerts };
 }
+
+test('a browser that switched counting off sends nothing', () => {
+  const { browser, requests, listeners, alerts } = fixture({ stored: { skipgc: 't' } });
+  startAnalytics(config, browser);
+  assert.equal(requests.length, 0);
+  assert.equal(listeners.size, 0);
+  assert.equal(alerts.length, 0);
+});
+
+test('#toggle-goatcounter switches counting off and on again for this browser', () => {
+  const off = fixture({ location: { hash: '#toggle-goatcounter' } });
+  startAnalytics(config, off.browser);
+  assert.equal(off.storage.get('skipgc'), 't');
+  assert.equal(off.requests.length, 0);
+  assert.match(off.alerts[0], /disabled/);
+
+  const on = fixture({ location: { hash: '#toggle-goatcounter' }, stored: { skipgc: 't' } });
+  startAnalytics(config, on.browser);
+  assert.equal(on.storage.has('skipgc'), false);
+  assert.equal(on.requests.length, 1);
+  assert.match(on.alerts[0], /enabled/);
+});
+
+test('blocked browser storage neither breaks the switch nor counting', () => {
+  const blocked = () => { throw new Error('SecurityError'); };
+  for (const hash of ['', '#toggle-goatcounter']) {
+    const { browser, requests, alerts } = fixture({ location: { hash } });
+    browser.localStorage = { getItem: blocked, setItem: blocked, removeItem: blocked };
+    assert.doesNotThrow(() => startAnalytics(config, browser));
+    assert.equal(requests.length, 1);
+    assert.equal(alerts.length, hash ? 1 : 0);
+  }
+});
 
 test('no requests or listeners on local previews, foreign origins, or privacy opt-outs', () => {
   for (const options of [
@@ -60,19 +101,28 @@ test('no requests or listeners on local previews, foreign origins, or privacy op
   assert.equal(framed.requests.length, 0);
 });
 
-test('page request contains only fixed public metadata and sends no credentials/referrer', () => {
+test('page request contains fixed metadata plus the external referring URL, without credentials', () => {
   const { browser, requests } = fixture();
   startAnalytics(config, browser);
   assert.equal(requests.length, 1);
   const { url, options } = requests[0];
-  assert.deepEqual([...url.searchParams.keys()].sort(), ['p', 'rnd', 't']);
+  assert.deepEqual([...url.searchParams.keys()].sort(), ['p', 'r', 'rnd', 't']);
   assert.equal(url.searchParams.get('p'), '/research/');
   assert.equal(url.searchParams.get('t'), 'Research');
+  assert.equal(url.searchParams.get('r'), 'https://private.test/secret');
   assert.equal(options.credentials, 'omit');
   assert.equal(options.referrerPolicy, 'no-referrer');
   assert.equal(options.keepalive, true);
   assert.equal(options.mode, 'no-cors');
-  assert.doesNotMatch(url.href, /secret|private/);
+  assert.doesNotMatch(url.searchParams.get('p') + url.searchParams.get('t'), /secret|private/);
+});
+
+test('internal, missing, or malformed referrers are not sent', () => {
+  for (const referrer of ['', `${origin}/cv/`, 'not a url']) {
+    const { browser, requests } = fixture({ document: { referrer } });
+    startAnalytics(config, browser);
+    assert.deepEqual([...requests[0].url.searchParams.keys()].sort(), ['p', 'rnd', 't']);
+  }
 });
 
 test('only known paper/CV targets count, including keyboard and middle clicks', () => {
