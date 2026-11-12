@@ -9,8 +9,8 @@ const courses = [
     id: 'building-with-ai',
     shortTitle: 'Building with AI',
     title: 'Building Digital Services with AI',
-    context: 'Practical seminar · KIT · Winter 2026/27',
-    description: 'Take an idea you care about and turn it into a web app with AI coding tools. You keep the app and its repository, so the project can continue beyond the course.',
+    context: 'MSc practical seminar · KIT · Winter 2026/27',
+    description: 'In this course, students design, build, and evaluate their own AI-based service. AI coding tools help turn the idea into a working web app. You keep the app and its repository, so the project can continue beyond the course.',
     parts: [
       {
         label: 'Find your starting point',
@@ -58,9 +58,9 @@ const courses = [
   {
     id: 'doctoral-seminar',
     shortTitle: 'Philosophy of science',
-    title: 'Philosophy of Science',
+    title: 'Philosophy of Science for PhD Students',
     context: 'Doctoral seminar · KIT · Winter 2026/27',
-    description: 'What do we really learn when we do research? I co-lead this seminar as a space to explore that question together. Bring your own project into conversation with foundational readings and other researchers’ perspectives.',
+    description: 'What do we really learn when we do research? I developed and lead this new seminar as a space to explore that question together. Bring your own project into conversation with foundational readings and other researchers’ perspectives.',
     parts: [
       {
         label: 'See your question differently',
@@ -75,6 +75,14 @@ const courses = [
         description: 'Articulate the kind of researcher you want to be. Explore where AI could help your work and which decisions you want to think through yourself.',
       },
     ],
+  },
+  {
+    id: 'qualitative-research',
+    shortTitle: 'Qualitative research',
+    title: 'Qualitative Research (incl. case study)',
+    context: 'Online module · Research Training@WIN · Winter 2026/27',
+    description: 'I am the module lead for this qualitative research module.',
+    parts: [],
   },
   {
     id: 'executive-education',
@@ -108,7 +116,7 @@ const courses = [
 
 <SiteLayout
   title="Teaching"
-  description="Daniel Heinz’s teaching in digital services, AI-assisted development, philosophy of science, and executive education at KIT."
+  description="Daniel Heinz’s teaching in AI-based digital services, philosophy of science, qualitative research, and executive education."
   active="teaching"
   bodyClass="lab-teaching-page"
 >
@@ -118,6 +126,7 @@ const courses = [
 
   <h1>Teaching</h1>
   <p class="lede">From building your own digital service to finding your voice as a researcher.</p>
+  <p>I align learning objectives, learning activities, and transparent assessment criteria. Students connect concepts with real cases and with systems they build and evaluate themselves.</p>
 
   <nav class="research-contents" aria-label="Courses on this page">
     {courses.map(course => <a href={`#${course.id}`}>{course.shortTitle}</a>)}

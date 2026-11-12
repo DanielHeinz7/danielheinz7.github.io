@@ -6,8 +6,11 @@
 .research-page .lede{max-width:36ch}
 .research-contents{display:flex;flex-wrap:wrap;column-gap:24px;row-gap:0;margin-top:24px;padding-bottom:16px;border-bottom:1px solid var(--rule)}
 .research-contents a{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
-.research-stream{margin-top:40px;padding-top:16px;border-top:2px solid var(--ink);scroll-margin-top:24px}
-.research-stream h2{font-size:20px;line-height:1.35;max-width:35ch;text-wrap:balance}
+.research-vision{margin-top:48px;padding-top:20px;border-top:2px solid var(--ink);scroll-margin-top:24px}
+.research-vision h2{font-size:28px;line-height:1.2;text-wrap:balance}
+.vision-question{margin-top:12px;max-width:48ch}
+.research-stream{margin-top:32px;padding-top:20px;border-top:1px solid var(--rule);scroll-margin-top:24px}
+.research-stream h3{font-size:20px;line-height:1.35;max-width:35ch;text-wrap:balance}
 .stream-body{display:grid;grid-template-columns:34% minmax(0,1fr);grid-template-areas:'page idea' 'page citation';gap:20px 28px;margin-top:24px;align-items:start}
 .stream-idea{grid-area:idea;max-width:48ch}
 .stream-body.without-preview{grid-template-columns:1fr 1fr;grid-template-areas:'idea citation'}
@@ -16,8 +19,8 @@
 .paper-sheet{grid-area:page;display:block;background:#fff;border:1px solid var(--rule);line-height:0}
 .paper-sheet img{display:block;width:100%;height:auto}
 .paper-citation{grid-area:citation;border-top:1px solid var(--rule);padding-top:16px}
-.paper-citation h3{font-size:16px;line-height:1.5;font-weight:700}
-.paper-citation h3 a{display:block;text-decoration-thickness:1px}
+.paper-citation h3,.paper-citation .paper-title{font-size:16px;line-height:1.5;font-weight:700}
+.paper-citation h3 a,.paper-citation .paper-title a{display:block;text-decoration-thickness:1px}
 .paper-citation .authors{margin-top:12px;color:var(--mute)}
 .paper-citation .venue{margin-top:4px;color:var(--mute)}
 .paper-citation .paper-source{margin-top:12px;color:var(--mute)}

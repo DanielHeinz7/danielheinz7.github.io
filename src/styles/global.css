@@ -1,9 +1,9 @@
 @font-face{font-family:Schibsted;src:url(/fonts/schibsted-400.woff2);font-weight:400;font-display:swap}
 @font-face{font-family:Schibsted;src:url(/fonts/schibsted-700.woff2);font-weight:700;font-display:swap}
 
-:root{--cover:#56695a;--cover-ink:#fff;--ink:#151c18;--mute:#5c6760;--paper:#f7f8f5;--contact:#ecf0e9;--rule:#d3dacf;--wash:#e8ede5;--accent:#1f3a2e;color-scheme:light}
+:root{--cover:#3a6fb0;--cover-ink:#fff;--ink:#151c18;--mute:#5c6760;--paper:#f7f8f5;--contact:#e6edf6;--rule:#cfd6e0;--wash:#e9eef6;--accent:#2f62a6;color-scheme:light}
 
-:root[data-palette=soft]{--cover:#56695a;--cover-ink:#fff;--paper:#f7f8f5;--contact:#ecf0e9;--wash:#e8ede5}
+:root[data-palette=soft]{--cover:#3a6fb0;--cover-ink:#fff;--paper:#f7f8f5;--contact:#e6edf6;--wash:#e9eef6}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding:24px}

@@ -186,6 +186,12 @@
     "venue": "WI · 2025",
     "url": "https://doi.org/10.5445/IR/1000183238",
     "slug": "circular-value",
+    "image": "circular-value-first-page.png",
+    "image_source": {
+      "url": "https://publikationen.bibliothek.kit.edu/1000183238",
+      "label": "Postprint · KITopen",
+      "credit": "First-page preview · No Creative Commons license asserted"
+    },
     "explainer": {
       "headline": "A circular product needs a working network.",
       "intro": "An unwanted product can be useful to someone else. Making that exchange work means finding partners, agreeing on their contributions, and deciding who coordinates the handover.",
@@ -538,6 +544,12 @@
     "venue": "ECIS · 2026",
     "url": "https://aisel.aisnet.org/ecis2026/is_adopt/is_adopt/20/",
     "slug": "startup-agency",
+    "image": "startup-agency-first-page.png",
+    "image_source": {
+      "url": "https://aisel.aisnet.org/ecis2026/is_adopt/is_adopt/20/",
+      "label": "Author manuscript · ECIS 2026",
+      "credit": "Copyright the author and/or publisher; noncommercial use only"
+    },
     "explainer": {
       "headline": "How much should founders hand over to AI?",
       "intro": "Founders described using AI to take on work beyond their own expertise. They also drew boundaries around what an assistant could decide or do in their name.",

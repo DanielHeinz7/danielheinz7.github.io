@@ -4,8 +4,8 @@
   "institution": "Karlsruhe Institute of Technology",
   "email": "daniel.heinz@kit.edu",
   "profileUrl": "https://dsi.win.kit.edu/team_heinz.php",
-  "agenda": "I study how organizations change when data and AI enter everyday work: which responsibilities shift, which capabilities people need, and how existing systems can support renewal.",
-  "approach": "My work combines qualitative field research with design science. Working systems let us study organizational change while it happens.",
+  "agenda": "I study how work gets organized when AI agents act in firms, in new ventures, and between organizations, and I design, build, and evaluate AI systems in the field.",
+  "approach": "Observe: qualitative research (interviews, case studies, taxonomies) and computationally intensive theory construction. Build: design science and deployment in organizations and ventures. Test: field experiments and interviews.",
   "appointments": [
     {
       "date": "Since 2024",
@@ -45,11 +45,15 @@
     },
     {
       "title": "Building Digital Services with AI",
-      "context": "Practical seminar · KIT · Winter 2026/27"
+      "context": "MSc practical seminar · KIT · Winter 2026/27"
     },
     {
-      "title": "Philosophy of Science",
+      "title": "Philosophy of Science for PhD Students",
       "context": "Doctoral seminar · KIT · Winter 2026/27"
+    },
+    {
+      "title": "Qualitative Research (incl. case study)",
+      "context": "Online module · Research Training@WIN · Module lead · Winter 2026/27"
     },
     {
       "title": "Digital Services at HECTOR School",
@@ -64,5 +68,5 @@
     "Chair for Workshops, Tutorials & Community Events, WI 2027"
   ],
   "outsideWork": "Outside work I volunteer with DPSG, Germany’s largest scout association. I lead its program for 15- to 21-year-olds in the Freiburg diocese, train youth leaders, and from 2023 to 2025 led CrOver, an international camp for about 250 scouts supported by €99,495 in Erasmus+ funding.",
-  "updated": "October 2026"
+  "updated": "November 2026"
 }
