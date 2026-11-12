@@ -544,6 +544,12 @@
     "venue": "ECIS · 2026",
     "url": "https://aisel.aisnet.org/ecis2026/is_adopt/is_adopt/20/",
     "slug": "startup-agency",
+    "image": "startup-agency-first-page.png",
+    "image_source": {
+      "url": "https://aisel.aisnet.org/ecis2026/is_adopt/is_adopt/20/",
+      "label": "Author manuscript · ECIS 2026",
+      "credit": "Copyright the author and/or publisher; noncommercial use only"
+    },
     "explainer": {
       "headline": "How much should founders hand over to AI?",
       "intro": "Founders described using AI to take on work beyond their own expertise. They also drew boundaries around what an assistant could decide or do in their name.",

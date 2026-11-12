@@ -160,7 +160,8 @@ for (const id of ['circular-value', 'startup-agency']) {
   const paper = papers.find(paper => paper.id === id);
   const image = imageVariants[`${id}-first-page.png`];
   if (paper.image !== `${id}-first-page.png` || !image) errors.push(`${id}: missing real first-page preview`);
-  if (JSON.stringify(image?.sources.map(source => source.width)) !== '[160,320,640,960]') errors.push(`${id}: missing responsive image widths`);
+  const expectedWidths = id === 'startup-agency' ? '[160,320,640]' : '[160,320,640,960]';
+  if (JSON.stringify(image?.sources.map(source => source.width)) !== expectedWidths) errors.push(`${id}: missing responsive image widths`);
   if (!paper.image_source?.label || !paper.image_source?.credit || !assetSources.includes(paper.title)) errors.push(`${id}: missing version and source credit`);
   for (const route of ['research/index.html', `research/${paper.slug}/index.html`]) {
     const html = cache.get(path.join(root, route)) || '';

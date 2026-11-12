@@ -202,5 +202,23 @@
         "width": 960
       }
     ]
+  },
+  "startup-agency-first-page.png": {
+    "width": 910,
+    "height": 1287,
+    "sources": [
+      {
+        "src": "/images/responsive/startup-agency-first-page-160.webp",
+        "width": 160
+      },
+      {
+        "src": "/images/responsive/startup-agency-first-page-320.webp",
+        "width": 320
+      },
+      {
+        "src": "/images/responsive/startup-agency-first-page-640.webp",
+        "width": 640
+      }
+    ]
   }
 }
