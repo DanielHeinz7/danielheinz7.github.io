@@ -15,7 +15,7 @@ export const news: NewsItem[] = [
   {
     date: '2026-10',
     label: 'Oct 2026',
-    text: 'Coming up: our new course Building Digital Services with AI kicks off this October. Students will develop their own web apps with AI coding tools.',
+    text: 'Building Digital Services with AI kicked off with 12 students. Each student is developing a web app with AI coding tools.',
     link: { href: '/teaching/#building-with-ai', label: 'About the course' },
   },
   {
