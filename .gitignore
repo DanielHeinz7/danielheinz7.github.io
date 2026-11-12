@@ -14,3 +14,7 @@ dist/
 .env.*
 !.env.example
 .DS_Store
+
+# Lokale Aufträge und Arbeitspläne, keine Website-Inhalte
+spinoff-*.md
+PLAN-website-cv.md
