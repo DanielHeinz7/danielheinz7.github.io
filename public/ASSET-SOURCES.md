@@ -5,8 +5,9 @@
   - Jonas Liebschner: [KIT profile](https://dsi.win.kit.edu/team_1074.php), image `portrait_img_1074` → `images/researchers/jonas-liebschner.jpg`.
   - Linda Sagnier Eckert: [KIT profile](https://dsi.win.kit.edu/team_1071.php), image `portrait_img_1071` → `images/researchers/linda-sagnier-eckert.jpg`.
   - Ida Meier: [KIT profile](https://dsi.win.kit.edu/team_1232.php), image `portrait_img_1232` → `images/researchers/ida-meier.jpg`.
+- Pandora Dietle portrait: [official KIT arrival announcement](https://www.win.kit.edu/news_2135.php), November 11, 2026; [original PNG](https://www.win.kit.edu/img/dora.png), retrieved unchanged on November 12, 2026 → `images/researchers/pandora-dietle.png` (703 × 527). Displayed with a square CSS crop; KIT attribution and the reuse terms linked above apply.
 - Research-harness session image: public demonstration from https://github.com/DanielHeinz7/research-harness. Data sources and credits: https://github.com/DanielHeinz7/research-harness/blob/main/docs/media/README.md#where-the-content-comes-from.
-- InnoCompass update review: screenshot of implemented components using synthetic demo data. Cropped to remove the test harness; application content unchanged. Prepared for this website on October 18, 2026.
+- VentureTool update review: screenshot of implemented components using synthetic demo data. Cropped to remove the test harness; application content unchanged. Prepared for this website on October 18, 2026.
 - KIT LENS search screen: prototype video frame embedded in the master’s thesis presentation, slide 12. Used with permission. Cropped to remove the browser address and video border; interface content unchanged.
 - DSI-WI4 Hub app catalog: local screenshot of the implemented React components, captured on October 18, 2026 with fictional app entries and isolated data and authentication fixtures.
 - Paper page images: first pages of the publications or author manuscripts listed below. Rasterized and resized without cropping or changing article content. The source DOI and reuse basis for each image are listed below.

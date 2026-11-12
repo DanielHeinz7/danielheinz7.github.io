@@ -22,5 +22,13 @@
     "since": "Since September 2025",
     "url": "https://dsi.win.kit.edu/team_1232.php",
     "portrait": { "src": "/images/researchers/ida-meier.jpg", "width": 460, "height": 460 }
+  },
+  {
+    "name": "Pandora Dietle",
+    "topic": "Human–agentic AI collaboration",
+    "question": "How does collaboration with AI agents change team dynamics, productivity, and efficiency?",
+    "since": "Since November 2026",
+    "url": "https://www.win.kit.edu/news_2135.php",
+    "portrait": { "src": "/images/researchers/pandora-dietle.png", "width": 703, "height": 527 }
   }
 ]

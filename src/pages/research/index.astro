@@ -5,36 +5,58 @@ import PaperImage from '../../components/PaperImage.astro';
 import papers from '../../data/papers.json';
 import '../../styles/research.css';
 
-const topics = papers.filter((paper, index) => papers.findIndex(item => item.topic === paper.topic) === index);
+const visions = [
+  {
+    id: 'agentic-enterprise',
+    title: 'The agentic enterprise',
+    question: 'How can employees and AI agents divide work by design, not by accident?',
+    papers: ['renewal', 'smart-services', 'pilot-production'],
+  },
+  {
+    id: 'ai-native-venturing',
+    title: 'AI-native venturing',
+    question: 'How can founders build ventures with AI while developing their own judgment?',
+    papers: ['entrepreneurship', 'startup-agency'],
+  },
+  {
+    id: 'agentic-ecosystems',
+    title: 'Agentic ecosystems',
+    question: 'How can AI agents act across firms while each firm keeps control?',
+    papers: ['circular-industry', 'circular-value', 'enterprise-ai', 'data-ecosystems', 'data-selection'],
+  },
+];
 ---
 <SiteLayout title="Research" description="How work gets organized when AI agents act in firms, in new ventures, and between organizations. Research questions, methods, and selected publications." active="research" bodyClass="research-page">
   <nav class="page-nav" aria-label="Back to home"><a href="/"><Arrow /> Home</a></nav>
   <h1>Research</h1>
   <p class="lede">I study how work gets organized when AI agents act in firms, in new ventures, and between organizations.</p>
-  <p>The agentic enterprise: How can employees and AI agents divide work by design, not by accident? Related work examines <a href="#renewal">legacy enterprise systems</a>, <a href="#enterprise-ai">human–AI work</a>, and the transition <a href="#pilot-production">from pilot to production</a>.</p>
-  <p>AI-native venturing: How can founders build ventures with AI while developing their own judgment? Related work studies <a href="#entrepreneurship">entrepreneurial coaching</a> and <a href="#startup-agency">human–AI agency in startups</a>.</p>
-  <p>Agentic ecosystems: How can AI agents act across firms while each firm keeps control? Related work examines <a href="#data-ecosystems">data sharing</a>, <a href="#enterprise-ai">hybrid intelligent service ecosystems</a>, and the coordination needed for <a href="#circular-industry">circular industry</a> and <a href="#circular-value">value constellations</a>.</p>
-  <nav class="research-contents" aria-label="Research topics">
-    {topics.map(paper => <a href={`#${paper.id}`}>{paper.topic}</a>)}
+  <nav class="research-contents" aria-label="Research visions">
+    {visions.map(vision => <a href={`#${vision.id}`}>{vision.title}</a>)}
   </nav>
-  {papers.map(paper => (
-    <section class="research-stream" id={paper.id} aria-labelledby={`${paper.id}-title`}>
-      <h2 id={`${paper.id}-title`}>{paper.question}</h2>
-      <div class:list={['stream-body', { 'without-preview': !('image' in paper && paper.image) }]}>
-        <div class="stream-idea">
-          <p>{paper.idea}</p>
-          <a class="idea-link text-link" href={`/research/${paper.slug}/`} aria-label={`Explore the idea: ${paper.question}`}>Explore the idea <Arrow /></a>
-        </div>
-        {'image' in paper && paper.image && <a class="paper-sheet" href={paper.url} aria-label={`Read ${paper.title}`}>
-          <PaperImage file={paper.image} alt={`First page of ${paper.title}`} sizes="(max-width: 380px) 64px, (max-width: 850px) 88px, (max-width: 1150px) 160px, (max-width: 1500px) 230px, 310px" />
-        </a>}
-        <div class="paper-citation">
-          <h3><a href={paper.url}>{paper.title}</a></h3>
-          <p class="authors">{paper.authors}</p>
-          <p class="venue">{paper.venue}</p>
-          {'image_source' in paper && paper.image_source && <p class="paper-source"><a href={paper.image_source.url}>{paper.image_source.label}</a><br />{paper.image_source.credit}</p>}
-        </div>
-      </div>
+  {visions.map(vision => (
+    <section class="research-vision" id={vision.id} aria-labelledby={`${vision.id}-title`}>
+      <h2 id={`${vision.id}-title`}>{vision.title}</h2>
+      <p class="vision-question">{vision.question}</p>
+      {vision.papers.map(id => papers.find(paper => paper.id === id)!).map(paper => (
+        <article class="research-stream" id={paper.id} aria-labelledby={`${paper.id}-title`}>
+          <h3 id={`${paper.id}-title`}>{paper.question}</h3>
+          <div class:list={['stream-body', { 'without-preview': !('image' in paper && paper.image) }]}>
+            <div class="stream-idea">
+              <p>{paper.idea}</p>
+              <a class="idea-link text-link" href={`/research/${paper.slug}/`} aria-label={`Explore the idea: ${paper.question}`}>Explore the idea <Arrow /></a>
+            </div>
+            {'image' in paper && paper.image && <a class="paper-sheet" href={paper.url} aria-label={`Read ${paper.title}`}>
+              <PaperImage file={paper.image} alt={`First page of ${paper.title}`} sizes="(max-width: 380px) 64px, (max-width: 850px) 88px, (max-width: 1150px) 160px, (max-width: 1500px) 230px, 310px" />
+            </a>}
+            <div class="paper-citation">
+              <p class="paper-title"><a href={paper.url}>{paper.title}</a></p>
+              <p class="authors">{paper.authors}</p>
+              <p class="venue">{paper.venue}</p>
+              {'image_source' in paper && paper.image_source && <p class="paper-source"><a href={paper.image_source.url}>{paper.image_source.label}</a><br />{paper.image_source.credit}</p>}
+            </div>
+          </div>
+        </article>
+      ))}
     </section>
   ))}
   <section class="research-approach" aria-labelledby="approach-title">

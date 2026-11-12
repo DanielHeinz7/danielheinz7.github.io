@@ -60,5 +60,50 @@ if (!analyticsJson) {
     if (!analytics.links[new URL(paper.url).href]) errors.push(`cv/index.html: publication click is not counted: ${paper.url}`);
   }
 }
+// Research visions preserve every existing paper and its deep link.
+const researchHtml = cache.get(path.join(root, 'research/index.html')) || '';
+const visions = [
+  ['agentic-enterprise', ['renewal', 'smart-services', 'pilot-production']],
+  ['ai-native-venturing', ['entrepreneurship', 'startup-agency']],
+  ['agentic-ecosystems', ['circular-industry', 'circular-value', 'enterprise-ai', 'data-ecosystems', 'data-selection']],
+];
+const researchNav = researchHtml.match(/<nav class="research-contents"[^>]*>([\s\S]*?)<\/nav>/)?.[1] || '';
+const visionLinks = [...researchNav.matchAll(/href="#([^"]+)"/g)].map(match => match[1]);
+if (JSON.stringify(visionLinks) !== JSON.stringify(visions.map(([id]) => id))) errors.push('Research: expected exactly three vision navigation targets');
+const papers = JSON.parse(await readFile('src/data/papers.json', 'utf8'));
+const escapeHtml = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
+for (const [vision, ids] of visions) {
+  const group = researchHtml.match(new RegExp(`<section class="research-vision" id="${vision}"[^>]*>([\\s\\S]*?)</section>`))?.[1] || '';
+  const actual = [...group.matchAll(/<article class="research-stream" id="([^"]+)"/g)].map(match => match[1]);
+  if (JSON.stringify(actual) !== JSON.stringify(ids)) errors.push(`Research: wrong paper grouping for ${vision}`);
+  if (!group.includes(`<h2 id="${vision}-title">`) || !group.includes('class="vision-question"')) errors.push(`Research: missing vision heading or guiding question for ${vision}`);
+}
+if ((researchHtml.match(/class="research-stream"/g) || []).length !== 10) errors.push('Research: expected exactly ten papers');
+for (const paper of papers) {
+  const article = researchHtml.match(new RegExp(`<article class="research-stream" id="${paper.id}"[^>]*>([\\s\\S]*?)</article>`))?.[1] || '';
+  if ((researchHtml.match(new RegExp(`id="${paper.id}"`, 'g')) || []).length !== 1) errors.push(`Research: paper anchor must occur exactly once: ${paper.id}`);
+  for (const text of [paper.question, paper.idea, paper.title, paper.authors, paper.venue]) {
+    if (!article.includes(escapeHtml(text))) errors.push(`Research: changed or missing paper content: ${paper.id}`);
+  }
+  for (const url of [paper.url, `/research/${paper.slug}/`, paper.image_source?.url].filter(Boolean)) {
+    if (!article.includes(`href="${escapeHtml(url)}"`)) errors.push(`Research: missing paper link: ${paper.id}: ${url}`);
+  }
+  if (!article.includes(`<h3 id="${paper.id}-title">`)) errors.push(`Research: paper question must be h3: ${paper.id}`);
+}
+const toolsHtml = cache.get(path.join(root, 'tools/index.html')) || '';
+if (!toolsHtml.includes('id="venturetool"') || !toolsHtml.includes('VentureTool (working title)')) errors.push('Tools: VentureTool working title must be visible');
+for (const file of files) {
+  if (/innocompass/i.test(file)) errors.push(`Old public tool path: ${file}`);
+  if (/\.(?:html|css|js|json|md|txt|xml)$/.test(file) && /innocompass/i.test(await readFile(file, 'utf8'))) errors.push(`Old public tool name: ${file}`);
+}
+const boundedRole = 'I provide day-to-day research advising for Jonas Liebschner, Linda Sagnier Eckert, and Ida Meier. Prof. Gerhard Satzger provides formal doctoral supervision for these three researchers.';
+for (const route of ['lab/index.html', 'cv/index.html']) {
+  const html = cache.get(path.join(root, route)) || '';
+  for (const text of ['Pandora Dietle', 'Human–agentic AI collaboration', 'Since November 2026', 'https://www.win.kit.edu/news_2135.php', boundedRole]) {
+    if (!html.includes(text)) errors.push(`${route}: missing Pandora source data or bounded roles: ${text}`);
+  }
+  if (html.includes('for the projects below')) errors.push(`${route}: universal supervision claim`);
+}
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
+console.log('Research: ten unchanged papers, three vision groups, stable anchors and links; VentureTool naming; Pandora source/date and bounded roles passed.');
 console.log(`Checked ${pages.length} pages: local links, responsive images, downloads, metadata, sitemap coverage, and private-path exclusions passed.`);

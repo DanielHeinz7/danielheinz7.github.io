@@ -9,7 +9,7 @@ export const news: NewsItem[] = [
   {
     date: '2026-11',
     label: 'Nov 2026',
-    text: 'Coming up: Pandora Dietle will join the lab in November.',
+    text: 'Pandora Dietle joined the lab in November to study human–agentic AI collaboration.',
     link: { href: '/lab/', label: 'About the lab' },
   },
   {
